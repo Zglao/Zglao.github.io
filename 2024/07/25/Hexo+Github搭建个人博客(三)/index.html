@@ -79,10 +79,10 @@
 <p>分为<strong>站点配置文件</strong>和<strong>主题配置文件</strong></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 站点配置文件路径</span><br><span class="line">D:\Blog\_config.yml</span><br><span class="line"></span><br><span class="line"># 主题配置文件</span><br><span class="line">D:\Blog\themes\Ocean\_config.yml</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>菜单配置</p>
+<li><p>添加菜单配置</p>
 <ul>
 <li><p><code>Home</code>（首页）、<code>Archives</code>（目录）、<code>Gallery</code>（相册）、<code>About</code>（关于我）、<code>Search</code>（搜索）五部分，其中博客选择的主题中<code>Gallery</code>（相册）、<code>About</code>（关于我）、点击提示没有被找到，需要的话可进行配置</p>
-<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%89%EF%BC%89Images/Hexo.png"></p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%89%EF%BC%89Images/Hexo_1.png"></p>
 </li>
 <li><p><code>About</code>（关于我）</p>
 <p>桌面右键打开<code>Open Git Bash here</code>终端命令行页面，进入<code>D:\Blog</code>路径执行命令<code>hexo new page about</code>，会在路径<code>D:\Blog\source</code>下生成<code>about</code>文件夹以及<code>about</code>文件夹下文件<code>index.md</code>，在<code>index.md</code>文件中编辑内容，编辑完成后，在<code>D:\Blog</code>路径，执行命令<code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code>上传<code>Github</code></p>
@@ -101,12 +101,26 @@
 <p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%89%EF%BC%89Images/gallery_2.png"></p>
 <p>执行完成，打开浏览器输入<code>Zglao.github.io</code>进入个人博客查看<code>Gallery</code>（相册）页面</p>
 <p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%89%EF%BC%89Images/gallery_3.png"></p>
-<p>博主路径<code>D:\Blog\source``gallery</code>文件夹下文件<code>index.md</code>内容</p>
+<p>博主路径<code>D:\Blog\source</code>，<code>gallery</code>文件夹下文件<code>index.md</code>内容</p>
 <p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%89%EF%BC%89Images/gallery_4.png"></p>
 </li>
 </ul>
 </li>
+<li><p>修改页面内容配置</p>
+<ul>
+<li><p>修改标题</p>
+<p>打开站点配置文件<code>_comfig.yml</code>，文件路径在<code>D:\Blog</code>，文件最上面</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Site</span><br><span class="line">title: Hexo</span><br><span class="line">subtitle: &#x27;&#x27;</span><br><span class="line">description: &#x27;&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>修改为</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Site</span><br><span class="line">title: 路浩</span><br><span class="line">subtitle: &#x27;&#x27;</span><br><span class="line">description: &#x27;&#x27;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%89%EF%BC%89Images/Hexo_2.png"></p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%89%EF%BC%89Images/Hexo_3.png"></p>
+</li>
 <li></li>
+</ul>
+</li>
 <li><p>其他配置和美化</p>
 <p>后续持续补充……</p>
 </li>
@@ -115,8 +129,8 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/07/25/Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%B8%89)/" data-id="clz0wvwvq0005a4fa2ehwd3c9" class="article-share-link">
-        分享
+      <a data-url="http://example.com/2024/07/25/Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%B8%89)/" data-id="clz0zdt4n0004m4fabfbmfhds" class="article-share-link">
+        Share
       </a>
       
     </footer>
@@ -128,7 +142,7 @@
 <nav class="article-nav">
   
   <a href="/2024/07/25/Gitee%E4%BB%93%E5%BA%93%E8%AE%BE%E7%BD%AE%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5/" class="article-nav-link">
-    <strong class="article-nav-caption">前一篇</strong>
+    <strong class="article-nav-caption">Newer</strong>
     <div class="article-nav-title">
       
       Gitee仓库设置下载链接
@@ -138,7 +152,7 @@
   
   
   <a href="/2024/07/25/Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%BA%8C)/" class="article-nav-link">
-    <strong class="article-nav-caption">后一篇</strong>
+    <strong class="article-nav-caption">Older</strong>
     <div class="article-nav-title">Hexo+Github搭建个人博客(二)</div>
   </a>
   
@@ -204,9 +218,9 @@
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link nav-item-search" title="搜索">
+      <a class="nav-item-link nav-item-search" title="Search">
         <i class="fe fe-search"></i>
-        搜索
+        Search
       </a>
     </li>
   </ul>
