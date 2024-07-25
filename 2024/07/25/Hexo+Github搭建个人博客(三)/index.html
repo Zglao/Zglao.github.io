@@ -52,7 +52,7 @@
     
     <div class="article-meta">
       <a href="/2024/07/25/Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%B8%89)/" class="article-date">
-  <time datetime="2024-07-25T04:02:13.394Z" itemprop="datePublished">2024-07-25</time>
+  <time datetime="2024-07-25T04:25:15.453Z" itemprop="datePublished">2024-07-25</time>
 </a>
       
     </div>
@@ -69,41 +69,37 @@
       
       
         <h2 id="一、相关说明"><a href="#一、相关说明" class="headerlink" title="一、相关说明"></a>一、相关说明</h2><ul>
-<li><p>Hexo个性化，添加、删除、修改等</p>
-</li>
-<li><p>文章发布需要使用Typora软件</p>
-</li>
-<li><p>博主本地环境：Windows 11 家庭中文版、64位操作系统，基于x64的处理器</p>
-</li>
-<li><p>我的个人博客：<a target="_blank" rel="noopener" href="https://zglao.github.io/">zglao.github.io</a></p>
-</li>
+<li><code>Hexo</code>个性化，添加、删除、修改等</li>
+<li>文章发布需要使用<code>Typora</code>软件</li>
+<li>博主本地环境：<code>Windows 11</code>家庭中文版、<code>64</code>位操作系统，基于<code>x64</code>的处理器</li>
+<li>我的个人博客：<a target="_blank" rel="noopener" href="https://zglao.github.io/">Zglao.github.io</a></li>
 </ul>
 <h2 id="二、Hexo个性化"><a href="#二、Hexo个性化" class="headerlink" title="二、Hexo个性化"></a>二、Hexo个性化</h2><ul>
 <li><p>配置文件</p>
-<p>分为<strong>站点配置文件</strong>， 和<strong>主题配置文件</strong></p>
+<p>分为<strong>站点配置文件</strong>和<strong>主题配置文件</strong></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 站点配置文件路径</span><br><span class="line">D:\Blog\_config.yml</span><br><span class="line"></span><br><span class="line"># 主题配置文件</span><br><span class="line">D:\Blog\themes\Ocean\_config.yml</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>菜单配置</p>
 <ul>
-<li><p>Home（首页）、Archives（目录）、Gallery（相册）、About（关于我）、Search（搜索）五部分，其中博客选择的主题中Gallery（相册）、About（关于我）、点击提示没有被找到，需要的话可进行配置</p>
-<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%89%EF%BC%89Images/Hexo_1.png"></p>
+<li><p><code>Home</code>（首页）、<code>Archives</code>（目录）、<code>Gallery</code>（相册）、<code>About</code>（关于我）、<code>Search</code>（搜索）五部分，其中博客选择的主题中<code>Gallery</code>（相册）、<code>About</code>（关于我）、点击提示没有被找到，需要的话可进行配置</p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%89%EF%BC%89Images/Hexo.png"></p>
 </li>
-<li><p>About（关于我）</p>
+<li><p><code>About</code>（关于我）</p>
 <p>桌面右键打开<code>Open Git Bash here</code>终端命令行页面，进入<code>D:\Blog</code>路径执行命令<code>hexo new page about</code>，会在路径<code>D:\Blog\source</code>下生成<code>about</code>文件夹以及<code>about</code>文件夹下文件<code>index.md</code>，在<code>index.md</code>文件中编辑内容，编辑完成后，在<code>D:\Blog</code>路径，执行命令<code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code>上传<code>Github</code></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">Zg Lao@admin MINGW64 ~/Desktop</span><br><span class="line">$ cd D:\Blog</span><br><span class="line"></span><br><span class="line">Zg Lao@admin MINGW64 /d/Blog</span><br><span class="line">$ hexo new page about</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Created: D:\Blog\source\about\index.md</span><br><span class="line"></span><br><span class="line">Zg Lao@admin MINGW64 /d/Blog</span><br><span class="line">$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Deleted database.</span><br><span class="line">INFO  Deleted public folder.</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Files loaded in 176 ms</span><br><span class="line">...</span><br><span class="line">INFO  Deploy done: git</span><br></pre></td></tr></table></figure>
 
 <p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%89%EF%BC%89Images/about_1.png"></p>
 <p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%89%EF%BC%89Images/about_2.png"></p>
-<p>执行完成，打开浏览器输入<code>Zglao.github.io</code>进入个人博客查看About（关于）页面</p>
+<p>执行完成，打开浏览器输入<code>Zglao.github.io</code>进入个人博客查看<code>About</code>（关于）页面</p>
 <p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%89%EF%BC%89Images/about_3.png"></p>
 </li>
-<li><p>Gallery（相册）</p>
+<li><p><code>Gallery</code>（相册）</p>
 <p>桌面右键打开<code>Open Git Bash here</code>终端命令行页面，进入<code>D:\Blog</code>路径执行命令<code>hexo new page gallery</code>，会在路径<code>D:\Blog\source</code>下生成<code>gallery</code>文件夹以及<code>gallery</code>文件夹下文件<code>index.md</code>，在<code>index.md</code>文件中编辑内容（手动在路径<code>D:\Blog\source</code>下创建文件夹存放相册中的图像，博主命名<code>Gallery Images</code>），编辑完成后，在<code>D:\Blog</code>路径，执行命令<code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code>上传<code>Github</code></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">Zg Lao@admin MINGW64 ~/Desktop</span><br><span class="line">$ cd D:\Blog</span><br><span class="line"></span><br><span class="line">Zg Lao@admin MINGW64 /d/Blog</span><br><span class="line">$ hexo new page gallery</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Created: D:\Blog\source\gallery\index.md</span><br><span class="line"></span><br><span class="line">Zg Lao@admin MINGW64 /d/Blog</span><br><span class="line">$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Deleted database.</span><br><span class="line">INFO  Deleted public folder.</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Files loaded in 180 ms</span><br><span class="line">...</span><br><span class="line">INFO  Deploy done: git</span><br></pre></td></tr></table></figure>
 
 <p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%89%EF%BC%89Images/gallery_1.png"></p>
 <p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%89%EF%BC%89Images/gallery_2.png"></p>
-<p>执行完成，打开浏览器输入<code>Zglao.github.io</code>进入个人博客查看Gallery（相册）页面</p>
+<p>执行完成，打开浏览器输入<code>Zglao.github.io</code>进入个人博客查看<code>Gallery</code>（相册）页面</p>
 <p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%89%EF%BC%89Images/gallery_3.png"></p>
 <p>博主路径<code>D:\Blog\source``gallery</code>文件夹下文件<code>index.md</code>内容</p>
 <p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%89%EF%BC%89Images/gallery_4.png"></p>
@@ -118,7 +114,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/07/25/Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%B8%89)/" data-id="clz0r6w8e0005jofaajra88r7" class="article-share-link">
+      <a data-url="http://example.com/2024/07/25/Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%B8%89)/" data-id="clz0tcu270005e0fa71dp5ari" class="article-share-link">
         Share
       </a>
       
@@ -130,11 +126,11 @@
   
 <nav class="article-nav">
   
-  <a href="/2024/07/25/Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%B8%80)/" class="article-nav-link">
+  <a href="/2024/07/25/Gitee%E4%BB%93%E5%BA%93%E8%AE%BE%E7%BD%AE%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5/" class="article-nav-link">
     <strong class="article-nav-caption">Newer</strong>
     <div class="article-nav-title">
       
-      Hexo+Github搭建个人博客(一)
+      Gitee仓库设置下载链接
       
     </div>
   </a>
