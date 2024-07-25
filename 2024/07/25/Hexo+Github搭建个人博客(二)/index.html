@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <title>
+    Hexo+Github搭建个人博客(二) |
+    
+    Hexo
+  </title>
+  <!-- Icon -->
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<script src="/js/pace.min.js"></script>
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <main class="content">
+    <section class="outer">
+  <article id="post-Hexo+Github搭建个人博客(二)" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+      
+  
+  <h1 class="article-title" itemprop="name">
+    Hexo+Github搭建个人博客(二)
+  </h1>
+  
+  
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2024/07/25/Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%BA%8C)/" class="article-date">
+  <time datetime="2024-07-25T04:02:13.393Z" itemprop="datePublished">2024-07-25</time>
+</a>
+      
+    </div>
+    
+
+    
+    
+<div class="tocbot"></div>
+
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+      
+        <h2 id="一、相关说明"><a href="#一、相关说明" class="headerlink" title="一、相关说明"></a>一、相关说明</h2><ul>
+<li><p>Hexo更换主题，Hexo官网（<a target="_blank" rel="noopener" href="https://hexo.io/themes/">HexoTheme</a>）选择喜欢的主题</p>
+</li>
+<li><p>文章发布需要使用Typora软件</p>
+</li>
+<li><p>博主本地环境：Windows 11 家庭中文版、64位操作系统，基于x64的处理器</p>
+</li>
+<li><p>我的个人博客：<a target="_blank" rel="noopener" href="https://zglao.github.io/">zglao.github.io</a></p>
+</li>
+</ul>
+<h2 id="二、Hexo个性化"><a href="#二、Hexo个性化" class="headerlink" title="二、Hexo个性化"></a>二、Hexo个性化</h2><ul>
+<li><p>Hexo主题选择</p>
+<ul>
+<li><p>初始化Hexo后默认主题是<code>landscape</code></p>
+</li>
+<li><p>通过Hexo官网（<a target="_blank" rel="noopener" href="https://hexo.io/themes/">HexoTheme</a>）自由选择喜欢的主题，点击主题名下面<code>Visit preview site</code>可以对主题进行浏览</p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%BA%8C%EF%BC%89Images/HexoTheme.png"></p>
+<p>![](..&#x2F;Hexo+Github搭建个人博客（二）Images&#x2F;HexoTheme_Visit preview site.png)</p>
+</li>
+</ul>
+</li>
+<li><p>主题下载</p>
+<ul>
+<li><p>克隆主题格式<code>git clone [url] themes/xxx</code>（<code>url</code>是点击主题名跳转页面的url，<code>xxx</code>是主题名），博主采用<code>Ocean</code>主题</p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%BA%8C%EF%BC%89Images/HexoTheme_url.png"></p>
+</li>
+<li><p>桌面右键打开<code>Open Git Bash here</code>终端命令行页面，进入<code>D:\Blog</code>路径，执行命令<code>git clone https://github.com/zhwangart/hexo-theme-ocean themes/Ocean</code>，克隆喜欢的主题到<code>Blog</code>文件夹中</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Zg Lao@admin MINGW64 ~/Desktop</span><br><span class="line">$ cd D:\Blog</span><br><span class="line"></span><br><span class="line">Zg Lao@admin MINGW64 /d/Blog</span><br><span class="line">$ git clone https://github.com/zhwangart/hexo-theme-ocean themes/Ocean</span><br><span class="line">Cloning into &#x27;themes/Ocean&#x27;...</span><br><span class="line">remote: Enumerating objects: 959, done.</span><br><span class="line">remote: Counting objects: 100% (153/153), done.</span><br><span class="line">remote: Compressing objects: 100% (103/103), done.</span><br><span class="line">remote: Total 959 (delta 79), reused 96 (delta 48), pack-reused 806</span><br><span class="line">Receiving objects: 100% (959/959), 12.92 MiB | 4.79 MiB/s, done.</span><br><span class="line">Resolving deltas: 100% (568/568), done.</span><br></pre></td></tr></table></figure>
+
+<p>出现<code>Resolving deltas: 100% (n/n), done.</code>，已克隆完成，还需要进行主题配置才会把默认主题替换</p>
+</li>
+</ul>
+</li>
+<li><p>主题配置</p>
+<ul>
+<li><p>修改<code>_config.yml</code>文件，<code>_comfig.yml</code>文件路径在<code>D:\Blog</code>，<code>_comfig.yml</code>文件用记事本打开，<code>Ctrl+F</code>搜索<code>theme: landscape</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https://hexo.io/plugins/</span><br><span class="line">## Themes: https://hexo.io/themes/</span><br><span class="line">theme: landscape</span><br></pre></td></tr></table></figure>
+
+<p>修改为</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https://hexo.io/plugins/</span><br><span class="line">## Themes: https://hexo.io/themes/</span><br><span class="line">theme: Ocean</span><br></pre></td></tr></table></figure>
+
+<p>配置完成后，桌面右键打开<code>Open Git Bash here</code>终端命令行页面，进入<code>D:\Blog</code>路径，执行命令<code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code>，部署到Github，进入个人博客可看到主题已修改</p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%BA%8C%EF%BC%89Images/Hexo.png"></p>
+</li>
+<li><p>其他配置会在后续博客文章中发布</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="三、文章发布"><a href="#三、文章发布" class="headerlink" title="三、文章发布"></a>三、文章发布</h2><ul>
+<li><p>Typora</p>
+<ul>
+<li><p>官网下载（<code>Ctrl+单击链接</code>自动跳转，付费版）</p>
+<p><a target="_blank" rel="noopener" href="https://typoraio.cn/">Typora 官方中文站 (typoraio.cn)</a></p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%BA%8C%EF%BC%89Images/Typora_1.png"></p>
+</li>
+<li><p>博主提供的下载链接（<code>Ctrl+单击链接</code>自动跳转，免费版），根据跳转页面安装教程安装</p>
+<p><a target="_blank" rel="noopener" href="https://gitee.com/zglao/InstallPackage">InstallPackage: 安装包 (gitee.com)</a></p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%BA%8C%EF%BC%89Images/Typora_2.png"></p>
+</li>
+</ul>
+</li>
+<li><p>文档编辑</p>
+<ul>
+<li><p>打开Typora</p>
+</li>
+<li><p>编辑内容</p>
+<p>根据内容设置标题等级、代码块（公式块）、有&#x2F;无序列表、加粗、下划线等</p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%BA%8C%EF%BC%89Images/Typora_3.png"></p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%BA%8C%EF%BC%89Images/Typora_4.png"></p>
+</li>
+<li><p>文档路径保存</p>
+<p>保存在<code>Hexo+Github搭建个人博客（一）</code>文章中创建的Blog文件夹<code>D:\Blog\source\_posts\</code>路径</p>
+</li>
+</ul>
+</li>
+<li><p>文档图片引用</p>
+<ul>
+<li><p>图片路径</p>
+<p>在<code>Hexo+Github搭建个人博客（一）</code>文章中创建的Blog文件夹<code>D:\Blog\source\</code>路径创建文件夹，命名<code>Images</code>（博主命名<code>Hexo+Github搭建个人博客（一）Images</code>）</p>
+<p>![](..&#x2F;Hexo+Github搭建个人博客（二）Images&#x2F;Picture Path.png)</p>
+</li>
+<li><p>引用图片格式</p>
+<p><code>![](路径+图片名)</code>，如红框所示</p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%BA%8C%EF%BC%89Images/Image_1.png"></p>
+<p><strong>注意</strong>：此处引用使用相对引用，路径引用正确，图片会自动显示，否则反之</p>
+</li>
+</ul>
+</li>
+<li><p>上传Github</p>
+<p>桌面右键打开<code>Open Git Bash here</code>终端命令行页面，进入<code>D:\Blog</code>路径，执行命令<code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Zg Lao@admin MINGW64 ~/Desktop</span><br><span class="line">$ cd D:\Blog</span><br><span class="line"></span><br><span class="line">Zg Lao@admin MINGW64 /d/Blog</span><br><span class="line">$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Deleted database.</span><br><span class="line">INFO  Deleted public folder.</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Files loaded in 191 ms</span><br><span class="line">...</span><br><span class="line">INFO  Deploy done: git</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/07/25/Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%BA%8C)/" data-id="clz0r6w8e0006jofae9j848a4" class="article-share-link">
+        Share
+      </a>
+      
+    </footer>
+
+  </div>
+
+  
+  
+<nav class="article-nav">
+  
+  <a href="/2024/07/25/Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%B8%89)/" class="article-nav-link">
+    <strong class="article-nav-caption">Newer</strong>
+    <div class="article-nav-title">
+      
+      Hexo+Github搭建个人博客(三)
+      
+    </div>
+  </a>
+  
+  
+  <a href="/2024/07/25/Hello%20World/" class="article-nav-link">
+    <strong class="article-nav-caption">Older</strong>
+    <div class="article-nav-title">Hello World</div>
+  </a>
+  
+</nav>
+
+  
+
+  
+  
+  
+  
+
+</article>
+</section>
+    <footer class="footer">
+  <div class="outer">
+    <ul class="list-inline">
+      <li>Hexo &copy; 2024</li>
+      
+        <li>
+          
+            <a href="https://beian.miit.gov.cn/" target="_blank"></a>
+            
+        </li>
+      
+      <li>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></li>
+      <li>theme  <a target="_blank" rel="noopener" href="https://github.com/zhwangart/hexo-theme-ocean">Ocean</a></li>
+    </ul>
+    <p><ul class="list-inline">
+  
+  <li><i class="fe fe-smile-alt tooltip" data-tooltip="UV"></i> <span id="busuanzi_value_site_uv"></span></li>
+  
+  <li><i class="fe fe-bookmark tooltip" data-tooltip="PV"></i> <span id="busuanzi_value_page_pv"></span></li>
+  
+</ul></p>
+  </div>
+</footer>
+  </main>
+  <aside class="sidebar">
+    <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/hexo.svg" alt="Hexo"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">Home</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">Archives</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/gallery">Gallery</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">About</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link nav-item-search" title="Search">
+        <i class="fe fe-search"></i>
+        Search
+      </a>
+    </li>
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      <div class="totop" id="totop">
+  <i class="fe fe-rocket"></i>
+</div>
+    </li>
+    <li class="nav-item">
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="fe fe-feed"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+  </aside>
+  
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/js/jquery.justifiedGallery.min.js"></script>
+
+
+<script src="/js/lazyload.min.js"></script>
+
+
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+
+<script src="/js/tocbot.min.js"></script>
+
+
+<script>
+  // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+  tocbot.init({
+    tocSelector: '.tocbot',
+    contentSelector: '.article-entry',
+    headingSelector: 'h1, h2, h3, h4, h5, h6',
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    positionFixedSelector: '.tocbot',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto',
+  });
+</script>
+
+
+
+<script src="/js/ocean.js"></script>
+
+</body>
+
+</html>

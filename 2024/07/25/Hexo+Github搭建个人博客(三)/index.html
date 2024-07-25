@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <title>
+    Hexo+Github搭建个人博客(三) |
+    
+    Hexo
+  </title>
+  <!-- Icon -->
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<script src="/js/pace.min.js"></script>
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <main class="content">
+    <section class="outer">
+  <article id="post-Hexo+Github搭建个人博客(三)" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+      
+  
+  <h1 class="article-title" itemprop="name">
+    Hexo+Github搭建个人博客(三)
+  </h1>
+  
+  
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2024/07/25/Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%B8%89)/" class="article-date">
+  <time datetime="2024-07-25T04:02:13.394Z" itemprop="datePublished">2024-07-25</time>
+</a>
+      
+    </div>
+    
+
+    
+    
+<div class="tocbot"></div>
+
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+      
+        <h2 id="一、相关说明"><a href="#一、相关说明" class="headerlink" title="一、相关说明"></a>一、相关说明</h2><ul>
+<li><p>Hexo个性化，添加、删除、修改等</p>
+</li>
+<li><p>文章发布需要使用Typora软件</p>
+</li>
+<li><p>博主本地环境：Windows 11 家庭中文版、64位操作系统，基于x64的处理器</p>
+</li>
+<li><p>我的个人博客：<a target="_blank" rel="noopener" href="https://zglao.github.io/">zglao.github.io</a></p>
+</li>
+</ul>
+<h2 id="二、Hexo个性化"><a href="#二、Hexo个性化" class="headerlink" title="二、Hexo个性化"></a>二、Hexo个性化</h2><ul>
+<li><p>配置文件</p>
+<p>分为<strong>站点配置文件</strong>， 和<strong>主题配置文件</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 站点配置文件路径</span><br><span class="line">D:\Blog\_config.yml</span><br><span class="line"></span><br><span class="line"># 主题配置文件</span><br><span class="line">D:\Blog\themes\Ocean\_config.yml</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>菜单配置</p>
+<ul>
+<li><p>Home（首页）、Archives（目录）、Gallery（相册）、About（关于我）、Search（搜索）五部分，其中博客选择的主题中Gallery（相册）、About（关于我）、点击提示没有被找到，需要的话可进行配置</p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%89%EF%BC%89Images/Hexo_1.png"></p>
+</li>
+<li><p>About（关于我）</p>
+<p>桌面右键打开<code>Open Git Bash here</code>终端命令行页面，进入<code>D:\Blog</code>路径执行命令<code>hexo new page about</code>，会在路径<code>D:\Blog\source</code>下生成<code>about</code>文件夹以及<code>about</code>文件夹下文件<code>index.md</code>，在<code>index.md</code>文件中编辑内容，编辑完成后，在<code>D:\Blog</code>路径，执行命令<code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code>上传<code>Github</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">Zg Lao@admin MINGW64 ~/Desktop</span><br><span class="line">$ cd D:\Blog</span><br><span class="line"></span><br><span class="line">Zg Lao@admin MINGW64 /d/Blog</span><br><span class="line">$ hexo new page about</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Created: D:\Blog\source\about\index.md</span><br><span class="line"></span><br><span class="line">Zg Lao@admin MINGW64 /d/Blog</span><br><span class="line">$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Deleted database.</span><br><span class="line">INFO  Deleted public folder.</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Files loaded in 176 ms</span><br><span class="line">...</span><br><span class="line">INFO  Deploy done: git</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%89%EF%BC%89Images/about_1.png"></p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%89%EF%BC%89Images/about_2.png"></p>
+<p>执行完成，打开浏览器输入<code>Zglao.github.io</code>进入个人博客查看About（关于）页面</p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%89%EF%BC%89Images/about_3.png"></p>
+</li>
+<li><p>Gallery（相册）</p>
+<p>桌面右键打开<code>Open Git Bash here</code>终端命令行页面，进入<code>D:\Blog</code>路径执行命令<code>hexo new page gallery</code>，会在路径<code>D:\Blog\source</code>下生成<code>gallery</code>文件夹以及<code>gallery</code>文件夹下文件<code>index.md</code>，在<code>index.md</code>文件中编辑内容（手动在路径<code>D:\Blog\source</code>下创建文件夹存放相册中的图像，博主命名<code>Gallery Images</code>），编辑完成后，在<code>D:\Blog</code>路径，执行命令<code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code>上传<code>Github</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">Zg Lao@admin MINGW64 ~/Desktop</span><br><span class="line">$ cd D:\Blog</span><br><span class="line"></span><br><span class="line">Zg Lao@admin MINGW64 /d/Blog</span><br><span class="line">$ hexo new page gallery</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Created: D:\Blog\source\gallery\index.md</span><br><span class="line"></span><br><span class="line">Zg Lao@admin MINGW64 /d/Blog</span><br><span class="line">$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Deleted database.</span><br><span class="line">INFO  Deleted public folder.</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Files loaded in 180 ms</span><br><span class="line">...</span><br><span class="line">INFO  Deploy done: git</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%89%EF%BC%89Images/gallery_1.png"></p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%89%EF%BC%89Images/gallery_2.png"></p>
+<p>执行完成，打开浏览器输入<code>Zglao.github.io</code>进入个人博客查看Gallery（相册）页面</p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%89%EF%BC%89Images/gallery_3.png"></p>
+<p>博主路径<code>D:\Blog\source``gallery</code>文件夹下文件<code>index.md</code>内容</p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%89%EF%BC%89Images/gallery_4.png"></p>
+</li>
+</ul>
+</li>
+<li><p>其他配置和美化</p>
+<p>后续持续补充……</p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/07/25/Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%B8%89)/" data-id="clz0r6w8e0005jofaajra88r7" class="article-share-link">
+        Share
+      </a>
+      
+    </footer>
+
+  </div>
+
+  
+  
+<nav class="article-nav">
+  
+  <a href="/2024/07/25/Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%B8%80)/" class="article-nav-link">
+    <strong class="article-nav-caption">Newer</strong>
+    <div class="article-nav-title">
+      
+      Hexo+Github搭建个人博客(一)
+      
+    </div>
+  </a>
+  
+  
+  <a href="/2024/07/25/Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%BA%8C)/" class="article-nav-link">
+    <strong class="article-nav-caption">Older</strong>
+    <div class="article-nav-title">Hexo+Github搭建个人博客(二)</div>
+  </a>
+  
+</nav>
+
+  
+
+  
+  
+  
+  
+
+</article>
+</section>
+    <footer class="footer">
+  <div class="outer">
+    <ul class="list-inline">
+      <li>Hexo &copy; 2024</li>
+      
+        <li>
+          
+            <a href="https://beian.miit.gov.cn/" target="_blank"></a>
+            
+        </li>
+      
+      <li>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></li>
+      <li>theme  <a target="_blank" rel="noopener" href="https://github.com/zhwangart/hexo-theme-ocean">Ocean</a></li>
+    </ul>
+    <p><ul class="list-inline">
+  
+  <li><i class="fe fe-smile-alt tooltip" data-tooltip="UV"></i> <span id="busuanzi_value_site_uv"></span></li>
+  
+  <li><i class="fe fe-bookmark tooltip" data-tooltip="PV"></i> <span id="busuanzi_value_page_pv"></span></li>
+  
+</ul></p>
+  </div>
+</footer>
+  </main>
+  <aside class="sidebar">
+    <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/hexo.svg" alt="Hexo"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">Home</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">Archives</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/gallery">Gallery</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">About</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link nav-item-search" title="Search">
+        <i class="fe fe-search"></i>
+        Search
+      </a>
+    </li>
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      <div class="totop" id="totop">
+  <i class="fe fe-rocket"></i>
+</div>
+    </li>
+    <li class="nav-item">
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="fe fe-feed"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+  </aside>
+  
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/js/jquery.justifiedGallery.min.js"></script>
+
+
+<script src="/js/lazyload.min.js"></script>
+
+
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+
+<script src="/js/tocbot.min.js"></script>
+
+
+<script>
+  // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+  tocbot.init({
+    tocSelector: '.tocbot',
+    contentSelector: '.article-entry',
+    headingSelector: 'h1, h2, h3, h4, h5, h6',
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    positionFixedSelector: '.tocbot',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto',
+  });
+</script>
+
+
+
+<script src="/js/ocean.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <title>
+    Hexo+Github搭建个人博客(一) |
+    
+    Hexo
+  </title>
+  <!-- Icon -->
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<script src="/js/pace.min.js"></script>
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <main class="content">
+    <section class="outer">
+  <article id="post-Hexo+Github搭建个人博客(一)" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+      
+  
+  <h1 class="article-title" itemprop="name">
+    Hexo+Github搭建个人博客(一)
+  </h1>
+  
+  
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2024/07/25/Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%B8%80)/" class="article-date">
+  <time datetime="2024-07-25T04:02:13.394Z" itemprop="datePublished">2024-07-25</time>
+</a>
+      
+    </div>
+    
+
+    
+    
+<div class="tocbot"></div>
+
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+      
+        <h2 id="一、相关说明"><a href="#一、相关说明" class="headerlink" title="一、相关说明"></a>一、相关说明</h2><ul>
+<li>搭建个人博客需要安装配置Node.js、Git、Hexo</li>
+<li>博主本地环境：Windows 11 家庭中文版、64位操作系统，基于x64的处理器</li>
+<li>我的个人博客：<a target="_blank" rel="noopener" href="https://zglao.github.io/">zglao.github.io</a></li>
+</ul>
+<h2 id="二、Node-js"><a href="#二、Node-js" class="headerlink" title="二、Node.js"></a>二、Node.js</h2><ul>
+<li><p>下载</p>
+<ul>
+<li><p>官网路径</p>
+<p><a target="_blank" rel="noopener" href="https://nodejs.cn/">Node.js 中文网 (nodejs.cn)</a></p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%80%EF%BC%89Images/Node_1.png"></p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%80%EF%BC%89Images/Node_2.png"></p>
+</li>
+<li><p>博主提供的下载链接（Ctrl+单击自动跳转，需要登陆自己的Gitee账号)</p>
+<p><a target="_blank" rel="noopener" href="https://gitee.com/zglao/InstallPackage/raw/master/Node-v20.15.0-x64.msi">(https://gitee.com/zglao/InstallPackage/raw/master/Node-v20.15.0-x64.msi)</a></p>
+</li>
+</ul>
+</li>
+<li><p>安装</p>
+<p>修改安装路径即可，博主安装路径为<code>D:\nodejs</code>，其他默认就可以</p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%80%EF%BC%89Images/Node_3.png"></p>
+</li>
+<li><p>检查是否安装成功</p>
+<p>打开终端（<code>Win+R</code>键，输入<code>cmd</code>）或者终端管理员命令行页面，执行命令<code>node -v</code>、<code>npm -v</code>或者<code>node --version</code>、<code>npm --version</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\20538&gt;node -v</span><br><span class="line">v20.15.0</span><br><span class="line"></span><br><span class="line">C:\Users\20538&gt;npm -v</span><br><span class="line">10.7.0</span><br></pre></td></tr></table></figure>
+
+<p>出现版本号，就证明安装成功</p>
+</li>
+</ul>
+<h2 id="三、Git"><a href="#三、Git" class="headerlink" title="三、Git"></a>三、Git</h2><ul>
+<li><p>下载</p>
+<ul>
+<li><p>官网路径</p>
+<p><a target="_blank" rel="noopener" href="https://git-scm.com/download">Git - Downloads (git-scm.com)</a></p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%80%EF%BC%89Images/Git_1.png"></p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%80%EF%BC%89Images/Git_2.png"></p>
+<p>下载完成关闭下载窗口，会用默认浏览器打开版本发布说明</p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%80%EF%BC%89Images/Git_3.png"></p>
+</li>
+<li><p>博主提供的下载链接（<code>Ctrl+单击自动跳转</code>，需要登陆自己的Gitee账号）</p>
+<p><a target="_blank" rel="noopener" href="https://gitee.com/zglao/InstallPackage/raw/master/Git-2.43.0-64-bit.exe">(https://gitee.com/zglao/InstallPackage/raw/master/Git-2.43.0-64-bit.exe)</a></p>
+</li>
+</ul>
+</li>
+<li><p>安装</p>
+<p>修改安装路径即可，博主安装路径为<code>D:\Git</code>，其他默认就可以</p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%80%EF%BC%89Images/Git_4.png"></p>
+</li>
+<li><p>检查是否安装成功</p>
+<p>桌面右键打开<code>Open Git Bash here</code>终端命令行页面，执行命令<code>git -v</code>或者<code>git --version</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Zg Lao@admin MINGW64 ~/Desktop</span><br><span class="line">$ git -v</span><br><span class="line">git version 2.43.0.windows.1</span><br></pre></td></tr></table></figure>
+
+<p>出现版本号，就证明安装成功</p>
+</li>
+</ul>
+<h2 id="四、Hexo"><a href="#四、Hexo" class="headerlink" title="四、Hexo"></a>四、Hexo</h2><ul>
+<li><p>安装Hexo</p>
+<p>创建文件夹，命名为Blog（文件夹命名，MyBlog、Personal Blog等都可以），博主文件夹路径为<code>D:\Blog</code>，打开终端管理员命令行页面，进入<code>D:\Blog</code>路径，执行命令<code>npm install -g hexo-cli</code>，安装Hexo</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">PS C:\Users\20538&gt; cd D:\Blog</span><br><span class="line">PS D:\Blog&gt; npm install -g hexo-cli</span><br><span class="line"></span><br><span class="line">added 53 packages in 17s</span><br><span class="line"></span><br><span class="line">14 packages are looking for funding</span><br><span class="line">  run `npm fund` for details</span><br><span class="line">npm notice</span><br><span class="line">npm notice New minor version of npm available! 10.7.0 -&gt; 10.8.1</span><br><span class="line">npm notice Changelog: https://github.com/npm/cli/releases/tag/v10.8.1</span><br><span class="line">npm notice To update run: npm install -g npm@10.8.1</span><br><span class="line">npm notice</span><br></pre></td></tr></table></figure>
+
+<p>执行完后，路径<code>D:\nodejs</code>下面会出现<code>node_cache</code>和<code>node_global</code>两个文件夹</p>
+</li>
+<li><p>检查是否安装成功</p>
+<p>打开终端（<code>Win+R</code>键，输入<code>cmd</code>）或者终端管理员命令行页面，执行命令<code>hexo -v</code>或者<code>hexo --version</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">PS D:\Blog&gt; hexo -v</span><br><span class="line">INFO  Validating config</span><br><span class="line">hexo: 7.3.0</span><br><span class="line">hexo-cli: 4.3.2</span><br><span class="line">os: win32 10.0.22631 undefined</span><br><span class="line">node: 20.15.0</span><br><span class="line">acorn: 8.11.3</span><br><span class="line">ada: 2.7.8</span><br><span class="line">ares: 1.28.1</span><br><span class="line">base64: 0.5.2</span><br><span class="line">brotli: 1.1.0</span><br><span class="line">cjs_module_lexer: 1.2.2</span><br><span class="line">cldr: 45.0</span><br><span class="line">icu: 75.1</span><br><span class="line">llhttp: 8.1.2</span><br><span class="line">modules: 115</span><br><span class="line">napi: 9</span><br><span class="line">nghttp2: 1.61.0</span><br><span class="line">nghttp3: 0.7.0</span><br><span class="line">ngtcp2: 1.1.0</span><br><span class="line">openssl: 3.0.13+quic</span><br><span class="line">simdutf: 5.2.8</span><br><span class="line">tz: 2024a</span><br><span class="line">undici: 6.13.0</span><br><span class="line">unicode: 15.1</span><br><span class="line">uv: 1.46.0</span><br><span class="line">uvwasi: 0.0.21</span><br><span class="line">v8: 11.3.244.8-node.23</span><br><span class="line">zlib: 1.3.0.1-motley-7d77fb7</span><br></pre></td></tr></table></figure>
+
+<p>出现版本号，就证明安装成功</p>
+</li>
+<li><p>初始化Hexo</p>
+<p>打开终端管理员命令行页面，进入<code>D:\Blog</code>路径，执行命令<code>hexo init</code>，初始化Hexo</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">PS C:\Users\20538&gt; cd D:\Blog</span><br><span class="line">PS D:\Blog&gt; hexo init</span><br><span class="line">INFO  Cloning hexo-starter https://github.com/hexojs/hexo-starter.git</span><br><span class="line">INFO  Install dependencies</span><br><span class="line">INFO  Start blogging with Hexo!</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>启动Hexo</p>
+<p>打开终端管理员命令行页面，进入<code>D:\Blog</code>路径，执行命令<code>hexo s</code>或者<code>hexo server</code>，启动Hexo</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">PS D:\Blog&gt; hexo s</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Hexo is running at http://localhost:4000/ . Press Ctrl+C to stop.</span><br></pre></td></tr></table></figure>
+
+<p><code>Ctrl+单击(链接http://localhost:4000/)</code>自动跳转默认浏览器访问，<code>Ctrl+C</code>停止运行</p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%80%EF%BC%89Images/Hexo.png"></p>
+<p>此时，Hexo已经部署完成</p>
+</li>
+</ul>
+<h2 id="五、GitHub"><a href="#五、GitHub" class="headerlink" title="五、GitHub"></a>五、GitHub</h2><p>通过Github相应配置，即可将其部署到Github上（其他设备输入你的博客地址，即可查看你发布的文章）</p>
+<ul>
+<li><p>注册Github账号</p>
+<p>GitHub注册地址<a target="_blank" rel="noopener" href="https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=/&source=header-home">Github-signup</a></p>
+</li>
+<li><p>Github SSH免密码配置</p>
+<ul>
+<li><p>初始化Git的用户名和邮箱</p>
+<p>打开终端（<code>Win+R</code>键，输入<code>cmd</code>）或者终端管理员命令行页面，执行命令格式<code>git config --global user.name &quot;name&quot;</code>和<code>git config --global user.email &quot;email&quot;</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;name&quot;</span><br><span class="line">git config --global user.email &quot;email&quot;</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意</strong>：这里的<code>name</code>输入你的<code>GitHub</code>用户名，<code>email</code>输入你的<code>GitHub</code>邮箱</p>
+<p>博主<code>GitHub</code>用户名<code>Zglao</code>，<code>GitHub</code>的邮箱<code>3878XX6714@qq.com</code>，初始化Git的用户名和邮箱，执行命令<code>git config --global user.name &quot;Zglao&quot;</code>和<code>git config --global user.email &quot;3878XX6714@qq.com&quot;</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PS C:\Users\20538&gt; git config --global user.name &quot;Zglao&quot;</span><br><span class="line">PS C:\Users\20538&gt; git config --global user.email &quot;3878XX6714@qq.com&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>生成密钥</p>
+<p>打开终端（<code>Win+R</code>键，输入<code>cmd</code>）或者终端管理员命令行页面，执行命令<code>ssh-keygen -t rsa -C &quot;3878XX6714@qq.com&quot;</code>，需要Enter回车三次</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">PS C:\Users\20538&gt; ssh-keygen -t rsa -C &quot;3878XX6714@qq.com&quot;</span><br><span class="line">Generating public/private rsa key pair.</span><br><span class="line">Enter file in which to save the key (C:\Users\20538/.ssh/id_rsa):</span><br><span class="line">Created directory &#x27;C:\\Users\\20538/.ssh&#x27;.</span><br><span class="line">Enter passphrase (empty for no passphrase):</span><br><span class="line">Enter same passphrase again:</span><br><span class="line">Your identification has been saved in C:\Users\20538/.ssh/id_rsa</span><br><span class="line">Your public key has been saved in C:\Users\20538/.ssh/id_rsa.pub</span><br><span class="line">The key fingerprint is:</span><br><span class="line">SHA256:MZ5Yd1Gt1iJJ5z3l4DEfN1patptTv4A8swcN2+1Y5v0 3878XX6714@qq.com</span><br><span class="line">The key&#x27;s randomart image is:</span><br><span class="line">+---[RSA 3072]----+</span><br><span class="line">|            .... |</span><br><span class="line">|            ..=*+|</span><br><span class="line">|        + ...=*X*|</span><br><span class="line">|       + = ooo*o*|</span><br><span class="line">|      . S . *o..*|</span><br><span class="line">|           B + B.|</span><br><span class="line">|            = B +|</span><br><span class="line">|           . o +.|</span><br><span class="line">|            .   E|</span><br><span class="line">+----[SHA256]-----+</span><br></pre></td></tr></table></figure>
+
+<p>上述操作会在<code>C:\Users\20538</code>路径下生成<code>.ssh</code>的文件夹，其中有一个<code>id_rsa</code>命名的文件是私钥，带<code>.pub</code>扩展名的文件是公钥</p>
+</li>
+<li><p>Github创建ssh密钥</p>
+<p>登陆到GitHub，操作步骤：右上角小头像-&gt; <code>Setting</code> -&gt; <code>SSH and GPG keys</code>，点击<code>new SSH key</code>，系统会提示<code>Cofirm access</code>（确认访问），输入Github密码点击<code>Confim</code>，就可实现SSH免密码访问</p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%80%EF%BC%89Images/Github_1.png"><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%80%EF%BC%89Images/Github_2.png"><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%80%EF%BC%89Images/Github_3.png"></p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%80%EF%BC%89Images/Github_4.png"></p>
+<p>其中，<code>Title</code>可以随便填写，最好能让自己知道这个公钥是哪个设备，<code>key</code>把生成的<code>.pub</code>文件中的所有内容复制粘贴进去</p>
+</li>
+<li><p>验证ssh连接是否成功</p>
+<p>打开终端（<code>Win+R</code>键，输入<code>cmd</code>）或者终端管理员命令行页面，执行命令<code>ssh -T git@github.com</code>，提示<code>Are you sure you want to continue connecting (yes/no/[fingerprint])?</code>（您确定要继续连接吗（是&#x2F;否&#x2F;[指纹]）？）需要手动输入<code>yes</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">PS C:\Users\20538&gt; ssh -T git@github.com</span><br><span class="line">The authenticity of host &#x27;github.com (20.205.243.166)&#x27; can&#x27;t be established.</span><br><span class="line">ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.</span><br><span class="line">This key is not known by any other names</span><br><span class="line">Are you sure you want to continue connecting (yes/no/[fingerprint])? yes</span><br><span class="line">Warning: Permanently added &#x27;github.com&#x27; (ED25519) to the list of known hosts.</span><br><span class="line">Hi Zglao! You&#x27;ve successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure>
+
+<p>出现用户名（<code>Hi Zglao!</code>），博主用户名<code>Zglao</code>，代表访问成功，上述操作之后会在<code>C:\Users\20538</code>路径下生成<code>.ssh</code>的文件夹，其中有一个<code>known_hosts</code>命名的文件是用于存储 SSH客户端已知的服务器公钥，<code>known_hosts.old</code>命名的文件是 <code>known_hosts</code> 文件的一个备份，目的是防止意外删除或修改 <code>known_hosts</code> 文件，导致无法验证之前连接过的服务器</p>
+</li>
+</ul>
+</li>
+<li><p>Github 远程仓库配置</p>
+<ul>
+<li><p>创建仓库</p>
+<p>仓库名格式 GitHub用户名.github.io（博主仓库名是<a target="_blank" rel="noopener" href="https://github.com/Zglao/Zglao.github.io">Zglao.github.io</a>），仓库类型选择<code>Public</code>，其他内容默认，点击<code>Create repository</code></p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%80%EF%BC%89Images/Repositories_1.png"><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%80%EF%BC%89Images/Repositories_2.png"><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%80%EF%BC%89Images/Repositories_3.png"></p>
+</li>
+<li><p>安装hexo部署插件</p>
+<p>打开终端管理员命令行页面，进入<code>D:\Blog</code>路径，执行命令<code>npm install hexo-deployer-git --save</code>，安装hexo部署插件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">PS C:\Users\20538&gt; cd D:\Blog</span><br><span class="line">PS D:\Blog&gt; npm install hexo-deployer-git --save</span><br><span class="line"></span><br><span class="line">added 10 packages in 3s</span><br><span class="line"></span><br><span class="line">29 packages are looking for funding</span><br><span class="line">  run `npm fund` for details</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>配置<code>_comfig.yml</code>文件</p>
+<p><code>_comfig.yml</code>文件路径在<code>D:\Blog</code>，<code>_comfig.yml</code>文件用记事本打开，文件最下面</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/one-command-deployment</span><br><span class="line">deploy:</span><br><span class="line">  type: &#x27;&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>修改为</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/one-command-deployment</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:name/name.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意</strong>：这里的<code>name</code>为用户名，<code>name.github.io</code>为仓库名</p>
+<p>博主GitHub仓库名是<code>Zglao/Zglao.github.io</code>，配置<code>_comfig.yml </code>文件该部分内容修改为</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/one-command-deployment</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:Zglao/Zglao.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>部署到Github</p>
+<p>桌面右键打开<code>Open Git Bash here</code>终端命令行页面，进入<code>D:\Blog</code>路径，执行命令<code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Zg Lao@admin MINGW64 ~/Desktop</span><br><span class="line">$ cd D:\Blog</span><br><span class="line"></span><br><span class="line">Zg Lao@admin MINGW64 /d/Blog</span><br><span class="line">$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Deleted database.</span><br><span class="line">INFO  Deleted public folder.</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Files loaded in 100 ms</span><br><span class="line">...</span><br><span class="line">INFO  Deploy done: git</span><br></pre></td></tr></table></figure>
+
+<p>其中，命令<code>hexo clean</code>是清除缓存文件，<code>hexo g</code>或者<code>hexo generate</code>是生成网页文件，<code>hexo d</code>或者<code>hexo deploy</code>是部署网页文件到Github，显示<code>INFO  Deploy done: git</code>证明已经部署到Github，此时，可以打开浏览器输入<code>Zglao.github.io</code>进入个人博客</p>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/07/25/Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%B8%80)/" data-id="clz0r6w8d0004jofaas4u22nh" class="article-share-link">
+        Share
+      </a>
+      
+    </footer>
+
+  </div>
+
+  
+  
+<nav class="article-nav">
+  
+  
+  <a href="/2024/07/25/Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%B8%89)/" class="article-nav-link">
+    <strong class="article-nav-caption">Older</strong>
+    <div class="article-nav-title">Hexo+Github搭建个人博客(三)</div>
+  </a>
+  
+</nav>
+
+  
+
+  
+  
+  
+  
+
+</article>
+</section>
+    <footer class="footer">
+  <div class="outer">
+    <ul class="list-inline">
+      <li>Hexo &copy; 2024</li>
+      
+        <li>
+          
+            <a href="https://beian.miit.gov.cn/" target="_blank"></a>
+            
+        </li>
+      
+      <li>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></li>
+      <li>theme  <a target="_blank" rel="noopener" href="https://github.com/zhwangart/hexo-theme-ocean">Ocean</a></li>
+    </ul>
+    <p><ul class="list-inline">
+  
+  <li><i class="fe fe-smile-alt tooltip" data-tooltip="UV"></i> <span id="busuanzi_value_site_uv"></span></li>
+  
+  <li><i class="fe fe-bookmark tooltip" data-tooltip="PV"></i> <span id="busuanzi_value_page_pv"></span></li>
+  
+</ul></p>
+  </div>
+</footer>
+  </main>
+  <aside class="sidebar">
+    <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/hexo.svg" alt="Hexo"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">Home</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">Archives</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/gallery">Gallery</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">About</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link nav-item-search" title="Search">
+        <i class="fe fe-search"></i>
+        Search
+      </a>
+    </li>
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      <div class="totop" id="totop">
+  <i class="fe fe-rocket"></i>
+</div>
+    </li>
+    <li class="nav-item">
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="fe fe-feed"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+  </aside>
+  
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/js/jquery.justifiedGallery.min.js"></script>
+
+
+<script src="/js/lazyload.min.js"></script>
+
+
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+
+<script src="/js/tocbot.min.js"></script>
+
+
+<script>
+  // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+  tocbot.init({
+    tocSelector: '.tocbot',
+    contentSelector: '.article-entry',
+    headingSelector: 'h1, h2, h3, h4, h5, h6',
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    positionFixedSelector: '.tocbot',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto',
+  });
+</script>
+
+
+
+<script src="/js/ocean.js"></script>
+
+</body>
+
+</html>
