@@ -73,7 +73,7 @@
       
   
   <h2 class="article-title" itemprop="name">
-    <a href="/2024/08/26/Excel(%E4%BA%8C)/">Excel(一)--基础</a>
+    <a href="/2024/08/26/Excel(%E4%BA%8C)/">Excel(二)--基础</a>
   </h2>
   
   
@@ -190,7 +190,7 @@
 <li><p>SUMIFS   根据多个条件对一系列数字求和</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=SUMIFS(B1:B10, A1:A10, &quot;&gt;5&quot;, C1:C10, &quot;&lt;18&quot;)  # 21</span><br></pre></td></tr></table></figure>
 
-<p><img src="/../Excel%EF%BC%88%E4%BA%8C%EF%BC%89Images/SUMIFS.png"></p>
+<p><img src="/../ExcelImages/SUMIFS.png"></p>
 </li>
 <li><p>MEDIAN   返回一组数字的中位数</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">=MEDIAN(1, 3, 3, 6, 7, 8, 9)  # 取中位数6</span><br><span class="line">=MEDIAN(A1:A10)  # 取A1到A10单元格的中位数</span><br></pre></td></tr></table></figure>
@@ -291,13 +291,13 @@
 <li><p>LEN   返回文本字符串中的字符数</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">=LEN(&quot;Hello&quot;)  # 5</span><br><span class="line">=LEN(A1)  # 5</span><br></pre></td></tr></table></figure>
 
-<p><img src="/../Excel%EF%BC%88%E4%BA%8C%EF%BC%89Images/LEN.png"></p>
+<p><img src="/../ExcelImages/LEN.png"></p>
 </li>
 <li><p>FIND   查找字符串中第一次出现另一个字符串的位置</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">=FIND(&quot;e&quot;, &quot;Hello&quot;)  # 2</span><br><span class="line">=FIND(&quot;e&quot;, A1)  # 2</span><br><span class="line">=FIND(&quot;a&quot;, &quot;Hello&quot;)  # #VALUE!</span><br><span class="line">=FIND(&quot;a&quot;, A1)  # #VALUE!</span><br></pre></td></tr></table></figure>
 
-<p><img src="/../Excel%EF%BC%88%E4%BA%8C%EF%BC%89Images/FIND_1.png"></p>
-<p><img src="/../Excel%EF%BC%88%E4%BA%8C%EF%BC%89Images/FIND_2.png"></p>
+<p><img src="/../ExcelImages/FIND_1.png"></p>
+<p><img src="/../ExcelImages/FIND_2.png"></p>
 </li>
 <li><p>LEFT   返回字符串中最左侧的指定数量的字符</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">=LEFT(&quot;Hello&quot;, 2)  # &quot;He&quot;</span><br><span class="line">=LEFT(A1, 2)  # &quot;He&quot;</span><br></pre></td></tr></table></figure>
@@ -323,7 +323,7 @@
 <li><p>TEXTJOIN   多个文本字符串合并为一个文本字符串，可以指定分隔符</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">=TEXTJOIN(&quot;, &quot;, TRUE, &quot;Apple&quot;, &quot;Banana&quot;)  # &quot;Apple, Banana&quot;</span><br><span class="line">=TEXTJOIN(&quot;, &quot;, TRUE, A1:B1)  # &quot;Apple, Banana&quot;</span><br></pre></td></tr></table></figure>
 
-<p><img src="/../Excel%EF%BC%88%E4%BA%8C%EF%BC%89Images/TEXTJOIN.png"></p>
+<p><img src="/../ExcelImages/TEXTJOIN.png"></p>
 </li>
 <li><p>…</p>
 </li>
@@ -342,7 +342,7 @@
 </ul>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">=IF(A1 &gt; 10, &quot;Value is greater than 10&quot;, &quot;Value is 10 or less&quot;)  # 判断A1单元格的值，A1单元格的值大于10，输出&quot;Value is greater than 10&quot;; A1单元格的值小于等于10，输出&quot;Value is 10 or less&quot;;</span><br><span class="line">=IF(A1 &gt; 10, &quot;Value is greater than 10&quot;, &quot;Value is 10 or less&quot;)  # Value is greater than 10</span><br></pre></td></tr></table></figure>
 
-<p><img src="/../Excel%EF%BC%88%E4%BA%8C%EF%BC%89Images/IF.png"></p>
+<p><img src="/../ExcelImages/IF.png"></p>
 </li>
 <li><p>OR   检查多个条件是否至少有一个为真</p>
 <p><strong>格式</strong></p>
@@ -351,7 +351,7 @@
 <p><code>logical1</code>, <code>logical2</code>, …: 逻辑条件列表</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">=OR(A1 &gt; 10, B1 &lt; 5)  # 如果A1大于10或B1小于5，则返回TRUE</span><br><span class="line">=OR(A1 &gt; 10, B1 &lt; 5)  # TRUE</span><br></pre></td></tr></table></figure>
 
-<p><img src="/../Excel%EF%BC%88%E4%BA%8C%EF%BC%89Images/OR.png"></p>
+<p><img src="/../ExcelImages/OR.png"></p>
 </li>
 <li><p>AND   检查多个条件是否全部为真</p>
 <p><strong>格式</strong></p>
@@ -360,7 +360,7 @@
 <p><code>logical1</code>, <code>logical2</code>, …: 逻辑条件列表</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">=AND(A1 &gt; 10, B1 &lt; 5)  # 只有当A1大于10且B1小于5时，才返回TRUE</span><br><span class="line">=AND(A1 &gt; 10, B1 &lt; 5)  # FALSE</span><br></pre></td></tr></table></figure>
 
-<p><img src="/../Excel%EF%BC%88%E4%BA%8C%EF%BC%89Images/AND.png"></p>
+<p><img src="/../ExcelImages/AND.png"></p>
 </li>
 <li><p>…</p>
 </li>
@@ -393,7 +393,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/08/26/Excel(%E4%BA%8C)/" data-id="cm0dhsyqv0003qcck8o4uav0e" class="article-share-link">
+      <a data-url="http://example.com/2024/08/26/Excel(%E4%BA%8C)/" data-id="cm0drl8x60008w4ck1zxoaq94" class="article-share-link">
         Share
       </a>
       
@@ -890,7 +890,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/08/25/Excel(%E4%B8%80)/" data-id="cm0dhsyqq0001qcck8eww49ci" class="article-share-link">
+      <a data-url="http://example.com/2024/08/25/Excel(%E4%B8%80)/" data-id="cm0drl8wt0001w4ckhrjnarit" class="article-share-link">
         Share
       </a>
       
@@ -1030,7 +1030,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/07/25/Gitee%E4%BB%93%E5%BA%93%E8%AE%BE%E7%BD%AE%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5/" data-id="cm0dhsyqx0004qcckhly40atp" class="article-share-link">
+      <a data-url="http://example.com/2024/07/25/Gitee%E4%BB%93%E5%BA%93%E8%AE%BE%E7%BD%AE%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5/" data-id="cm0drl8wz0003w4ckeect1jm2" class="article-share-link">
         Share
       </a>
       
@@ -1092,27 +1092,27 @@
 <li><p>添加菜单配置</p>
 <ul>
 <li><p><code>Home</code>（首页）、<code>Archives</code>（目录）、<code>Gallery</code>（相册）、<code>About</code>（关于我）、<code>Search</code>（搜索）五部分，其中博客选择的主题中<code>Gallery</code>（相册）、<code>About</code>（关于我）、点击提示没有被找到，需要的话可进行配置</p>
-<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%89%EF%BC%89Images/Hexo_1.png"></p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/Hexo_3.png"></p>
 </li>
 <li><p><code>About</code>（关于我）</p>
 <p>桌面右键打开<code>Open Git Bash here</code>终端命令行页面，进入<code>D:\Blog</code>路径执行命令<code>hexo new page about</code>，会在路径<code>D:\Blog\source</code>下生成<code>about</code>文件夹以及<code>about</code>文件夹下文件<code>index.md</code>，在<code>index.md</code>文件中编辑内容，编辑完成后，在<code>D:\Blog</code>路径，执行命令<code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code>上传<code>Github</code></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">Zg Lao@admin MINGW64 ~/Desktop</span><br><span class="line">$ cd D:\Blog</span><br><span class="line"></span><br><span class="line">Zg Lao@admin MINGW64 /d/Blog</span><br><span class="line">$ hexo new page about</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Created: D:\Blog\source\about\index.md</span><br><span class="line"></span><br><span class="line">Zg Lao@admin MINGW64 /d/Blog</span><br><span class="line">$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Deleted database.</span><br><span class="line">INFO  Deleted public folder.</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Files loaded in 176 ms</span><br><span class="line">...</span><br><span class="line">INFO  Deploy done: git</span><br></pre></td></tr></table></figure>
 
-<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%89%EF%BC%89Images/about_1.png"></p>
-<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%89%EF%BC%89Images/about_2.png"></p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/about_1.png"></p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/about_2.png"></p>
 <p>执行完成，打开浏览器输入<code>Zglao.github.io</code>进入个人博客查看<code>About</code>（关于）页面</p>
-<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%89%EF%BC%89Images/about_3.png"></p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/about_3.png"></p>
 </li>
 <li><p><code>Gallery</code>（相册）</p>
 <p>桌面右键打开<code>Open Git Bash here</code>终端命令行页面，进入<code>D:\Blog</code>路径执行命令<code>hexo new page gallery</code>，会在路径<code>D:\Blog\source</code>下生成<code>gallery</code>文件夹以及<code>gallery</code>文件夹下文件<code>index.md</code>，在<code>index.md</code>文件中编辑内容（手动在路径<code>D:\Blog\source</code>下创建文件夹存放相册中的图像，博主命名<code>Gallery Images</code>），编辑完成后，在<code>D:\Blog</code>路径，执行命令<code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code>上传<code>Github</code></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">Zg Lao@admin MINGW64 ~/Desktop</span><br><span class="line">$ cd D:\Blog</span><br><span class="line"></span><br><span class="line">Zg Lao@admin MINGW64 /d/Blog</span><br><span class="line">$ hexo new page gallery</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Created: D:\Blog\source\gallery\index.md</span><br><span class="line"></span><br><span class="line">Zg Lao@admin MINGW64 /d/Blog</span><br><span class="line">$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Deleted database.</span><br><span class="line">INFO  Deleted public folder.</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Files loaded in 180 ms</span><br><span class="line">...</span><br><span class="line">INFO  Deploy done: git</span><br></pre></td></tr></table></figure>
 
-<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%89%EF%BC%89Images/gallery_1.png"></p>
-<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%89%EF%BC%89Images/gallery_2.png"></p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/gallery_1.png"></p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/gallery_2.png"></p>
 <p>执行完成，打开浏览器输入<code>Zglao.github.io</code>进入个人博客查看<code>Gallery</code>（相册）页面</p>
-<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%89%EF%BC%89Images/gallery_3.png"></p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/gallery_3.png"></p>
 <p>博主路径<code>D:\Blog\source</code>，<code>gallery</code>文件夹下文件<code>index.md</code>内容</p>
-<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%89%EF%BC%89Images/gallery_4.png"></p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/gallery_4.png"></p>
 </li>
 </ul>
 </li>
@@ -1125,8 +1125,8 @@
 <p>修改为</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Site</span><br><span class="line">title: 路浩</span><br><span class="line">subtitle: &#x27;&#x27;</span><br><span class="line">description: &#x27;&#x27;</span><br></pre></td></tr></table></figure>
 
-<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%89%EF%BC%89Images/Hexo_2.png"></p>
-<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%89%EF%BC%89Images/Hexo_3.png"></p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/Hexo_2.png"></p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/Hexo_5.png"></p>
 </li>
 <li></li>
 </ul>
@@ -1139,7 +1139,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/07/25/Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%B8%89)/" data-id="cm0dhsyr00007qcckh5njh3y1" class="article-share-link">
+      <a data-url="http://example.com/2024/07/25/Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%B8%89)/" data-id="cm0drl8x40006w4ck1nj9flmp" class="article-share-link">
         Share
       </a>
       
@@ -1203,15 +1203,15 @@
 <li><p>初始化<code>Hexo</code>后默认主题是<code>landscape</code></p>
 </li>
 <li><p>通过<code>Hexo</code>官网（<a target="_blank" rel="noopener" href="https://hexo.io/themes/">HexoTheme</a>）自由选择喜欢的主题，点击主题名下面<code>Visit preview site</code>可以对主题进行浏览</p>
-<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%BA%8C%EF%BC%89Images/HexoTheme.png"></p>
-<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%BA%8C%EF%BC%89Images/HexoTheme_Visit-preview-site.png"></p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/HexoTheme.png"></p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/HexoTheme_Visit-preview-site.png"></p>
 </li>
 </ul>
 </li>
 <li><p>主题下载</p>
 <ul>
 <li><p>克隆主题格式<code>git clone [url] themes/xxx</code>（<code>url</code>是点击主题名跳转页面的<code>url</code>，<code>xxx</code>是主题名），博主采用<code>Ocean</code>主题</p>
-<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%BA%8C%EF%BC%89Images/HexoTheme_url.png"></p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/HexoTheme_url.png"></p>
 </li>
 <li><p>桌面右键打开<code>Open Git Bash here</code>终端命令行页面，进入<code>D:\Blog</code>路径，执行命令<code>git clone https://github.com/zhwangart/hexo-theme-ocean themes/Ocean</code>，克隆喜欢的主题到<code>Blog</code>文件夹中</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Zg Lao@admin MINGW64 ~/Desktop</span><br><span class="line">$ cd D:\Blog</span><br><span class="line"></span><br><span class="line">Zg Lao@admin MINGW64 /d/Blog</span><br><span class="line">$ git clone https://github.com/zhwangart/hexo-theme-ocean themes/Ocean</span><br><span class="line">Cloning into &#x27;themes/Ocean&#x27;...</span><br><span class="line">remote: Enumerating objects: 959, done.</span><br><span class="line">remote: Counting objects: 100% (153/153), done.</span><br><span class="line">remote: Compressing objects: 100% (103/103), done.</span><br><span class="line">remote: Total 959 (delta 79), reused 96 (delta 48), pack-reused 806</span><br><span class="line">Receiving objects: 100% (959/959), 12.92 MiB | 4.79 MiB/s, done.</span><br><span class="line">Resolving deltas: 100% (568/568), done.</span><br></pre></td></tr></table></figure>
@@ -1229,7 +1229,7 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https://hexo.io/plugins/</span><br><span class="line">## Themes: https://hexo.io/themes/</span><br><span class="line">theme: Ocean</span><br></pre></td></tr></table></figure>
 
 <p>配置完成后，桌面右键打开<code>Open Git Bash here</code>终端命令行页面，进入<code>D:\Blog</code>路径，执行命令<code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code>，部署到<code>Github</code>，进入个人博客可看到主题已修改</p>
-<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%BA%8C%EF%BC%89Images/Hexo.png"></p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/Hexo_2.png"></p>
 </li>
 <li><p>其他配置会在后续博客文章中发布</p>
 </li>
@@ -1241,11 +1241,11 @@
 <ul>
 <li><p>官网下载（<code>Ctrl+</code>单击链接自动跳转，付费版）</p>
 <p><a target="_blank" rel="noopener" href="https://typoraio.cn/">Typora 官方中文站 (typoraio.cn)</a></p>
-<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%BA%8C%EF%BC%89Images/Typora_1.png"></p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/Typora_1.png"></p>
 </li>
 <li><p>博主提供的下载链接（<code>Ctrl+</code>单击链接自动跳转，免费版），根据跳转页面安装教程安装</p>
 <p><a target="_blank" rel="noopener" href="https://gitee.com/zglao/InstallPackage">InstallPackage: 安装包 (gitee.com)</a></p>
-<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%BA%8C%EF%BC%89Images/Typora_2.png"></p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/Typora_2.png"></p>
 </li>
 </ul>
 </li>
@@ -1255,8 +1255,8 @@
 </li>
 <li><p>编辑内容</p>
 <p>根据内容设置标题等级、代码块（公式块）、有&#x2F;无序列表、加粗、下划线等</p>
-<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%BA%8C%EF%BC%89Images/Typora_3.png"></p>
-<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%BA%8C%EF%BC%89Images/Typora_4.png"></p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/Typora_3.png"></p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/Typora_4.png"></p>
 </li>
 <li><p>文档路径保存</p>
 <p>保存在<code>Hexo+Github搭建个人博客（一）</code>文章中创建的<code>Blog</code>文件夹<code>D:\Blog\source\_posts\</code>路径</p>
@@ -1267,11 +1267,11 @@
 <ul>
 <li><p>图片路径</p>
 <p>在<code>Hexo+Github搭建个人博客（一）</code>文章中创建的Blog文件夹<code>D:\Blog\source\</code>路径创建文件夹，命名<code>Images</code>（博主命名<code>Hexo+Github搭建个人博客（一）Images</code>）</p>
-<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%BA%8C%EF%BC%89Images/Picture-Path.png"></p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/Picture-Path.png"></p>
 </li>
 <li><p>引用图片格式</p>
 <p><code>![](路径+图片名)</code>，如红框所示</p>
-<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%BA%8C%EF%BC%89Images/Image_1.png"></p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/Image_1.png"></p>
 <p><strong>注意</strong>：此处引用使用相对引用，路径引用正确，图片会自动显示，否则反之</p>
 </li>
 </ul>
@@ -1284,7 +1284,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/07/25/Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%BA%8C)/" data-id="cm0dhsyr10008qcck4yoxgxlj" class="article-share-link">
+      <a data-url="http://example.com/2024/07/25/Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%BA%8C)/" data-id="cm0drl8x50007w4ckdsre3okc" class="article-share-link">
         Share
       </a>
       
@@ -1342,8 +1342,8 @@
 <ul>
 <li><p>官网路径</p>
 <p><a target="_blank" rel="noopener" href="https://nodejs.cn/">Node.js 中文网 (nodejs.cn)</a></p>
-<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%80%EF%BC%89Images/Node_1.png"></p>
-<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%80%EF%BC%89Images/Node_2.png"></p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/Node_1.png"></p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/Node_2.png"></p>
 </li>
 <li><p>博主提供的下载链接（<code>Ctrl+</code>单击自动跳转，需要登陆自己的<code>Gitee</code>账号)</p>
 <p><a target="_blank" rel="noopener" href="https://gitee.com/zglao/InstallPackage/raw/master/Node-v20.15.0-x64.msi">(https://gitee.com/zglao/InstallPackage/raw/master/Node-v20.15.0-x64.msi)</a></p>
@@ -1352,7 +1352,7 @@
 </li>
 <li><p>安装</p>
 <p>修改安装路径即可，博主安装路径为<code>D:\nodejs</code>，其他默认就可以</p>
-<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%80%EF%BC%89Images/Node_3.png"></p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/Node_3.png"></p>
 </li>
 <li><p>检查是否安装成功</p>
 <p>打开终端（<code>Win+R</code>键，输入<code>cmd</code>）或者终端管理员命令行页面，执行命令<code>node -v</code>、<code>npm -v</code>或者<code>node --version</code>、<code>npm --version</code></p>
@@ -1366,8 +1366,8 @@
 <ul>
 <li><p>官网路径</p>
 <p><a target="_blank" rel="noopener" href="https://git-scm.com/download">Git - Downloads (git-scm.com)</a></p>
-<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%80%EF%BC%89Images/Git_1.png"></p>
-<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%80%EF%BC%89Images/Git_2.png"></p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/Git_1.png"></p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/Git_2.png"></p>
 </li>
 <li><p>博主提供的下载链接（<code>Ctrl+</code>单击自动跳转，需要登陆自己的<code>Gitee</code>账号）</p>
 <p><a target="_blank" rel="noopener" href="https://gitee.com/zglao/InstallPackage/raw/master/Git-2.43.0-64-bit.exe">(https://gitee.com/zglao/InstallPackage/raw/master/Git-2.43.0-64-bit.exe)</a></p>
@@ -1376,9 +1376,9 @@
 </li>
 <li><p>安装</p>
 <p>修改安装路径即可，博主安装路径为<code>D:\Git</code>，其他默认就可以</p>
-<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%80%EF%BC%89Images/Git_3.png"></p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/Git_3.png"></p>
 <p>安装完成，关闭下载窗口，默认浏览器会自动打开版本发布说明</p>
-<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%80%EF%BC%89Images/Git_4.png"></p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/Git_4.png"></p>
 </li>
 <li><p>检查是否安装成功</p>
 <p>桌面右键打开<code>Open Git Bash here</code>终端命令行页面，执行命令<code>git -v</code>或者<code>git --version</code></p>
@@ -1432,7 +1432,7 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">PS D:\Blog&gt; hexo s</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Hexo is running at http://localhost:4000/ . Press Ctrl+C to stop.</span><br></pre></td></tr></table></figure>
 
 <p><code>Ctrl+</code>单击(链接<code>http://localhost:4000/</code>)自动跳转默认浏览器访问，<code>Ctrl+C</code>停止运行</p>
-<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%80%EF%BC%89Images/Hexo.png"></p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/Hexo_1.png"></p>
 <p>此时，<code>Hexo</code>已经部署完成</p>
 </li>
 </ul>
@@ -1459,8 +1459,8 @@
 </li>
 <li><p><code>Github</code>创建<code>ssh</code>密钥</p>
 <p>登陆到<code>GitHub</code>，操作步骤：右上角小头像-&gt;<code>Setting</code>-&gt;<code>SSH and GPG keys</code>，点击<code>new SSH key</code>，系统会提示<code>Cofirm access</code>（确认访问），输入<code>Github</code>密码点击<code>Confim</code>，就可实现<code>SSH</code>免密码访问</p>
-<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%80%EF%BC%89Images/Github_1.png"><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%80%EF%BC%89Images/Github_2.png"><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%80%EF%BC%89Images/Github_3.png"></p>
-<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%80%EF%BC%89Images/Github_4.png"></p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/Github_1.png"><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/Github_2.png"><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/Github_3.png"></p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/Github_4.png"></p>
 <p>其中，<code>Title</code>可以随便填写，最好能让自己知道这个公钥是哪个设备，<code>key</code>把生成的<code>.pub</code>文件中的所有内容复制粘贴进去</p>
 </li>
 <li><p>验证<code>ssh</code>连接是否成功</p>
@@ -1475,7 +1475,7 @@
 <ul>
 <li><p>创建仓库</p>
 <p>仓库名格式<code>GitHub</code>用户名<code>.github.io</code>（博主仓库名是<a target="_blank" rel="noopener" href="https://github.com/Zglao/Zglao.github.io">Zglao.github.io</a>），仓库类型选择<code>Public</code>，其他内容默认，点击<code>Create repository</code></p>
-<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%80%EF%BC%89Images/Repositories_1.png"><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%80%EF%BC%89Images/Repositories_2.png"><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%80%EF%BC%89Images/Repositories_3.png"></p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/Repositories_1.png"><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/Repositories_2.png"><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/Repositories_3.png"></p>
 </li>
 <li><p>安装<code>hexo</code>部署插件</p>
 <p>打开终端管理员命令行页面，进入<code>D:\Blog</code>路径，执行命令<code>npm install hexo-deployer-git --save</code>，安装<code>hexo</code>部署插件</p>
@@ -1505,7 +1505,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/07/25/Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%B8%80)/" data-id="cm0dhsyr00006qcckew38hjv9" class="article-share-link">
+      <a data-url="http://example.com/2024/07/25/Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%B8%80)/" data-id="cm0drl8x30005w4ck7f27hzqm" class="article-share-link">
         Share
       </a>
       
@@ -1570,7 +1570,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/07/25/Hello%20World/" data-id="cm0dhsyqy0005qcck39u00g1x" class="article-share-link">
+      <a data-url="http://example.com/2024/07/25/Hello%20World/" data-id="cm0drl8x20004w4ck8nove09e" class="article-share-link">
         Share
       </a>
       

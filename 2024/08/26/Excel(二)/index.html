@@ -8,7 +8,7 @@
   
   
   <title>
-    Excel(一)--基础 |
+    Excel(二)--基础 |
     
     路浩
   </title>
@@ -41,7 +41,7 @@
       
   
   <h1 class="article-title" itemprop="name">
-    Excel(一)--基础
+    Excel(二)--基础
   </h1>
   
   
@@ -160,7 +160,7 @@
 <li><p>SUMIFS   根据多个条件对一系列数字求和</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=SUMIFS(B1:B10, A1:A10, &quot;&gt;5&quot;, C1:C10, &quot;&lt;18&quot;)  # 21</span><br></pre></td></tr></table></figure>
 
-<p><img src="/../Excel%EF%BC%88%E4%BA%8C%EF%BC%89Images/SUMIFS.png"></p>
+<p><img src="/../ExcelImages/SUMIFS.png"></p>
 </li>
 <li><p>MEDIAN   返回一组数字的中位数</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">=MEDIAN(1, 3, 3, 6, 7, 8, 9)  # 取中位数6</span><br><span class="line">=MEDIAN(A1:A10)  # 取A1到A10单元格的中位数</span><br></pre></td></tr></table></figure>
@@ -261,13 +261,13 @@
 <li><p>LEN   返回文本字符串中的字符数</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">=LEN(&quot;Hello&quot;)  # 5</span><br><span class="line">=LEN(A1)  # 5</span><br></pre></td></tr></table></figure>
 
-<p><img src="/../Excel%EF%BC%88%E4%BA%8C%EF%BC%89Images/LEN.png"></p>
+<p><img src="/../ExcelImages/LEN.png"></p>
 </li>
 <li><p>FIND   查找字符串中第一次出现另一个字符串的位置</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">=FIND(&quot;e&quot;, &quot;Hello&quot;)  # 2</span><br><span class="line">=FIND(&quot;e&quot;, A1)  # 2</span><br><span class="line">=FIND(&quot;a&quot;, &quot;Hello&quot;)  # #VALUE!</span><br><span class="line">=FIND(&quot;a&quot;, A1)  # #VALUE!</span><br></pre></td></tr></table></figure>
 
-<p><img src="/../Excel%EF%BC%88%E4%BA%8C%EF%BC%89Images/FIND_1.png"></p>
-<p><img src="/../Excel%EF%BC%88%E4%BA%8C%EF%BC%89Images/FIND_2.png"></p>
+<p><img src="/../ExcelImages/FIND_1.png"></p>
+<p><img src="/../ExcelImages/FIND_2.png"></p>
 </li>
 <li><p>LEFT   返回字符串中最左侧的指定数量的字符</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">=LEFT(&quot;Hello&quot;, 2)  # &quot;He&quot;</span><br><span class="line">=LEFT(A1, 2)  # &quot;He&quot;</span><br></pre></td></tr></table></figure>
@@ -293,7 +293,7 @@
 <li><p>TEXTJOIN   多个文本字符串合并为一个文本字符串，可以指定分隔符</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">=TEXTJOIN(&quot;, &quot;, TRUE, &quot;Apple&quot;, &quot;Banana&quot;)  # &quot;Apple, Banana&quot;</span><br><span class="line">=TEXTJOIN(&quot;, &quot;, TRUE, A1:B1)  # &quot;Apple, Banana&quot;</span><br></pre></td></tr></table></figure>
 
-<p><img src="/../Excel%EF%BC%88%E4%BA%8C%EF%BC%89Images/TEXTJOIN.png"></p>
+<p><img src="/../ExcelImages/TEXTJOIN.png"></p>
 </li>
 <li><p>…</p>
 </li>
@@ -312,7 +312,7 @@
 </ul>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">=IF(A1 &gt; 10, &quot;Value is greater than 10&quot;, &quot;Value is 10 or less&quot;)  # 判断A1单元格的值，A1单元格的值大于10，输出&quot;Value is greater than 10&quot;; A1单元格的值小于等于10，输出&quot;Value is 10 or less&quot;;</span><br><span class="line">=IF(A1 &gt; 10, &quot;Value is greater than 10&quot;, &quot;Value is 10 or less&quot;)  # Value is greater than 10</span><br></pre></td></tr></table></figure>
 
-<p><img src="/../Excel%EF%BC%88%E4%BA%8C%EF%BC%89Images/IF.png"></p>
+<p><img src="/../ExcelImages/IF.png"></p>
 </li>
 <li><p>OR   检查多个条件是否至少有一个为真</p>
 <p><strong>格式</strong></p>
@@ -321,7 +321,7 @@
 <p><code>logical1</code>, <code>logical2</code>, …: 逻辑条件列表</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">=OR(A1 &gt; 10, B1 &lt; 5)  # 如果A1大于10或B1小于5，则返回TRUE</span><br><span class="line">=OR(A1 &gt; 10, B1 &lt; 5)  # TRUE</span><br></pre></td></tr></table></figure>
 
-<p><img src="/../Excel%EF%BC%88%E4%BA%8C%EF%BC%89Images/OR.png"></p>
+<p><img src="/../ExcelImages/OR.png"></p>
 </li>
 <li><p>AND   检查多个条件是否全部为真</p>
 <p><strong>格式</strong></p>
@@ -330,7 +330,7 @@
 <p><code>logical1</code>, <code>logical2</code>, …: 逻辑条件列表</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">=AND(A1 &gt; 10, B1 &lt; 5)  # 只有当A1大于10且B1小于5时，才返回TRUE</span><br><span class="line">=AND(A1 &gt; 10, B1 &lt; 5)  # FALSE</span><br></pre></td></tr></table></figure>
 
-<p><img src="/../Excel%EF%BC%88%E4%BA%8C%EF%BC%89Images/AND.png"></p>
+<p><img src="/../ExcelImages/AND.png"></p>
 </li>
 <li><p>…</p>
 </li>
@@ -363,7 +363,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/08/26/Excel(%E4%BA%8C)/" data-id="cm0dhsyqv0003qcck8o4uav0e" class="article-share-link">
+      <a data-url="http://example.com/2024/08/26/Excel(%E4%BA%8C)/" data-id="cm0drl8x60008w4ck1zxoaq94" class="article-share-link">
         Share
       </a>
       
