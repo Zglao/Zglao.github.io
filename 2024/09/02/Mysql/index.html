@@ -68,212 +68,218 @@
       
       
       
-        <h2 id="SQL语句及其种类"><a href="#SQL语句及其种类" class="headerlink" title="SQL语句及其种类"></a>SQL语句及其种类</h2><p>数据定义语言DDL（Data Definition Language）</p>
+        <h2 id="一、相关说明"><a href="#一、相关说明" class="headerlink" title="一、相关说明"></a>一、相关说明</h2><ul>
+<li>更新日期<code>2024</code>年<code>9</code>月<code>3</code>日 <code>14</code>点<code>09</code>分（持续更新中）</li>
+</ul>
+<h2 id="二、Mysql相关知识"><a href="#二、Mysql相关知识" class="headerlink" title="二、Mysql相关知识"></a>二、Mysql相关知识</h2><ul>
+<li><p>数据库基础</p>
 <ul>
-<li>CREATE、DROP、ALTER、…<ul>
-<li>创建数据库<ul>
-<li>CREATE DATABASE 数据库名;</li>
-</ul>
+<li><p>命令行登陆命令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure>
+
+
 </li>
-<li>删除数据库<ul>
-<li>DROP DATABASE 数据库名;</li>
-</ul>
-</li>
-<li>使用数据库<ul>
-<li>USE 数据库名;</li>
-</ul>
-</li>
-<li>创建表<ul>
-<li>CREATE TABLE 表名( 列名1 列1类型, … 列名n 列n类型, PRIMARY KEY ( <code>列名</code> ) );</li>
-</ul>
-</li>
-<li>删除表<ul>
-<li>DROP TABLE 表名;</li>
-</ul>
-</li>
-<li>查看数据库、数据表、表结构<ul>
-<li>SHOW DATABASES;</li>
-<li>SHOW TABLES;</li>
-<li>DESC 表名; 或 DESCRIBE 表名;</li>
-</ul>
-</li>
-<li>原数据表的结构，索引<ul>
-<li>SHOW CREATE TABLE 表名;</li>
-</ul>
-</li>
-<li>修改表名<ul>
-<li>RENAME TABLE 原表名 to 新表名;</li>
+<li></li>
 </ul>
 </li>
 </ul>
-</li>
-</ul>
-<p>数据查询语言DQL（Data Query Language）</p>
+<h2 id="三、SQL语句及其种类"><a href="#三、SQL语句及其种类" class="headerlink" title="三、SQL语句及其种类"></a>三、SQL语句及其种类</h2><ul>
+<li><p>数据定义语言DDL（Data Definition Language）——CREATE、DROP、ALTER、…</p>
 <ul>
-<li>SELECT<ul>
-<li>简单查询<ul>
-<li>SELECT * FROM 表名 WHERE 字段&#x3D;‘值’;</li>
-<li>SELECT * FROM 表名 WHERE 条件 IN(‘值’,‘值’,…,’值‘);</li>
-</ul>
+<li><p>创建数据库</p>
+<p>CREATE DATABASE 数据库名;</p>
 </li>
-<li>联表查询<ul>
-<li>左连接<ul>
-<li>SELECT a.*,b.字段(需要的值) FROM B表名 b LEFT JOIN A表名 a ON a.字段 &#x3D;b.字段 WHERE 字段&#x3D;‘值’;</li>
-</ul>
+<li><p>删除数据库</p>
+<p>DROP DATABASE 数据库名;</p>
 </li>
-</ul>
+<li><p>使用数据库</p>
+<p>USE 数据库名;</p>
 </li>
-<li>嵌套查询<ul>
-<li>SELECT * FROM A表名 WHERE 字段1 IN(SELECT 字段1 FROM B表名 WHERE 字段3 &#x3D;’值’);</li>
-</ul>
+<li><p>创建表</p>
+<p>CREATE TABLE 表名(</p>
+<p>​		列名1 列1类型,</p>
+<p>​		…</p>
+<p>​		列名n 列n类型,</p>
+<p>​		PRIMARY KEY (‘列名’) </p>
+<p>);</p>
 </li>
-<li>其他查询<ul>
-<li>去掉重复值<ul>
-<li>DISTINCT<ul>
-<li>SELECT DISTINCT 字段 FROM 表名;</li>
-</ul>
+<li><p>删除表</p>
+<p>DROP TABLE 表名;</p>
 </li>
-</ul>
+<li><p>查看数据库、数据表、表结构</p>
+<p>SHOW DATABASES;</p>
+<p>SHOW TABLES;</p>
+<p>DESC 表名; 或 DESCRIBE 表名;</p>
 </li>
-<li>限制行数<ul>
-<li>LIMIT<ul>
-<li>SELECT * FROM 表名 LIMIT 数值;</li>
-</ul>
+<li><p>原数据表的结构，索引</p>
+<p>SHOW CREATE TABLE 表名;</p>
 </li>
-</ul>
-</li>
-<li>范围区间<ul>
-<li>BETWEEN…AND<ul>
-<li>SELECT * FROM 表名 WHERE 字段1 &#x3D; ‘值’ AND 字段2 BETWEEN ‘起始范围’ AND ‘结束范围’;</li>
-</ul>
+<li><p>修改表名</p>
+<p>RENAME TABLE 原表名 TO 新表名;</p>
 </li>
 </ul>
 </li>
-<li>除…之外<ul>
-<li>NOT IN<ul>
-<li>SELECT 字段(需要的值) FROM 表名 WHERE 字段(除…之外) NOT IN (‘值’);</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>包含<ul>
-<li>LIKE<ul>
-<li>SELECT * FROM 表面 WHERE 字段 LIKE ‘%值%’;</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>排序<ul>
-<li>升序<ul>
-<li>SELECT * FROM 表名 WHERE 字段 &#x3D; ‘值’ ORDER BY 排序字段 ASC;</li>
-</ul>
-</li>
-<li>降序<ul>
-<li>SELECT * FROM 表名 WHERE 字段 &#x3D; ‘值’ ORDER BY 排序字段 DESC;</li>
-</ul>
-</li>
-<li>先升序再升序<ul>
-<li>SELECT * FROM 表名 WHERE 字段 &#x3D; ‘值’ ORDER BY 排序字段1 ASC,排序字段2 ASC;</li>
-<li>SELECT * FROM 表名 WHERE 字段 &#x3D; ‘值’ ORDER BY 排序字段1,排序字段2;</li>
-</ul>
-</li>
-<li>先降序再降序<ul>
-<li>SELECT * FROM 表名 WHERE 字段 &#x3D; ‘值’ ORDER BY 排序字段1 DESC,排序字段2 DESC;</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>分组<ul>
-<li>GROUP BY<ul>
-<li>SELECT * FROM 表名 GROUP BY 字段1,…,字段N;</li>
-<li>SELECT * FROM 表名 GROUP BY 字段1,…,字段N ORDER BY 字段 ASC&#x2F;DESC;</li>
-<li>SELECT * FROM 表名 GROUP BY 字段1,…,字段N HAVING 字段(&lt;、&gt;、&#x3D;)值;</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>组合查询<ul>
-<li>UNION ALL<ul>
-<li>SELECT 字段 FROM 表名 WHERE 字段&#x3D;‘值’ UNION ALL SELECT 字段 FROM 表名 WHERE 字段&#x3D;‘值’;</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>设置别名<ul>
-<li>AS<ul>
-<li>SELECT 字段 AS 别名 FROM 表名;</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>WHERE过滤空值<ul>
-<li>WHERE 列名IS NOT NULL</li>
-<li>WHERE 列名 !&#x3D; ‘NULL’</li>
-<li>WHERE 列名 &lt;&gt; ‘NULL’</li>
-</ul>
-</li>
-<li>操作符<ul>
-<li>AND</li>
-<li>OR</li>
-</ul>
-</li>
-<li>值<ul>
-<li>MAX最大值<ul>
-<li>SELECT MAX(字段) FROM 表名;</li>
-</ul>
-</li>
-<li>MIN最小值<ul>
-<li>SELECT MIN(字段) FROM 表名;</li>
-</ul>
-</li>
-<li>AVG平均值<ul>
-<li>SELECT AVG(字段) FROM 表名;</li>
-</ul>
-</li>
-<li>SUM和<ul>
-<li>SELECT SUM(字段) FROM 表名;</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>函数<ul>
-<li>条件函数</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>数据操纵语言DML（Data Manipulation Language）</p>
+<li><p>数据查询语言DQL（Data Query Language）——SELECT</p>
 <ul>
-<li>INSERT、UPDATE、DELETE<ul>
-<li>INSERT INTO 表名 (字段1,字段2,…,字段n) VALUES (‘值1’,’值2’,…,’值n’);</li>
-<li>UPDATE 表名 SET 字段 &#x3D; ’值‘(需要修改的值) WHERE 字段 &#x3D; ‘值’;</li>
-<li>DELETE 表名 WHERE 字段 &#x3D; ‘值’ AND 字段 &#x3D;’值’;</li>
+<li><p>简单查询</p>
+<p>  SELECT * FROM 表名 WHERE 字段&#x3D;’值’;</p>
+<p>  SELECT * FROM 表名 WHERE 条件 IN(‘值’,’值’,…,’值’);</p>
+</li>
+<li><p>联表查询</p>
+<ul>
+<li><p>左连接</p>
+<p>SELECT a.*,b.字段(需要的值) FROM B表名 b LEFT JOIN A表名 a ON a.字段 &#x3D;b.字段 WHERE 字段&#x3D;’值’;</p>
+</li>
+</ul>
+</li>
+<li><p>嵌套查询</p>
+<p>  SELECT * FROM A表名 WHERE 字段1 IN(SELECT 字段1 FROM B表名 WHERE 字段3 &#x3D;’值’);</p>
+</li>
+<li><p>其他查询</p>
+<ul>
+<li><p>去掉重复值</p>
+<ul>
+<li><p>DISTINCT</p>
+<p>SELECT DISTINCT 字段 FROM 表名;</p>
+</li>
+</ul>
+</li>
+<li><p>限制行数</p>
+<ul>
+<li><p>LIMIT</p>
+<p>SELECT * FROM 表名 LIMIT 数值;</p>
+</li>
+</ul>
+</li>
+<li><p>范围区间</p>
+<ul>
+<li><p>BETWEEN…AND</p>
+<p>SELECT * FROM 表名 WHERE 字段1 &#x3D; ‘值’ AND 字段2 BETWEEN ‘起始范围’ AND ‘结束范围’;</p>
+</li>
+</ul>
+</li>
+<li><p>除…之外</p>
+<ul>
+<li><p>NOT IN</p>
+<p>SELECT 字段(需要的值) FROM 表名 WHERE 字段(除…之外) NOT IN (‘值’);</p>
+</li>
+</ul>
+</li>
+<li><p>包含</p>
+<ul>
+<li><p>LIKE</p>
+<p>SELECT * FROM 表面 WHERE 字段 LIKE ‘%值%’;</p>
+</li>
+</ul>
+</li>
+<li><p>排序</p>
+<ul>
+<li><p>升序</p>
+<p>SELECT * FROM 表名 WHERE 字段 &#x3D; ‘值’ ORDER BY 排序字段 ASC;</p>
+</li>
+<li><p>降序</p>
+<p>SELECT * FROM 表名 WHERE 字段 &#x3D; ‘值’ ORDER BY 排序字段 DESC;</p>
+</li>
+<li><p>先升序再升序</p>
+<p>SELECT * FROM 表名 WHERE 字段 &#x3D; ‘值’ ORDER BY 排序字段1 ASC,排序字段2 ASC;</p>
+<p>SELECT * FROM 表名 WHERE 字段 &#x3D; ‘值’ ORDER BY 排序字段1,排序字段2;</p>
+</li>
+<li><p>先降序再降序</p>
+<p>SELECT * FROM 表名 WHERE 字段 &#x3D; ‘值’ ORDER BY 排序字段1 DESC,排序字段2 DESC;</p>
+</li>
+<li><p>分组</p>
+<ul>
+<li><p>GROUP BY</p>
+<p>SELECT * FROM 表名 GROUP BY 字段1,…,字段N;</p>
+<p>SELECT * FROM 表名 GROUP BY 字段1,…,字段N ORDER BY 字段 ASC&#x2F;DESC;</p>
+<p>SELECT * FROM 表名 GROUP BY 字段1,…,字段N HAVING 字段(&lt;、&gt;、&#x3D;)值;</p>
+<p><strong>提示</strong>：# WHERE关键字无法与合计函数一起使用，聚合函数作为筛选条件时，不能用WHERE，而是用HAVING语法 # HAVING关键字放在GROUP BY关键字后面，针对分组后的数据进行筛选</p>
+</li>
+</ul>
+</li>
+<li><p>组合查询</p>
+<ul>
+<li><p>UNION ALL</p>
+<p>SELECT 字段 FROM 表名 WHERE 字段&#x3D;’值’ UNION ALL SELECT 字段 FROM 表名 WHERE 字段&#x3D;’值’;</p>
+</li>
+</ul>
+</li>
+<li><p>设置别名</p>
+<ul>
+<li><p>AS</p>
+<p>SELECT 字段 AS 别名 FROM 表名;</p>
+</li>
+</ul>
+</li>
+<li><p>WHERE过滤空值</p>
+<p>WHERE 列名 IS NOT NULL</p>
+<p>WHERE 列名 !&#x3D; ‘NULL’</p>
+<p>WHERE 列名 &lt;&gt; ‘NULL’</p>
+</li>
+<li><p>操作符</p>
+<p>AND</p>
+<p>OR</p>
+<p><strong>提示</strong>：AND优先级大于OR优先级</p>
+</li>
+<li><p>值</p>
+<ul>
+<li><p>MAX最大值</p>
+<p>SELECT MAX(字段) FROM 表名;</p>
+</li>
+<li><p>MIN最小值</p>
+<p>SELECT MIN(字段) FROM 表名;</p>
+</li>
+<li><p>AVG平均值</p>
+<p>SELECT AVG(字段) FROM 表名;</p>
+</li>
+<li><p>SUM和</p>
+<p>SELECT SUM(字段) FROM 表名;</p>
+</li>
+</ul>
+</li>
+<li><p>函数</p>
+<p>条件函数</p>
+</li>
 </ul>
 </li>
 </ul>
-<p>数据控制语言DCL（Data Control Language）</p>
-<p>- </p>
-<p>其他相关知识</p>
+</li>
+</ul>
+</li>
+<li><p>数据操纵语言DML（Data Manipulation Language）——INSERT、UPDATE、DELETE</p>
 <ul>
+<li><p>INSERT INTO 表名 (字段1,字段2,…,字段n) VALUES (‘值1’,’值2’,…,’值n’);</p>
+</li>
+<li><p>UPDATE 表名 SET 字段 &#x3D; ‘值’(需要修改的值) WHERE 字段 &#x3D; ‘值’;</p>
+</li>
+<li><p>DELETE 表名 WHERE 字段 &#x3D; ‘值’ AND 字段 &#x3D;’值’;</p>
+</li>
+</ul>
+</li>
+<li><p>数据控制语言DCL（Data Control Language）</p>
+<ul>
+<li>…</li>
+</ul>
+</li>
+</ul>
+<h2 id="四、其他相关知识"><a href="#四、其他相关知识" class="headerlink" title="四、其他相关知识"></a>四、其他相关知识</h2><ul>
 <li><p>性能</p>
 <ul>
 <li><p>SELECT</p>
-<ul>
+</li>
 <li><p>SELECT * FROM 表</p>
 <p>查询出表中所有数据，性能比较差</p>
-</li>
-<li><p>SELECT 常量 FROM 表 </p>
+<ul>
+<li>SELECT 常量 FROM 表</li>
+</ul>
 <p>查询出结果是所有记录数的常量，性能比较高</p>
 </li>
+<li><p>SELECT COUNT(*)、SELECT COUNT(1)、SELECT COUNT(主键)</p>
+<ul>
+<li>SELECT COUNT(*)和SELECT COUNT(1)两者返回结果是一样的</li>
+<li>没有主键，使用COUNT(1)比COUNT(*)快</li>
+<li>有主键，那么COUNT(主键)最快</li>
 </ul>
-</li>
-<li><p>SELECT COUNT(*)、SELECT COUNT(1)、SELECT COUNT(字段)</p>
-<p>SELECT COUNT(*)和SELECT COUNT(1)两者返回结果是一样的</p>
-<p>没有主键，使用COUNT(1)比COUNT(*)快</p>
-<p>有主键，那么COUNT(主键)最快</p>
 </li>
 </ul>
 </li>
@@ -282,7 +288,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/09/02/Mysql/" data-id="cm0m034uj0006k0ckckso45xe" class="article-share-link">
+      <a data-url="http://example.com/2024/09/02/Mysql/" data-id="cm0m152z20008isckd6ed5ge0" class="article-share-link">
         Share
       </a>
       
