@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <title>
+    Mysql |
+    
+    路浩
+  </title>
+  <!-- Icon -->
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<script src="/js/pace.min.js"></script>
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <main class="content">
+    <section class="outer">
+  <article id="post-Mysql" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+      
+  
+  <h1 class="article-title" itemprop="name">
+    Mysql
+  </h1>
+  
+  
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2024/09/02/Mysql/" class="article-date">
+  <time datetime="2024-09-02T07:16:12.552Z" itemprop="datePublished">2024-09-02</time>
+</a>
+      
+    </div>
+    
+
+    
+    
+<div class="tocbot"></div>
+
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+      
+        <h2 id="SQL语句及其种类"><a href="#SQL语句及其种类" class="headerlink" title="SQL语句及其种类"></a>SQL语句及其种类</h2><p>数据定义语言DDL（Data Definition Language）</p>
+<ul>
+<li>CREATE、DROP、ALTER、…<ul>
+<li>创建数据库<ul>
+<li>CREATE DATABASE 数据库名;</li>
+</ul>
+</li>
+<li>删除数据库<ul>
+<li>DROP DATABASE 数据库名;</li>
+</ul>
+</li>
+<li>使用数据库<ul>
+<li>USE 数据库名;</li>
+</ul>
+</li>
+<li>创建表<ul>
+<li>CREATE TABLE 表名( 列名1 列1类型, … 列名n 列n类型, PRIMARY KEY ( <code>列名</code> ) );</li>
+</ul>
+</li>
+<li>删除表<ul>
+<li>DROP TABLE 表名;</li>
+</ul>
+</li>
+<li>查看数据库、数据表、表结构<ul>
+<li>SHOW DATABASES;</li>
+<li>SHOW TABLES;</li>
+<li>DESC 表名; 或 DESCRIBE 表名;</li>
+</ul>
+</li>
+<li>原数据表的结构，索引<ul>
+<li>SHOW CREATE TABLE 表名;</li>
+</ul>
+</li>
+<li>修改表名<ul>
+<li>RENAME TABLE 原表名 to 新表名;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>数据查询语言DQL（Data Query Language）</p>
+<ul>
+<li>SELECT<ul>
+<li>简单查询<ul>
+<li>SELECT * FROM 表名 WHERE 字段&#x3D;‘值’;</li>
+<li>SELECT * FROM 表名 WHERE 条件 IN(‘值’,‘值’,…,’值‘);</li>
+</ul>
+</li>
+<li>联表查询<ul>
+<li>左连接<ul>
+<li>SELECT a.*,b.字段(需要的值) FROM B表名 b LEFT JOIN A表名 a ON a.字段 &#x3D;b.字段 WHERE 字段&#x3D;‘值’;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>嵌套查询<ul>
+<li>SELECT * FROM A表名 WHERE 字段1 IN(SELECT 字段1 FROM B表名 WHERE 字段3 &#x3D;’值’);</li>
+</ul>
+</li>
+<li>其他查询<ul>
+<li>去掉重复值<ul>
+<li>DISTINCT<ul>
+<li>SELECT DISTINCT 字段 FROM 表名;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>限制行数<ul>
+<li>LIMIT<ul>
+<li>SELECT * FROM 表名 LIMIT 数值;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>范围区间<ul>
+<li>BETWEEN…AND<ul>
+<li>SELECT * FROM 表名 WHERE 字段1 &#x3D; ‘值’ AND 字段2 BETWEEN ‘起始范围’ AND ‘结束范围’;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>除…之外<ul>
+<li>NOT IN<ul>
+<li>SELECT 字段(需要的值) FROM 表名 WHERE 字段(除…之外) NOT IN (‘值’);</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>包含<ul>
+<li>LIKE<ul>
+<li>SELECT * FROM 表面 WHERE 字段 LIKE ‘%值%’;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>排序<ul>
+<li>升序<ul>
+<li>SELECT * FROM 表名 WHERE 字段 &#x3D; ‘值’ ORDER BY 排序字段 ASC;</li>
+</ul>
+</li>
+<li>降序<ul>
+<li>SELECT * FROM 表名 WHERE 字段 &#x3D; ‘值’ ORDER BY 排序字段 DESC;</li>
+</ul>
+</li>
+<li>先升序再升序<ul>
+<li>SELECT * FROM 表名 WHERE 字段 &#x3D; ‘值’ ORDER BY 排序字段1 ASC,排序字段2 ASC;</li>
+<li>SELECT * FROM 表名 WHERE 字段 &#x3D; ‘值’ ORDER BY 排序字段1,排序字段2;</li>
+</ul>
+</li>
+<li>先降序再降序<ul>
+<li>SELECT * FROM 表名 WHERE 字段 &#x3D; ‘值’ ORDER BY 排序字段1 DESC,排序字段2 DESC;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>分组<ul>
+<li>GROUP BY<ul>
+<li>SELECT * FROM 表名 GROUP BY 字段1,…,字段N;</li>
+<li>SELECT * FROM 表名 GROUP BY 字段1,…,字段N ORDER BY 字段 ASC&#x2F;DESC;</li>
+<li>SELECT * FROM 表名 GROUP BY 字段1,…,字段N HAVING 字段(&lt;、&gt;、&#x3D;)值;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>组合查询<ul>
+<li>UNION ALL<ul>
+<li>SELECT 字段 FROM 表名 WHERE 字段&#x3D;‘值’ UNION ALL SELECT 字段 FROM 表名 WHERE 字段&#x3D;‘值’;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>设置别名<ul>
+<li>AS<ul>
+<li>SELECT 字段 AS 别名 FROM 表名;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>WHERE过滤空值<ul>
+<li>WHERE 列名IS NOT NULL</li>
+<li>WHERE 列名 !&#x3D; ‘NULL’</li>
+<li>WHERE 列名 &lt;&gt; ‘NULL’</li>
+</ul>
+</li>
+<li>操作符<ul>
+<li>AND</li>
+<li>OR</li>
+</ul>
+</li>
+<li>值<ul>
+<li>MAX最大值<ul>
+<li>SELECT MAX(字段) FROM 表名;</li>
+</ul>
+</li>
+<li>MIN最小值<ul>
+<li>SELECT MIN(字段) FROM 表名;</li>
+</ul>
+</li>
+<li>AVG平均值<ul>
+<li>SELECT AVG(字段) FROM 表名;</li>
+</ul>
+</li>
+<li>SUM和<ul>
+<li>SELECT SUM(字段) FROM 表名;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>函数<ul>
+<li>条件函数</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>数据操纵语言DML（Data Manipulation Language）</p>
+<ul>
+<li>INSERT、UPDATE、DELETE<ul>
+<li>INSERT INTO 表名 (字段1,字段2,…,字段n) VALUES (‘值1’,’值2’,…,’值n’);</li>
+<li>UPDATE 表名 SET 字段 &#x3D; ’值‘(需要修改的值) WHERE 字段 &#x3D; ‘值’;</li>
+<li>DELETE 表名 WHERE 字段 &#x3D; ‘值’ AND 字段 &#x3D;’值’;</li>
+</ul>
+</li>
+</ul>
+<p>数据控制语言DCL（Data Control Language）</p>
+<p>- </p>
+<p>其他相关知识</p>
+<ul>
+<li><p>性能</p>
+<ul>
+<li><p>SELECT</p>
+<ul>
+<li><p>SELECT * FROM 表</p>
+<p>查询出表中所有数据，性能比较差</p>
+</li>
+<li><p>SELECT 常量 FROM 表 </p>
+<p>查询出结果是所有记录数的常量，性能比较高</p>
+</li>
+</ul>
+</li>
+<li><p>SELECT COUNT(*)、SELECT COUNT(1)、SELECT COUNT(字段)</p>
+<p>SELECT COUNT(*)和SELECT COUNT(1)两者返回结果是一样的</p>
+<p>没有主键，使用COUNT(1)比COUNT(*)快</p>
+<p>有主键，那么COUNT(主键)最快</p>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/09/02/Mysql/" data-id="cm0m034uj0006k0ckckso45xe" class="article-share-link">
+        Share
+      </a>
+      
+    </footer>
+
+  </div>
+
+  
+  
+<nav class="article-nav">
+  
+  <a href="/2024/09/03/Python/" class="article-nav-link">
+    <strong class="article-nav-caption">Newer</strong>
+    <div class="article-nav-title">
+      
+      Python学习思路
+      
+    </div>
+  </a>
+  
+  
+  <a href="/2024/08/26/Excel(%E4%BA%8C)/" class="article-nav-link">
+    <strong class="article-nav-caption">Older</strong>
+    <div class="article-nav-title">Excel(二)--基础</div>
+  </a>
+  
+</nav>
+
+  
+
+  
+  
+  
+  
+
+</article>
+</section>
+    <footer class="footer">
+  <div class="outer">
+    <ul class="list-inline">
+      <li>路浩 &copy; 2024</li>
+      
+        <li>
+          
+            <a href="https://beian.miit.gov.cn/" target="_blank"></a>
+            
+        </li>
+      
+      <li>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></li>
+      <li>theme  <a target="_blank" rel="noopener" href="https://github.com/zhwangart/hexo-theme-ocean">Ocean</a></li>
+    </ul>
+    <p><ul class="list-inline">
+  
+  <li><i class="fe fe-smile-alt tooltip" data-tooltip="UV"></i> <span id="busuanzi_value_site_uv"></span></li>
+  
+  <li><i class="fe fe-bookmark tooltip" data-tooltip="PV"></i> <span id="busuanzi_value_page_pv"></span></li>
+  
+</ul></p>
+  </div>
+</footer>
+  </main>
+  <aside class="sidebar">
+    <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/hexo.svg" alt="路浩"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">Home</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">Archives</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/gallery">Gallery</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">About</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link nav-item-search" title="Search">
+        <i class="fe fe-search"></i>
+        Search
+      </a>
+    </li>
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      <div class="totop" id="totop">
+  <i class="fe fe-rocket"></i>
+</div>
+    </li>
+    <li class="nav-item">
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="fe fe-feed"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+  </aside>
+  
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/js/jquery.justifiedGallery.min.js"></script>
+
+
+<script src="/js/lazyload.min.js"></script>
+
+
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+
+<script src="/js/tocbot.min.js"></script>
+
+
+<script>
+  // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+  tocbot.init({
+    tocSelector: '.tocbot',
+    contentSelector: '.article-entry',
+    headingSelector: 'h1, h2, h3, h4, h5, h6',
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    positionFixedSelector: '.tocbot',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto',
+  });
+</script>
+
+
+
+<script src="/js/ocean.js"></script>
+
+</body>
+
+</html>
