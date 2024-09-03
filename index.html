@@ -73,7 +73,7 @@
       
   
   <h2 class="article-title" itemprop="name">
-    <a href="/2024/09/03/Python/">Python学习思路</a>
+    <a href="/2024/09/03/Python/">Python</a>
   </h2>
   
   
@@ -285,7 +285,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/09/03/Python/" data-id="cm0m152z3000aisck3d2vfk4j" class="article-share-link">
+      <a data-url="http://example.com/2024/09/03/Python/" data-id="cm0m4cczq000ansck33ocad44" class="article-share-link">
         Share
       </a>
       
@@ -334,15 +334,30 @@
       
       
         <h2 id="一、相关说明"><a href="#一、相关说明" class="headerlink" title="一、相关说明"></a>一、相关说明</h2><ul>
-<li>更新日期<code>2024</code>年<code>9</code>月<code>3</code>日 <code>14</code>点<code>09</code>分（持续更新中）</li>
+<li>更新日期<code>2024</code>年<code>9</code>月<code>3</code>日 <code>15</code>点<code>38</code>分（持续更新中）</li>
 </ul>
 <h2 id="二、Mysql相关知识"><a href="#二、Mysql相关知识" class="headerlink" title="二、Mysql相关知识"></a>二、Mysql相关知识</h2><ul>
 <li><p>数据库基础</p>
 <ul>
-<li><p>命令行登陆命令</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure>
+<li><p>命令行登陆mysql命令</p>
+<p>输入 mysql 【-h主机名 -P端口号 】-u用户名 -p密码</p>
+<ul>
+<li><p>登录本地的数据库则可以不用输入主机名和端口号，直接输入 mysql -u用户名 -p密码即可</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">D:\phpEnv\www&gt;mysql -uroot -p</span><br><span class="line">Enter password: ******</span><br><span class="line">Welcome to the MySQL monitor.  Commands end with ; or \g.</span><br><span class="line">Your MySQL connection id is X</span><br><span class="line">Server version: 5.7.40 MySQL Community Server (GPL)</span><br><span class="line"></span><br><span class="line">Copyright (c) 2000, 2022, Oracle and/or its affiliates.</span><br><span class="line"></span><br><span class="line">Oracle is a registered trademark of Oracle Corporation and/or its</span><br><span class="line">affiliates. Other names may be trademarks of their respective</span><br><span class="line">owners.</span><br><span class="line"></span><br><span class="line">Type &#x27;help;&#x27; or &#x27;\h&#x27; for help. Type &#x27;\c&#x27; to clear the current input statement.</span><br><span class="line"></span><br><span class="line">mysql&gt;</span><br></pre></td></tr></table></figure>
 
+<p><strong>提示</strong>：在 -p 后直接输入密码，则不可以加空格，并且在这里输入密码，密码会显示出来；建议-p后按回车，命令行窗口就会自动跳到下一行：Enter password:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">D:\phpEnv\www&gt;mysql -uroot -p123456</span><br><span class="line">mysql: [Warning] Using a password on the command line interface can be insecure.</span><br><span class="line">Welcome to the MySQL monitor.  Commands end with ; or \g.</span><br><span class="line">Your MySQL connection id is X</span><br><span class="line">Server version: 5.7.40 MySQL Community Server (GPL)</span><br><span class="line"></span><br><span class="line">Copyright (c) 2000, 2022, Oracle and/or its affiliates.</span><br><span class="line"></span><br><span class="line">Oracle is a registered trademark of Oracle Corporation and/or its</span><br><span class="line">affiliates. Other names may be trademarks of their respective</span><br><span class="line">owners.</span><br><span class="line"></span><br><span class="line">Type &#x27;help;&#x27; or &#x27;\h&#x27; for help. Type &#x27;\c&#x27; to clear the current input statement.</span><br><span class="line"></span><br><span class="line">mysql&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>登录的是远端服务器的数据库，则得输入主机名和端口号，主机192.1X8.5.1X6，端口3306，用户名为root，密码123456</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">D:\phpEnv\www&gt;mysql -h192.1X8.5.1X6 -P3306 -uroot -p123456</span><br><span class="line">mysql: [Warning] Using a password on the command line interface can be insecure.</span><br><span class="line">Welcome to the MySQL monitor.  Commands end with ; or \g.</span><br><span class="line">Your MySQL connection id is X</span><br><span class="line">Server version: 5.6.50-log Source distribution</span><br><span class="line"></span><br><span class="line">Copyright (c) 2000, 2022, Oracle and/or its affiliates.</span><br><span class="line"></span><br><span class="line">Oracle is a registered trademark of Oracle Corporation and/or its</span><br><span class="line">affiliates. Other names may be trademarks of their respective</span><br><span class="line">owners.</span><br><span class="line"></span><br><span class="line">Type &#x27;help;&#x27; or &#x27;\h&#x27; for help. Type &#x27;\c&#x27; to clear the current input statement.</span><br><span class="line"></span><br><span class="line">mysql&gt;</span><br></pre></td></tr></table></figure>
 
+<p><strong>注意</strong>：-P端口号中的P是大写的，要跟密码前面的p（小写）区分开</p>
+</li>
+</ul>
+</li>
+<li><p>命令行退出mysql命令</p>
+<p>quit; 或者 exit; 或者 \q;</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; quit;</span><br><span class="line">Bye</span><br><span class="line"></span><br><span class="line">D:\phpEnv\www&gt;</span><br><span class="line"></span><br><span class="line">mysql&gt; exit;</span><br><span class="line">Bye</span><br><span class="line"></span><br><span class="line">D:\phpEnv\www&gt;</span><br><span class="line">mysql&gt; \q;</span><br><span class="line">Bye</span><br><span class="line"></span><br><span class="line">D:\phpEnv\www&gt;</span><br></pre></td></tr></table></figure>
 </li>
 <li></li>
 </ul>
@@ -553,7 +568,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/09/02/Mysql/" data-id="cm0m152z20008isckd6ed5ge0" class="article-share-link">
+      <a data-url="http://example.com/2024/09/02/Mysql/" data-id="cm0m4cczq0009nsckg7w52uuz" class="article-share-link">
         Share
       </a>
       
@@ -896,7 +911,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/08/26/Excel(%E4%BA%8C)/" data-id="cm0m152yq0001isck2tl4byif" class="article-share-link">
+      <a data-url="http://example.com/2024/08/26/Excel(%E4%BA%8C)/" data-id="cm0m4cczm0004nsckeuxb0k9u" class="article-share-link">
         Share
       </a>
       
@@ -1393,7 +1408,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/08/25/Excel(%E4%B8%80)/" data-id="cm0m152yv0003isckdjy3h0qm" class="article-share-link">
+      <a data-url="http://example.com/2024/08/25/Excel(%E4%B8%80)/" data-id="cm0m4cczi0001nsck61pj0ce9" class="article-share-link">
         Share
       </a>
       
@@ -1533,7 +1548,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/07/25/Gitee%E4%BB%93%E5%BA%93%E8%AE%BE%E7%BD%AE%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5/" data-id="cm0m152yw0004isckbxkv4e0x" class="article-share-link">
+      <a data-url="http://example.com/2024/07/25/Gitee%E4%BB%93%E5%BA%93%E8%AE%BE%E7%BD%AE%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5/" data-id="cm0m4cczn0005nsckf8005csi" class="article-share-link">
         Share
       </a>
       
@@ -1642,7 +1657,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/07/25/Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%B8%89)/" data-id="cm0m152z10007isck4hjlao4w" class="article-share-link">
+      <a data-url="http://example.com/2024/07/25/Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%B8%89)/" data-id="cm0m4cczn0006nsck5gg9fxke" class="article-share-link">
         Share
       </a>
       
@@ -1787,7 +1802,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/07/25/Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%BA%8C)/" data-id="cm0m152z20009isck983a3oht" class="article-share-link">
+      <a data-url="http://example.com/2024/07/25/Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%BA%8C)/" data-id="cm0m4cczp0008nsck4ikah71z" class="article-share-link">
         Share
       </a>
       
@@ -2008,7 +2023,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/07/25/Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%B8%80)/" data-id="cm0m152yy0005isck96prdjiq" class="article-share-link">
+      <a data-url="http://example.com/2024/07/25/Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%B8%80)/" data-id="cm0m4cczl0003nsckb4er9bso" class="article-share-link">
         Share
       </a>
       
@@ -2073,7 +2088,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/07/25/Hello%20World/" data-id="cm0m152z00006isckgkp90915" class="article-share-link">
+      <a data-url="http://example.com/2024/07/25/Hello%20World/" data-id="cm0m4cczo0007nsck9lpq7761" class="article-share-link">
         Share
       </a>
       
