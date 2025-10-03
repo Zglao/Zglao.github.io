@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Excel(二)--基础 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="一、相关说明 博主本地环境：Windows 11家庭中文版、64位操作系统，基于x64的处理器 更新日期2024年8月28日 14点45分（持续更新中）  二、单元格基本操作 选择单元格 输入数据 编辑单元格 清除单元格 移动和复制单元格 合并单元格 调整列宽和行高 隐藏和取消隐藏列&#x2F;行 插入和删除单元格、行或列 锁定和解锁单元格 …  三、函数 日期与时间函数  TODAY   返回当">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Excel(二)--基础">
+<meta property="og:url" content="http://example.com/2025/10/03/Excel(%E4%BA%8C)/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="一、相关说明 博主本地环境：Windows 11家庭中文版、64位操作系统，基于x64的处理器 更新日期2024年8月28日 14点45分（持续更新中）  二、单元格基本操作 选择单元格 输入数据 编辑单元格 清除单元格 移动和复制单元格 合并单元格 调整列宽和行高 隐藏和取消隐藏列&#x2F;行 插入和删除单元格、行或列 锁定和解锁单元格 …  三、函数 日期与时间函数  TODAY   返回当">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/ExcelImages/SUMIFS.png">
+<meta property="og:image" content="http://example.com/ExcelImages/LEN.png">
+<meta property="og:image" content="http://example.com/ExcelImages/FIND_1.png">
+<meta property="og:image" content="http://example.com/ExcelImages/FIND_2.png">
+<meta property="og:image" content="http://example.com/ExcelImages/TEXTJOIN.png">
+<meta property="og:image" content="http://example.com/ExcelImages/IF.png">
+<meta property="og:image" content="http://example.com/ExcelImages/OR.png">
+<meta property="og:image" content="http://example.com/ExcelImages/AND.png">
+<meta property="article:published_time" content="2025-10-03T08:13:45.348Z">
+<meta property="article:modified_time" content="2024-08-29T14:54:36.000Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/ExcelImages/SUMIFS.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 8.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Excel(二)" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2025/10/03/Excel(%E4%BA%8C)/" class="article-date">
+  <time class="dt-published" datetime="2025-10-03T08:13:45.348Z" itemprop="datePublished">2025-10-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Excel(二)--基础
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="一、相关说明"><a href="#一、相关说明" class="headerlink" title="一、相关说明"></a>一、相关说明</h2><ul>
+<li>博主本地环境：<code>Windows 11</code>家庭中文版、<code>64</code>位操作系统，基于<code>x64</code>的处理器</li>
+<li>更新日期<code>2024</code>年<code>8</code>月<code>28</code>日 <code>14</code>点<code>45</code>分（持续更新中）</li>
+</ul>
+<h2 id="二、单元格基本操作"><a href="#二、单元格基本操作" class="headerlink" title="二、单元格基本操作"></a>二、单元格基本操作</h2><ul>
+<li>选择单元格</li>
+<li>输入数据</li>
+<li>编辑单元格</li>
+<li>清除单元格</li>
+<li>移动和复制单元格</li>
+<li>合并单元格</li>
+<li>调整列宽和行高</li>
+<li>隐藏和取消隐藏列&#x2F;行</li>
+<li>插入和删除单元格、行或列</li>
+<li>锁定和解锁单元格</li>
+<li>…</li>
+</ul>
+<h2 id="三、函数"><a href="#三、函数" class="headerlink" title="三、函数"></a>三、函数</h2><ul>
+<li><p>日期与时间函数</p>
+<ul>
+<li><p>TODAY   返回当前日期</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=TODAY()  # 2024/8/26</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>NOW   返回当前的日期和时间</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=NOW()  # 2024/8/26 16:05</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>DATE   创建一个日期值，由年、月、日组成</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=DATE(2024, 8, 26)  # 2024/8/26</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>TIME   创建一个时间值，由小时、分钟和秒组成</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=TIME(16, 6, 10)  # 4:06 PM</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>YEAR   从日期值中提取年份</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=YEAR(&quot;2024-08-26&quot;)  # 2024</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>MONTH   从日期值中提取月份</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=MONTH(&quot;2024-08-26&quot;)  # 8</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>DAY   从日期值中提取天数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=DAY(&quot;2024-08-26&quot;)  # 26</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>HOUR   从时间值或日期时间值中提取小时数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=HOUR(&quot;16:09:26&quot;)  # 16</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>MINUTE   从时间值或日期时间值中提取分钟数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=MINUTE(&quot;16:10:35&quot;)  # 10</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>SECOND   从时间值或日期时间值中提取秒数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=SECOND(&quot;16:11:03&quot;)   # 3</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>WEEKDAY   返回日期值对应的星期几的数字或文本</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">=WEEKDAY(&quot;2024-08-26&quot;)    # 2</span><br><span class="line">=WEEKDAY(&quot;2024-08-26&quot;,1)   # 2</span><br><span class="line">=WEEKDAY(&quot;2024-08-26&quot;,2)   # 1</span><br><span class="line">=WEEKDAY(&quot;2024-08-26&quot;,3)   # 0</span><br><span class="line">=WEEKDAY(&quot;2024-08-26&quot;,11)   # 1</span><br><span class="line">=WEEKDAY(&quot;2024-08-26&quot;,12)   # 7</span><br><span class="line">=WEEKDAY(&quot;2024-08-26&quot;,13)   # 6</span><br><span class="line">=WEEKDAY(&quot;2024-08-26&quot;,14)   # 5</span><br><span class="line">=WEEKDAY(&quot;2024-08-26&quot;,15)   # 4</span><br><span class="line">=WEEKDAY(&quot;2024-08-26&quot;,16)   # 3</span><br><span class="line">=WEEKDAY(&quot;2024-08-26&quot;,17)   # 2</span><br><span class="line"></span><br><span class="line">(...)1-从1(星期日)到7(星期六)的数字</span><br><span class="line">(...)2-从1(星期一)到7(星期日)的数字</span><br><span class="line">(...)3-从0(星期一)到6(星期日)的数字</span><br><span class="line">(...)11-数字1(星期一)至7(星期日)</span><br><span class="line">(...)12-数字1(星期二)至7(星期一)</span><br><span class="line">(...)13-数字1(星期三)至7(星期二)</span><br><span class="line">(...)14-数字1(星期四)至7(星期三)</span><br><span class="line">(...)15-数字1(星期五)至7(星期四)</span><br><span class="line">(...)16-数字1(星期六)至7(星期五)</span><br><span class="line">(...)17-数字1(星期日)至7(星期六)</span><br><span class="line">默认是1</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>DAYS   返回两个日期之间的天数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">=DAYS(&quot;2024-08-31&quot;, &quot;2024-08-26&quot;)   # 5</span><br><span class="line">=DAYS(&quot;2024-08-26&quot;, &quot;2024-08-31&quot;)   # -5</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>…</p>
+</li>
+</ul>
+</li>
+<li><p>数学函数</p>
+<ul>
+<li><p>ABS   返回一个数的绝对值</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">=ABS(10)  # 10</span><br><span class="line">=ABS(-10)  # 10</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>MOD   返回除法的余数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=MOD(10, 3)  # 1</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>POWER   返回一个数的指定次幂</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=POWER(2, 5)  # 32</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>INT   将数字向下舍入到最接近的整数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=INT(9.99)  # 9</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>ROUND   将数字四舍五入到指定的小数位数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">=ROUND(3.14159, 2)  # 3.14</span><br><span class="line">=ROUND(6.65783, 2)  # 6.66</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>ROUNDDOWN   将数字向下舍入到指定的小数位数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=ROUNDDOWN(3.9, 0)  # 3</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>ROUNDUP   将数字向上舍入到指定的小数位数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=ROUNDUP(3.1, 0)  # 4</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>SUM   计算一系列数字的总和</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=SUM(A1:A10)  # 计算A1到A10单元格的总和</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>SUMIF   根据指定的条件对一系列数字求和</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=SUMIF(A1:A10, &quot;&gt;10&quot;)  # 计算A1到A10中大于10的数字之和</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>SUMIFS   根据多个条件对一系列数字求和</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=SUMIFS(B1:B10, A1:A10, &quot;&gt;5&quot;, C1:C10, &quot;&lt;18&quot;)  # 21</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../ExcelImages/SUMIFS.png"></p>
+</li>
+<li><p>MEDIAN   返回一组数字的中位数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">=MEDIAN(1, 3, 3, 6, 7, 8, 9)  # 取中位数6</span><br><span class="line">=MEDIAN(A1:A10)  # 取A1到A10单元格的中位数</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>RANK   返回一个数字在一系列数字中的排名（默认是降序排名）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">=RANK(A1, A1:A10)  # A1单元格的值在A1到A10中的排名（降序）（值越小排名越靠后）</span><br><span class="line">=RANK(A1, A1:A10, 1)  # A1单元格的值在A1到A10中的排名（升序）（值越小排名越靠前）</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>…</p>
+</li>
+</ul>
+</li>
+<li><p>统计函数</p>
+<ul>
+<li><p>COUNT   计算指定单元格中包含数字的单元格的数量</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=COUNT(A1:A10)  # 计算A1到A10中包含数字的单元格数量</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>COUNTA   计算指定单元格中非空的单元格的数量</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=COUNTA(A1:A10)  # 计算A1到A10中非空单元格的数量</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>COUNTIF   计算指定单元格中满足特定条件的单元格数量</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=COUNTIF(A1:A10, &quot;&gt;10&quot;)  # 计算A1到A10中大于10的单元格数量</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>COUNTIFS   计算指定单元格中满足多个条件的单元格数量</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=COUNTIFS(A1:A10, &quot;&gt;10&quot;, B1:B10, &quot;&lt;20&quot;)  # 如果A1到A10中大于10且B1到B10中小于20，则计算满足条件的单元格数量</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>AVERAGE   计算一系列数字的平均值</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=AVERAGE(A1:A10)  # 计算A1到A10中数字的平均值</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>MIN   找出一系列数字中的最小值</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=MIN(A1:A10)  # 找出A1到A10中的最小值</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>MAX   找出一系列数字中的最大值</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=MAX(A1:A10)  # 找出A1到A10中的最大值</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>SMALL   从一系列数字中返回第k个最小的值</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=SMALL(A1:A10, 3)  # 找出A1到A10中的第3个最小值</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>LARGE   从一系列数字中返回第k个最大的值</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=LARGE(A1:A10, 2)  # 找出A1到A10中的第2个最大值</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>…</p>
+</li>
+</ul>
+</li>
+<li><p>查找与引用函数</p>
+<ul>
+<li><p>VLOOKUP   在一列中查找特定信息，返回同行中另一列的值</p>
+<p><strong>格式</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup])</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>lookup_value</code>: 要查找的值</li>
+<li><code>table_array</code>: 包含数据的区域或范围（要查找数据表）</li>
+<li><code>col_index_num</code>: 数据表中返回值的列号</li>
+<li><code>range_lookup</code>: 布尔值，指定是否进行近似匹配，FALSE&#x2F;0表示精确匹配，TRUE&#x2F;1表示近似匹配</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">=VLOOKUP(&quot;A&quot;, A1:B10, 2, 0)  # 在A1:B10中查找&quot;A&quot;并返回A所在行的第二列的值</span><br><span class="line">=VLOOKUP(&quot;A&quot;, A1:B10, 2, FALSE)  # 在A1:B10中查找&quot;A&quot;并返回A所在行的第二列的值</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>LOOKUP   在向量或数组中查找特定值，并返回相应的值</p>
+<p><strong>格式</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LOOKUP(lookup_value, [lookup_vector], [result_vector])</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>lookup_value</code>: 要查找的值</li>
+<li><code>lookup_vector</code>: 要搜索的一行或一列</li>
+<li><code>result_vector</code>: 与<code>lookup_vector</code>对应的行或列，从中返回查找值的结果</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=LOOKUP(&quot;A&quot;, A1:A10, B1:B10)  # 在A1:A10中查找&quot;A&quot;并返回B列中相应的值</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>INDEX   返回表格中特定行和列交叉点处的值</p>
+<p><strong>格式</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INDEX(array, row_num, [column_num])</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>array</code>: 包含数据的区域或数组</li>
+<li><code>row_num</code>: 要返回的行号</li>
+<li><code>column_num</code>: 要返回的列号（可选）</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">=INDEX(A1:A10, 3)  # 从A1:B10中返回第3行的值</span><br><span class="line">=INDEX(A1:B10, 3, 2)  # 从A1:B10中返回第3行第2列的值</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>MATCH   返回一个值在给定数组中的相对位置</p>
+<p><strong>格式</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MATCH(lookup_value, lookup_array, [match_type])</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>lookup_value</code>: 要查找的值</li>
+<li><code>lookup_array</code>: 包含可能匹配项的一行或一列</li>
+<li><code>match_type</code>: 指定查找类型，1表示最近小于（），0表示精确匹配，-1表示最大大于</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">=MATCH(&quot;A&quot;, A1:A10, 0)  # 在A1:A10中查找&quot;A&quot;的位置，0表示精确匹配</span><br><span class="line">=MATCH(&quot;A&quot;, A1:A10, -1)  # 在A1:A10中查找&quot;A&quot;的位置，0表示精确匹配</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>…</p>
+</li>
+</ul>
+</li>
+<li><p>文本函数</p>
+<ul>
+<li><p>LEN   返回文本字符串中的字符数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">=LEN(&quot;Hello&quot;)  # 5</span><br><span class="line">=LEN(A1)  # 5</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../ExcelImages/LEN.png"></p>
+</li>
+<li><p>FIND   查找字符串中第一次出现另一个字符串的位置</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">=FIND(&quot;e&quot;, &quot;Hello&quot;)  # 2</span><br><span class="line">=FIND(&quot;e&quot;, A1)  # 2</span><br><span class="line">=FIND(&quot;a&quot;, &quot;Hello&quot;)  # #VALUE!</span><br><span class="line">=FIND(&quot;a&quot;, A1)  # #VALUE!</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../ExcelImages/FIND_1.png"></p>
+<p><img src="/../ExcelImages/FIND_2.png"></p>
+</li>
+<li><p>LEFT   返回字符串中最左侧的指定数量的字符</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">=LEFT(&quot;Hello&quot;, 2)  # &quot;He&quot;</span><br><span class="line">=LEFT(A1, 2)  # &quot;He&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>MID   从指定位置开始，提取指定长度的子字符串</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">=MID(&quot;Hello&quot;, 2, 1)  # &quot;e&quot;</span><br><span class="line">=MID(A1, 2, 1)  # &quot;e&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>RIGHT   返回字符串中最右侧的指定数量的字符</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">=RIGHT(&quot;Hello&quot;, 3)  # &quot;llo&quot;</span><br><span class="line">=RIGHT(A1, 3)  # &quot;llo&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>EXACT   检查两个文本字符串是否完全相同（区分大小写）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">=EXACT(&quot;Hello&quot;, &quot;Hello&quot;)  # TRUE</span><br><span class="line">=EXACT(A1, B1)  # TRUE</span><br><span class="line">=EXACT(&quot;Hello&quot;, &quot;hello&quot;)  # FALSE</span><br><span class="line">=EXACT(A2, B2)  # FALSE</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>LOWER   将文本转换为小写</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">=LOWER(&quot;HELLO&quot;)  # &quot;hello&quot;</span><br><span class="line">=LOWER(&quot;HEllo&quot;)  # &quot;hello&quot;</span><br><span class="line">=LOWER(&quot;Hello&quot;)  # &quot;hello&quot;</span><br><span class="line">=LOWER(&quot;hello&quot;)  # &quot;hello&quot;</span><br><span class="line">=LOWER(A1)  # &quot;hello&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>UPPER   将文本转换为大写</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">=UPPER(&quot;hello&quot;)  # &quot;HELLO&quot;</span><br><span class="line">=UPPER(&quot;Hello&quot;)  # &quot;HELLO&quot;</span><br><span class="line">=UPPER(&quot;HEllo&quot;)  # &quot;HELLO&quot;</span><br><span class="line">=UPPER(&quot;HELLO&quot;)  # &quot;HELLO&quot;</span><br><span class="line">=UPPER(A1)  # &quot;HELLO&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>PROPER   首字母转换为大写，其余字母转换为小写</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">=PROPER(&quot;hElLo&quot;)  # &quot;Hello&quot;</span><br><span class="line">=PROPER(&quot;HELLO&quot;)  # &quot;Hello&quot;</span><br><span class="line">=PROPER(&quot;Hello&quot;)  # &quot;Hello&quot;</span><br><span class="line">=PROPER(A1)  # &quot;Hello&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>TEXTJOIN   多个文本字符串合并为一个文本字符串，可以指定分隔符</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">=TEXTJOIN(&quot;, &quot;, TRUE, &quot;Apple&quot;, &quot;Banana&quot;)  # &quot;Apple, Banana&quot;</span><br><span class="line">=TEXTJOIN(&quot;, &quot;, TRUE, A1:B1)  # &quot;Apple, Banana&quot;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../ExcelImages/TEXTJOIN.png"></p>
+</li>
+<li><p>…</p>
+</li>
+</ul>
+</li>
+<li><p>逻辑函数</p>
+<ul>
+<li><p>IF   根据给定条件返回两个不同结果之一</p>
+<p><strong>格式</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">IF(condition, true_value, false_value)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>condition</code>: 判断条件</li>
+<li><code>true_value</code>: 如果条件为真，则返回的值</li>
+<li><code>false_value</code>: 如果条件为假，则返回的值</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">=IF(A1 &gt; 10, &quot;&gt;10&quot;, &quot;≤10&quot;)  # 判断A1单元格的值，A1单元格的值大于10，输出&quot;&gt;10&quot;; A1单元格的值小于等于10，输出&quot;≤10&quot;;</span><br><span class="line">=IF(A1 &gt; 10, &quot;&gt;10&quot;, &quot;≤10&quot;)  # &gt;10</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../ExcelImages/IF.png"></p>
+</li>
+<li><p>OR   检查多个条件是否至少有一个为真</p>
+<p><strong>格式</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">OR(logical1, logical2, ...)</span><br></pre></td></tr></table></figure>
+
+<p><code>logical1</code>, <code>logical2</code>, …: 逻辑条件列表</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">=OR(A1 &gt; 10, B1 &lt; 5)  # 如果A1大于10或B1小于5，则返回TRUE</span><br><span class="line">=OR(A1 &gt; 10, B1 &lt; 5)  # TRUE</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../ExcelImages/OR.png"></p>
+</li>
+<li><p>AND   检查多个条件是否全部为真</p>
+<p><strong>格式</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">AND(logical1, logical2, ...)</span><br></pre></td></tr></table></figure>
+
+<p><code>logical1</code>, <code>logical2</code>, …: 逻辑条件列表</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">=AND(A1 &gt; 10, B1 &lt; 5)  # 只有当A1大于10且B1小于5时，才返回TRUE</span><br><span class="line">=AND(A1 &gt; 10, B1 &lt; 5)  # FALSE</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../ExcelImages/AND.png"></p>
+</li>
+<li><p>…</p>
+</li>
+</ul>
+</li>
+<li><p>进制转换函数</p>
+<ul>
+<li><p>BIN2OCT、BIN2DEC、BIN2HEX   二进制转换为八进制、十进制、十六进制</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">=BIN2DEC(&quot;1010&quot;)  # 10</span><br><span class="line">=BIN2OCT(&quot;1010&quot;)  # 12</span><br><span class="line">=BIN2HEX(&quot;1010&quot;)  # A</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>OCT2BIN、OCT2DEC、OCT2HEX   八进制转换为二进制、十进制、十六进制</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">=OCT2BIN(&quot;12&quot;)  # 1010</span><br><span class="line">=OCT2DEC(&quot;12&quot;)  # 10</span><br><span class="line">=OCT2HEX(&quot;12&quot;)  # A</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>DEC2BIN、DEC2OCT、DEC2HEX   十进制转换为二进制、八进制、十六进制</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">=DEC2BIN(10)  # 1010</span><br><span class="line">=DEC2OCT(10)  # 12</span><br><span class="line">=DEC2HEX(10)  # A</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>HEX2BIN、HEX2OCT、HEX2DEC   十六进制转换为二进制、八进制、十进制</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">=HEX2BIN(&quot;A&quot;)  # 1010</span><br><span class="line">=HEX2OCT(&quot;A&quot;)  # 12</span><br><span class="line">=HEX2DEC(&quot;A&quot;)  # 10</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<h2 id="四、其他快捷方式"><a href="#四、其他快捷方式" class="headerlink" title="四、其他快捷方式"></a>四、其他快捷方式</h2><ul>
+<li><p>快速输入长数值200000</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=2**5  # 200000</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>…</p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2025/10/03/Excel(%E4%BA%8C)/" data-id="cuidur6ufOokiE9K9mh8-vgxI" data-title="Excel(二)--基础" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2025/10/03/Excel(%E4%B8%80)/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Excel(一)--快捷键
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2025/10/02/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/10/">October 2025</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2025/10/03/Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%B8%80)/">Hexo+Github搭建个人博客(一)</a>
+          </li>
+        
+          <li>
+            <a href="/2025/10/03/Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%B8%89)/">Hexo+Github搭建个人博客(三)</a>
+          </li>
+        
+          <li>
+            <a href="/2025/10/03/Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%BA%8C)/">Hexo+Github搭建个人博客(二)</a>
+          </li>
+        
+          <li>
+            <a href="/2025/10/03/Hello%20World/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2025/10/03/Gitee%E4%BB%93%E5%BA%93%E8%AE%BE%E7%BD%AE%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5/">Gitee仓库设置下载链接</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2025 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

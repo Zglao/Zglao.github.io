@@ -71,6 +71,1428 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Hexo+Github搭建个人博客(一)" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2025/10/03/Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%B8%80)/" class="article-date">
+  <time class="dt-published" datetime="2025-10-03T08:13:45.368Z" itemprop="datePublished">2025-10-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2025/10/03/Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%B8%80)/">Hexo+Github搭建个人博客(一)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="一、相关说明"><a href="#一、相关说明" class="headerlink" title="一、相关说明"></a>一、相关说明</h2><ul>
+<li>搭建个人博客需要安装配置<code>Node.js</code>、<code>Git</code>、<code>Hexo</code></li>
+<li>博主本地环境：<code>Windows 11</code>家庭中文版、<code>64</code>位操作系统，基于<code>x64</code>的处理器</li>
+<li>我的个人博客：<a target="_blank" rel="noopener" href="https://zglao.github.io/">Zglao.github.io</a></li>
+</ul>
+<h2 id="二、Node-js"><a href="#二、Node-js" class="headerlink" title="二、Node.js"></a>二、Node.js</h2><ul>
+<li><p>下载</p>
+<ul>
+<li><p>官网路径</p>
+<p><a target="_blank" rel="noopener" href="https://nodejs.cn/">Node.js 中文网 (nodejs.cn)</a></p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/Node_1.png"></p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/Node_2.png"></p>
+</li>
+<li><p>博主提供的下载链接（<code>Ctrl+</code>单击自动跳转，需要登陆自己的<code>Gitee</code>账号)</p>
+<p><a target="_blank" rel="noopener" href="https://gitee.com/zglao/InstallPackage/raw/master/Node-v20.15.0-x64.msi">(https://gitee.com/zglao/InstallPackage/raw/master/Node-v20.15.0-x64.msi)</a></p>
+</li>
+</ul>
+</li>
+<li><p>安装</p>
+<p>修改安装路径即可，博主安装路径为<code>D:\nodejs</code>，其他默认就可以</p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/Node_3.png"></p>
+</li>
+<li><p>检查是否安装成功</p>
+<p>打开终端（<code>Win+R</code>键，输入<code>cmd</code>）或者终端管理员命令行页面，执行命令<code>node -v</code>、<code>npm -v</code>或者<code>node --version</code>、<code>npm --version</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\20538&gt;node -v</span><br><span class="line">v20.15.0</span><br><span class="line"></span><br><span class="line">C:\Users\20538&gt;npm -v</span><br><span class="line">10.7.0</span><br></pre></td></tr></table></figure>
+
+<p>出现版本号，就证明安装成功</p>
+</li>
+</ul>
+<h2 id="三、Git"><a href="#三、Git" class="headerlink" title="三、Git"></a>三、Git</h2><ul>
+<li><p>下载</p>
+<ul>
+<li><p>官网路径</p>
+<p><a target="_blank" rel="noopener" href="https://git-scm.com/download">Git - Downloads (git-scm.com)</a></p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/Git_1.png"></p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/Git_2.png"></p>
+</li>
+<li><p>博主提供的下载链接（<code>Ctrl+</code>单击自动跳转，需要登陆自己的<code>Gitee</code>账号）</p>
+<p><a target="_blank" rel="noopener" href="https://gitee.com/zglao/InstallPackage/raw/master/Git-2.43.0-64-bit.exe">(https://gitee.com/zglao/InstallPackage/raw/master/Git-2.43.0-64-bit.exe)</a></p>
+</li>
+</ul>
+</li>
+<li><p>安装</p>
+<p>修改安装路径即可，博主安装路径为<code>D:\Git</code>，其他默认就可以</p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/Git_3.png"></p>
+<p>安装完成，关闭下载窗口，默认浏览器会自动打开版本发布说明</p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/Git_4.png"></p>
+</li>
+<li><p>检查是否安装成功</p>
+<p>桌面右键打开<code>Open Git Bash here</code>终端命令行页面，执行命令<code>git -v</code>或者<code>git --version</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Zg Lao@admin MINGW64 ~/Desktop</span><br><span class="line">$ git -v</span><br><span class="line">git version 2.43.0.windows.1</span><br></pre></td></tr></table></figure>
+
+<p>出现版本号，就证明安装成功</p>
+</li>
+</ul>
+<h2 id="四、Hexo"><a href="#四、Hexo" class="headerlink" title="四、Hexo"></a>四、Hexo</h2><ul>
+<li><p>安装<code>Hexo</code></p>
+<p>打开终端管理员命令行页面，执行命令<code>npm install -g hexo-cli</code>，安装<code>Hexo</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">PS C:\Users\20538&gt; npm install -g hexo-cli</span><br><span class="line"></span><br><span class="line">added 53 packages in 17s</span><br><span class="line"></span><br><span class="line">14 packages are looking for funding</span><br><span class="line">  run `npm fund` for details</span><br><span class="line">npm notice</span><br><span class="line">npm notice New minor version of npm available! 10.7.0 -&gt; 10.8.1</span><br><span class="line">npm notice Changelog: https://github.com/npm/cli/releases/tag/v10.8.1</span><br><span class="line">npm notice To update run: npm install -g npm@10.8.1</span><br><span class="line">npm notice</span><br></pre></td></tr></table></figure>
+
+<p>执行完后，路径<code>D:\nodejs</code>下面会出现<code>node_cache</code>和<code>node_global</code>两个文件夹（也可能不会出现，不出现也不会影响之后的操作）</p>
+<p>若安装失败内容如下，更换<code>npm</code>源重试</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">PS C:\Users\20538&gt; npm install -g hexo-cli</span><br><span class="line">npm error code ECONNRESET</span><br><span class="line">npm error syscall read</span><br><span class="line">npm error errno ECONNRESET</span><br><span class="line">npm error network request to https://registry.npmjs.org/hexo-fs failed, reason: read ECONNRESET</span><br><span class="line">npm error network This is a problem related to network connectivity.</span><br><span class="line">npm error network In most cases you are behind a proxy or have bad network settings.</span><br><span class="line">npm error network</span><br><span class="line">npm error network If you are behind a proxy, please make sure that the</span><br><span class="line">npm error network &#x27;proxy&#x27; config is set properly.  See: &#x27;npm help config&#x27;</span><br><span class="line"></span><br><span class="line">npm error A complete log of this run can be found in: C:\Users\20538\AppData\Local\npm-cache\_logs\2024-07-25T02_16_17_523Z-debug-0.log</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>查看当前配置的<code>npm</code>源</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PS C:\Users\20538&gt; npm config get registry</span><br><span class="line">https://registry.npmjs.org/</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>更换<code>npm</code>源</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">PS C:\Users\20538&gt; npm config set registry https://registry.npm.taobao.org/</span><br><span class="line"># 或者</span><br><span class="line">PS C:\Users\20538&gt; npm config set registry https://registry.npmmirror.com/</span><br></pre></td></tr></table></figure>
+
+<p><strong>注释</strong>：<code>https://registry.npm.taobao.org/</code>是淘宝<code>npm</code>镜像，<code>https://registry.npmmirror.com/</code>是搬瓦工提供的<code>npm</code>镜像</p>
+</li>
+<li><p>清除<code>npm</code>缓存</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PS C:\Users\20538&gt; npm cache clean --force</span><br><span class="line">npm warn using --force Recommended protections disabled.</span><br></pre></td></tr></table></figure>
+
+<p>清除<code>npm</code>缓存确保新的配置生效</p>
+</li>
+<li><p>验证<code>npm</code>源是否更换</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PS C:\Users\20538&gt; npm config get registry</span><br><span class="line">https://registry.npmmirror.com/</span><br></pre></td></tr></table></figure>
+
+<p>更换成功会显示新配置的<code>npm</code>源</p>
+</li>
+</ul>
+</li>
+<li><p>检查是否安装成功</p>
+<p>打开终端（<code>Win+R</code>键，输入<code>cmd</code>）或者终端管理员命令行页面，执行命令<code>hexo -v</code>或者<code>hexo --version</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">PS C:\Users\20538&gt; hexo -v</span><br><span class="line">INFO  Validating config</span><br><span class="line">hexo: 7.3.0</span><br><span class="line">hexo-cli: 4.3.2</span><br><span class="line">os: win32 10.0.22631 undefined</span><br><span class="line">node: 20.15.0</span><br><span class="line">acorn: 8.11.3</span><br><span class="line">ada: 2.7.8</span><br><span class="line">ares: 1.28.1</span><br><span class="line">base64: 0.5.2</span><br><span class="line">brotli: 1.1.0</span><br><span class="line">cjs_module_lexer: 1.2.2</span><br><span class="line">cldr: 45.0</span><br><span class="line">icu: 75.1</span><br><span class="line">llhttp: 8.1.2</span><br><span class="line">modules: 115</span><br><span class="line">napi: 9</span><br><span class="line">nghttp2: 1.61.0</span><br><span class="line">nghttp3: 0.7.0</span><br><span class="line">ngtcp2: 1.1.0</span><br><span class="line">openssl: 3.0.13+quic</span><br><span class="line">simdutf: 5.2.8</span><br><span class="line">tz: 2024a</span><br><span class="line">undici: 6.13.0</span><br><span class="line">unicode: 15.1</span><br><span class="line">uv: 1.46.0</span><br><span class="line">uvwasi: 0.0.21</span><br><span class="line">v8: 11.3.244.8-node.23</span><br><span class="line">zlib: 1.3.0.1-motley-7d77fb7</span><br></pre></td></tr></table></figure>
+
+<p>出现版本号，就证明安装成功</p>
+</li>
+<li><p>初始化<code>Hexo</code></p>
+<p>创建文件夹，命名为<code>Blog</code>（文件夹命名，<code>MyBlog</code>、<code>Personal Blog</code>等都可以），博主文件夹路径为<code>D:\Blog</code>，打开终端管理员命令行页面，进入<code>D:\Blog</code>路径，执行命令<code>hexo init</code>，初始化<code>Hexo</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">PS C:\Users\20538&gt; cd D:\Blog</span><br><span class="line">PS D:\Blog&gt; hexo init</span><br><span class="line">INFO  Cloning hexo-starter https://github.com/hexojs/hexo-starter.git</span><br><span class="line">INFO  Install dependencies</span><br><span class="line">INFO  Start blogging with Hexo!</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>启动<code>Hexo</code></p>
+<p>打开终端管理员命令行页面，进入<code>D:\Blog</code>路径，执行命令<code>hexo s</code>或者<code>hexo server</code>，启动<code>Hexo</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">PS D:\Blog&gt; hexo s</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Hexo is running at http://localhost:4000/ . Press Ctrl+C to stop.</span><br></pre></td></tr></table></figure>
+
+<p><code>Ctrl+</code>单击(链接<code>http://localhost:4000/</code>)自动跳转默认浏览器访问，<code>Ctrl+C</code>停止运行</p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/Hexo_1.png"></p>
+<p>此时，<code>Hexo</code>已经部署完成</p>
+</li>
+</ul>
+<h2 id="五、GitHub"><a href="#五、GitHub" class="headerlink" title="五、GitHub"></a>五、GitHub</h2><p>通过<code>Github</code>相应配置，即可将其部署到<code>Github</code>上（其他设备输入你的博客地址，即可查看你发布的文章）</p>
+<ul>
+<li><p>注册<code>Github</code>账号</p>
+<p><code>GitHub</code>注册地址<a target="_blank" rel="noopener" href="https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=/&source=header-home">Github-signup</a></p>
+</li>
+<li><p><code>Github SSH</code>免密码配置</p>
+<ul>
+<li><p>初始化用户名和邮箱</p>
+<p>打开终端（<code>Win+R</code>键，输入<code>cmd</code>）或者终端管理员命令行页面，执行命令格式<code>git config --global user.name &quot;name&quot;</code>和<code>git config --global user.email &quot;email&quot;</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;name&quot;</span><br><span class="line">git config --global user.email &quot;email&quot;</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意</strong>：这里的<code>name</code>输入你的<code>GitHub</code>用户名，<code>email</code>输入你的<code>GitHub</code>邮箱</p>
+<p>博主<code>GitHub</code>用户名<code>Zglao</code>，<code>GitHub</code>的邮箱<code>3878XX6714@qq.com</code>，初始化用户名和邮箱，执行命令<code>git config --global user.name &quot;Zglao&quot;</code>和<code>git config --global user.email &quot;3878XX6714@qq.com&quot;</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PS C:\Users\20538&gt; git config --global user.name &quot;Zglao&quot;</span><br><span class="line">PS C:\Users\20538&gt; git config --global user.email &quot;3878XX6714@qq.com&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>生成密钥</p>
+<p>打开终端（<code>Win+R</code>键，输入<code>cmd</code>）或者终端管理员命令行页面，执行命令<code>ssh-keygen -t rsa -C &quot;3878XX6714@qq.com&quot;</code>，需要按<code>Enter</code>键回车三次</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">PS C:\Users\20538&gt; ssh-keygen -t rsa -C &quot;3878XX6714@qq.com&quot;</span><br><span class="line">Generating public/private rsa key pair.</span><br><span class="line">Enter file in which to save the key (C:\Users\20538/.ssh/id_rsa):</span><br><span class="line">Created directory &#x27;C:\\Users\\20538/.ssh&#x27;.</span><br><span class="line">Enter passphrase (empty for no passphrase):</span><br><span class="line">Enter same passphrase again:</span><br><span class="line">Your identification has been saved in C:\Users\20538/.ssh/id_rsa</span><br><span class="line">Your public key has been saved in C:\Users\20538/.ssh/id_rsa.pub</span><br><span class="line">The key fingerprint is:</span><br><span class="line">SHA256:MZ5Yd1Gt1iJJ5z3l4DEfN1patptTv4A8swcN2+1Y5v0 3878XX6714@qq.com</span><br><span class="line">The key&#x27;s randomart image is:</span><br><span class="line">+---[RSA 3072]----+</span><br><span class="line">|            .... |</span><br><span class="line">|            ..=*+|</span><br><span class="line">|        + ...=*X*|</span><br><span class="line">|       + = ooo*o*|</span><br><span class="line">|      . S . *o..*|</span><br><span class="line">|           B + B.|</span><br><span class="line">|            = B +|</span><br><span class="line">|           . o +.|</span><br><span class="line">|            .   E|</span><br><span class="line">+----[SHA256]-----+</span><br></pre></td></tr></table></figure>
+
+<p>上述操作会在<code>C:\Users\20538</code>路径下生成<code>.ssh</code>的文件夹，其中有一个<code>id_rsa</code>命名的文件是私钥，带<code>.pub</code>扩展名的文件是公钥</p>
+</li>
+<li><p><code>Github</code>创建<code>ssh</code>密钥</p>
+<p>登陆到<code>GitHub</code>，操作步骤：右上角小头像-&gt;<code>Setting</code>-&gt;<code>SSH and GPG keys</code>，点击<code>new SSH key</code>，系统会提示<code>Cofirm access</code>（确认访问），输入<code>Github</code>密码点击<code>Confim</code>，就可实现<code>SSH</code>免密码访问</p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/Github_1.png"><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/Github_2.png"><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/Github_3.png"></p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/Github_4.png"></p>
+<p>其中，<code>Title</code>可以随便填写，最好能让自己知道这个公钥是哪个设备，<code>key</code>把生成的<code>.pub</code>文件中的所有内容复制粘贴进去</p>
+</li>
+<li><p>验证<code>ssh</code>连接是否成功</p>
+<p>打开终端（<code>Win+R</code>键，输入<code>cmd</code>）或者终端管理员命令行页面，执行命令<code>ssh -T git@github.com</code>，提示<code>Are you sure you want to continue connecting (yes/no/[fingerprint])?</code>（您确定要继续连接吗（是&#x2F;否&#x2F;[指纹]）？）需要手动输入<code>yes</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">PS C:\Users\20538&gt; ssh -T git@github.com</span><br><span class="line">The authenticity of host &#x27;github.com (20.205.243.166)&#x27; can&#x27;t be established.</span><br><span class="line">ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.</span><br><span class="line">This key is not known by any other names</span><br><span class="line">Are you sure you want to continue connecting (yes/no/[fingerprint])? yes</span><br><span class="line">Warning: Permanently added &#x27;github.com&#x27; (ED25519) to the list of known hosts.</span><br><span class="line">Hi Zglao! You&#x27;ve successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure>
+
+<p>出现用户名（<code>Hi Zglao!</code>），博主用户名<code>Zglao</code>，代表访问成功，上述操作之后会在<code>C:\Users\20538</code>路径下生成<code>.ssh</code>的文件夹，其中有一个<code>known_hosts</code>命名的文件是用于存储<code>SSH</code>客户端已知的服务器公钥，<code>known_hosts.old</code>命名的文件是<code>known_host</code>文件的一个备份，目的是防止意外删除或修改<code>known_hosts</code>文件，导致无法验证之前连接过的服务器</p>
+</li>
+</ul>
+</li>
+<li><p><code>Github</code>远程仓库配置</p>
+<ul>
+<li><p>创建仓库</p>
+<p>仓库名格式<code>GitHub</code>用户名<code>.github.io</code>（博主仓库名是<a target="_blank" rel="noopener" href="https://github.com/Zglao/Zglao.github.io">Zglao.github.io</a>），仓库类型选择<code>Public</code>，其他内容默认，点击<code>Create repository</code></p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/Repositories_1.png"><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/Repositories_2.png"><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/Repositories_3.png"></p>
+</li>
+<li><p>安装<code>hexo</code>部署插件</p>
+<p>打开终端管理员命令行页面，进入<code>D:\Blog</code>路径，执行命令<code>npm install hexo-deployer-git --save</code>，安装<code>hexo</code>部署插件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">PS C:\Users\20538&gt; cd D:\Blog</span><br><span class="line">PS D:\Blog&gt; npm install hexo-deployer-git --save</span><br><span class="line"></span><br><span class="line">added 10 packages in 3s</span><br><span class="line"></span><br><span class="line">29 packages are looking for funding</span><br><span class="line">  run `npm fund` for details</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>配置<code>_comfig.yml</code>文件</p>
+<p><code>_comfig.yml</code>文件路径在<code>D:\Blog</code>，<code>_comfig.yml</code>文件用记事本打开，文件最下面</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/one-command-deployment</span><br><span class="line">deploy:</span><br><span class="line">  type: &#x27;&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>修改为</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/one-command-deployment</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:name/name.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意</strong>：这里的<code>name</code>为用户名，<code>name.github.io</code>为仓库名</p>
+<p>博主<code>GitHub</code>仓库名是<code>Zglao/Zglao.github.io</code>，配置<code>_comfig.yml</code>文件该部分内容修改为</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/one-command-deployment</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:Zglao/Zglao.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>部署到<code>Github</code></p>
+<p>桌面右键打开<code>Open Git Bash here</code>终端命令行页面，进入<code>D:\Blog</code>路径，执行命令<code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Zg Lao@admin MINGW64 ~/Desktop</span><br><span class="line">$ cd D:\Blog</span><br><span class="line"></span><br><span class="line">Zg Lao@admin MINGW64 /d/Blog</span><br><span class="line">$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Deleted database.</span><br><span class="line">INFO  Deleted public folder.</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Files loaded in 100 ms</span><br><span class="line">...</span><br><span class="line">INFO  Deploy done: git</span><br></pre></td></tr></table></figure>
+
+<p>其中，命令<code>hexo clean</code>是清除缓存文件，<code>hexo g</code>或者<code>hexo generate</code>是生成网页文件，<code>hexo d</code>或者<code>hexo deploy</code>是部署网页文件到<code>Github</code>，显示<code>INFO  Deploy done: git</code>证明已经部署到<code>Github</code>，此时，可以打开浏览器输入<code>Zglao.github.io</code>进入个人博客</p>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2025/10/03/Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%B8%80)/" data-id="cuidWCdlZmeuDHTueY4ZGy_Ll" data-title="Hexo+Github搭建个人博客(一)" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Hexo+Github搭建个人博客(三)" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2025/10/03/Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%B8%89)/" class="article-date">
+  <time class="dt-published" datetime="2025-10-03T08:13:45.365Z" itemprop="datePublished">2025-10-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2025/10/03/Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%B8%89)/">Hexo+Github搭建个人博客(三)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="一、相关说明"><a href="#一、相关说明" class="headerlink" title="一、相关说明"></a>一、相关说明</h2><ul>
+<li><code>Hexo</code>个性化，添加、删除、修改等</li>
+<li>文章发布需要使用<code>Typora</code>软件</li>
+<li>博主本地环境：<code>Windows 11</code>家庭中文版、<code>64</code>位操作系统，基于<code>x64</code>的处理器</li>
+<li>我的个人博客：<a target="_blank" rel="noopener" href="https://zglao.github.io/">Zglao.github.io</a></li>
+</ul>
+<h2 id="二、Hexo个性化"><a href="#二、Hexo个性化" class="headerlink" title="二、Hexo个性化"></a>二、Hexo个性化</h2><ul>
+<li><p>配置文件</p>
+<p>分为<strong>站点配置文件</strong>和<strong>主题配置文件</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 站点配置文件路径</span><br><span class="line">D:\Blog\_config.yml</span><br><span class="line"></span><br><span class="line"># 主题配置文件</span><br><span class="line">D:\Blog\themes\Ocean\_config.yml</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>添加菜单配置</p>
+<ul>
+<li><p><code>Home</code>（首页）、<code>Archives</code>（目录）、<code>Gallery</code>（相册）、<code>About</code>（关于我）、<code>Search</code>（搜索）五部分，其中博客选择的主题中<code>Gallery</code>（相册）、<code>About</code>（关于我）、点击提示没有被找到，需要的话可进行配置</p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/Hexo_3.png"></p>
+</li>
+<li><p><code>About</code>（关于我）</p>
+<p>桌面右键打开<code>Open Git Bash here</code>终端命令行页面，进入<code>D:\Blog</code>路径执行命令<code>hexo new page about</code>，会在路径<code>D:\Blog\source</code>下生成<code>about</code>文件夹以及<code>about</code>文件夹下文件<code>index.md</code>，在<code>index.md</code>文件中编辑内容，编辑完成后，在<code>D:\Blog</code>路径，执行命令<code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code>上传<code>Github</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">Zg Lao@admin MINGW64 ~/Desktop</span><br><span class="line">$ cd D:\Blog</span><br><span class="line"></span><br><span class="line">Zg Lao@admin MINGW64 /d/Blog</span><br><span class="line">$ hexo new page about</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Created: D:\Blog\source\about\index.md</span><br><span class="line"></span><br><span class="line">Zg Lao@admin MINGW64 /d/Blog</span><br><span class="line">$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Deleted database.</span><br><span class="line">INFO  Deleted public folder.</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Files loaded in 176 ms</span><br><span class="line">...</span><br><span class="line">INFO  Deploy done: git</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/about_1.png"></p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/about_2.png"></p>
+<p>执行完成，打开浏览器输入<code>Zglao.github.io</code>进入个人博客查看<code>About</code>（关于）页面</p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/about_3.png"></p>
+</li>
+<li><p><code>Gallery</code>（相册）</p>
+<p>桌面右键打开<code>Open Git Bash here</code>终端命令行页面，进入<code>D:\Blog</code>路径执行命令<code>hexo new page gallery</code>，会在路径<code>D:\Blog\source</code>下生成<code>gallery</code>文件夹以及<code>gallery</code>文件夹下文件<code>index.md</code>，在<code>index.md</code>文件中编辑内容（手动在路径<code>D:\Blog\source</code>下创建文件夹存放相册中的图像，博主命名<code>Gallery Images</code>），编辑完成后，在<code>D:\Blog</code>路径，执行命令<code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code>上传<code>Github</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">Zg Lao@admin MINGW64 ~/Desktop</span><br><span class="line">$ cd D:\Blog</span><br><span class="line"></span><br><span class="line">Zg Lao@admin MINGW64 /d/Blog</span><br><span class="line">$ hexo new page gallery</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Created: D:\Blog\source\gallery\index.md</span><br><span class="line"></span><br><span class="line">Zg Lao@admin MINGW64 /d/Blog</span><br><span class="line">$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Deleted database.</span><br><span class="line">INFO  Deleted public folder.</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Files loaded in 180 ms</span><br><span class="line">...</span><br><span class="line">INFO  Deploy done: git</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/gallery_1.png"></p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/gallery_2.png"></p>
+<p>执行完成，打开浏览器输入<code>Zglao.github.io</code>进入个人博客查看<code>Gallery</code>（相册）页面</p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/gallery_3.png"></p>
+<p>博主路径<code>D:\Blog\source</code>，<code>gallery</code>文件夹下文件<code>index.md</code>内容</p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/gallery_4.png"></p>
+</li>
+</ul>
+</li>
+<li><p>修改页面内容配置</p>
+<ul>
+<li><p>修改标题</p>
+<p>打开站点配置文件<code>_comfig.yml</code>，文件路径在<code>D:\Blog</code>，文件最上面</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Site</span><br><span class="line">title: Hexo</span><br><span class="line">subtitle: &#x27;&#x27;</span><br><span class="line">description: &#x27;&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>修改为</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Site</span><br><span class="line">title: 路浩</span><br><span class="line">subtitle: &#x27;&#x27;</span><br><span class="line">description: &#x27;&#x27;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/Hexo_2.png"></p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/Hexo_5.png"></p>
+</li>
+<li></li>
+</ul>
+</li>
+<li><p>其他配置和美化</p>
+<p>后续持续补充……</p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2025/10/03/Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%B8%89)/" data-id="cuidrecvx43Pbg4gGNI-eWxMv" data-title="Hexo+Github搭建个人博客(三)" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Hexo+Github搭建个人博客(二)" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2025/10/03/Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%BA%8C)/" class="article-date">
+  <time class="dt-published" datetime="2025-10-03T08:13:45.362Z" itemprop="datePublished">2025-10-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2025/10/03/Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%BA%8C)/">Hexo+Github搭建个人博客(二)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="一、相关说明"><a href="#一、相关说明" class="headerlink" title="一、相关说明"></a>一、相关说明</h2><ul>
+<li><p><code>Hexo</code>更换主题，<code>Hexo</code>官网（<a target="_blank" rel="noopener" href="https://hexo.io/themes/">HexoTheme</a>）选择喜欢的主题</p>
+</li>
+<li><p>文章发布需要使用<code>Typora</code>软件</p>
+</li>
+<li><p>博主本地环境：<code>Windows 11</code>家庭中文版、<code>64</code>位操作系统，基于<code>x64</code>的处理器</p>
+</li>
+<li><p>我的个人博客：<a target="_blank" rel="noopener" href="https://zglao.github.io/">Zglao.github.io</a></p>
+</li>
+</ul>
+<h2 id="二、Hexo个性化"><a href="#二、Hexo个性化" class="headerlink" title="二、Hexo个性化"></a>二、Hexo个性化</h2><ul>
+<li><p><code>Hexo</code>主题选择</p>
+<ul>
+<li><p>初始化<code>Hexo</code>后默认主题是<code>landscape</code></p>
+</li>
+<li><p>通过<code>Hexo</code>官网（<a target="_blank" rel="noopener" href="https://hexo.io/themes/">HexoTheme</a>）自由选择喜欢的主题，点击主题名下面<code>Visit preview site</code>可以对主题进行浏览</p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/HexoTheme.png"></p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/HexoTheme_Visit-preview-site.png"></p>
+</li>
+</ul>
+</li>
+<li><p>主题下载</p>
+<ul>
+<li><p>克隆主题格式<code>git clone [url] themes/xxx</code>（<code>url</code>是点击主题名跳转页面的<code>url</code>，<code>xxx</code>是主题名），博主采用<code>Ocean</code>主题</p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/HexoTheme_url.png"></p>
+</li>
+<li><p>桌面右键打开<code>Open Git Bash here</code>终端命令行页面，进入<code>D:\Blog</code>路径，执行命令<code>git clone https://github.com/zhwangart/hexo-theme-ocean themes/Ocean</code>，克隆喜欢的主题到<code>Blog</code>文件夹中</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Zg Lao@admin MINGW64 ~/Desktop</span><br><span class="line">$ cd D:\Blog</span><br><span class="line"></span><br><span class="line">Zg Lao@admin MINGW64 /d/Blog</span><br><span class="line">$ git clone https://github.com/zhwangart/hexo-theme-ocean themes/Ocean</span><br><span class="line">Cloning into &#x27;themes/Ocean&#x27;...</span><br><span class="line">remote: Enumerating objects: 959, done.</span><br><span class="line">remote: Counting objects: 100% (153/153), done.</span><br><span class="line">remote: Compressing objects: 100% (103/103), done.</span><br><span class="line">remote: Total 959 (delta 79), reused 96 (delta 48), pack-reused 806</span><br><span class="line">Receiving objects: 100% (959/959), 12.92 MiB | 4.79 MiB/s, done.</span><br><span class="line">Resolving deltas: 100% (568/568), done.</span><br></pre></td></tr></table></figure>
+
+<p>出现<code>Resolving deltas: 100% (n/n), done.</code>，已克隆完成，还需要进行主题配置才会把默认主题替换</p>
+</li>
+</ul>
+</li>
+<li><p>主题配置</p>
+<ul>
+<li><p>修改<code>_config.yml</code>文件，<code>_comfig.yml</code>文件路径在<code>D:\Blog</code>，<code>_comfig.yml</code>文件用记事本打开，<code>Ctrl+F</code>搜索<code>theme: landscape</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https://hexo.io/plugins/</span><br><span class="line">## Themes: https://hexo.io/themes/</span><br><span class="line">theme: landscape</span><br></pre></td></tr></table></figure>
+
+<p>修改为</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https://hexo.io/plugins/</span><br><span class="line">## Themes: https://hexo.io/themes/</span><br><span class="line">theme: Ocean</span><br></pre></td></tr></table></figure>
+
+<p>配置完成后，桌面右键打开<code>Open Git Bash here</code>终端命令行页面，进入<code>D:\Blog</code>路径，执行命令<code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code>，部署到<code>Github</code>，进入个人博客可看到主题已修改</p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/Hexo_2.png"></p>
+</li>
+<li><p>其他配置会在后续博客文章中发布</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="三、文章发布"><a href="#三、文章发布" class="headerlink" title="三、文章发布"></a>三、文章发布</h2><ul>
+<li><p><code>Typora</code></p>
+<ul>
+<li><p>官网下载（<code>Ctrl+</code>单击链接自动跳转，付费版）</p>
+<p><a target="_blank" rel="noopener" href="https://typoraio.cn/">Typora 官方中文站 (typoraio.cn)</a></p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/Typora_1.png"></p>
+</li>
+<li><p>博主提供的下载链接（<code>Ctrl+</code>单击链接自动跳转，免费版），根据跳转页面安装教程安装</p>
+<p><a target="_blank" rel="noopener" href="https://gitee.com/zglao/InstallPackage">InstallPackage: 安装包 (gitee.com)</a></p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/Typora_2.png"></p>
+</li>
+</ul>
+</li>
+<li><p>文档编辑</p>
+<ul>
+<li><p>打开<code>Typora</code></p>
+</li>
+<li><p>编辑内容</p>
+<p>根据内容设置标题等级、代码块（公式块）、有&#x2F;无序列表、加粗、下划线等</p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/Typora_3.png"></p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/Typora_4.png"></p>
+</li>
+<li><p>文档路径保存</p>
+<p>保存在<code>Hexo+Github搭建个人博客（一）</code>文章中创建的<code>Blog</code>文件夹<code>D:\Blog\source\_posts\</code>路径</p>
+</li>
+</ul>
+</li>
+<li><p>文档图片引用</p>
+<ul>
+<li><p>图片路径</p>
+<p>在<code>Hexo+Github搭建个人博客（一）</code>文章中创建的Blog文件夹<code>D:\Blog\source\</code>路径创建文件夹，命名<code>Images</code>（博主命名<code>Hexo+Github搭建个人博客（一）Images</code>）</p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/Picture-Path.png"></p>
+</li>
+<li><p>引用图片格式</p>
+<p><code>![](路径+图片名)</code>，如红框所示</p>
+<p><img src="/../Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2Images/Image_1.png"></p>
+<p><strong>注意</strong>：此处引用使用相对引用，路径引用正确，图片会自动显示，否则反之</p>
+</li>
+</ul>
+</li>
+<li><p>上传<code>Github</code></p>
+<p>桌面右键打开<code>Open Git Bash here</code>终端命令行页面，进入<code>D:\Blog</code>路径，执行命令<code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Zg Lao@admin MINGW64 ~/Desktop</span><br><span class="line">$ cd D:\Blog</span><br><span class="line"></span><br><span class="line">Zg Lao@admin MINGW64 /d/Blog</span><br><span class="line">$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Deleted database.</span><br><span class="line">INFO  Deleted public folder.</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Files loaded in 191 ms</span><br><span class="line">...</span><br><span class="line">INFO  Deploy done: git</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2025/10/03/Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%BA%8C)/" data-id="cuidmfE02k9W1AMgG5Gih3bNa" data-title="Hexo+Github搭建个人博客(二)" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Hello World" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2025/10/03/Hello%20World/" class="article-date">
+  <time class="dt-published" datetime="2025-10-03T08:13:45.359Z" itemprop="datePublished">2025-10-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2025/10/03/Hello%20World/">Hello World</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2025/10/03/Hello%20World/" data-id="cuidRoY9NcQ2HETeOi-ryiOQm" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Gitee仓库设置下载链接" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2025/10/03/Gitee%E4%BB%93%E5%BA%93%E8%AE%BE%E7%BD%AE%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5/" class="article-date">
+  <time class="dt-published" datetime="2025-10-03T08:13:45.356Z" itemprop="datePublished">2025-10-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2025/10/03/Gitee%E4%BB%93%E5%BA%93%E8%AE%BE%E7%BD%AE%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5/">Gitee仓库设置下载链接</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="一、相关说明"><a href="#一、相关说明" class="headerlink" title="一、相关说明"></a>一、相关说明</h2><ul>
+<li>上传至<code>Gitee</code>仓库需要安装配置<code>Git</code></li>
+<li>博主本地环境：<code>Windows 11</code>家庭中文版、<code>64</code>位操作系统，基于<code>x64</code>的处理器</li>
+</ul>
+<h2 id="二、Gitee仓库设置下载链接"><a href="#二、Gitee仓库设置下载链接" class="headerlink" title="二、Gitee仓库设置下载链接"></a>二、Gitee仓库设置下载链接</h2><ul>
+<li><p>下载安装<code>Git</code></p>
+<p>参考博主发布过的文章<a target="_blank" rel="noopener" href="https://zglao.github.io/2024/07/11/Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%B8%80)/">Hexo+Github搭建个人博客(一) | Hexo (Zglao.github.io)</a></p>
+</li>
+<li><p>新建文件夹</p>
+<p>命名为<code>Gitee</code>（文件夹命名，<code>MyGitee</code>、<code>Local Gitee repository</code>等都可以），博主文件夹路径为<code>D:\Gitee</code></p>
+</li>
+<li><p>本地新建仓库</p>
+<p>桌面右键打开<code>Open Git Bash here</code>终端命令行页面，进入<code>D:\Gitee</code>路径，执行命令<code>git init</code>，本地新建仓库</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Zg Lao@admin MINGW64 ~/Desktop</span><br><span class="line">$ cd D:\Gitee</span><br><span class="line"></span><br><span class="line">Zg Lao@admin MINGW64 /d/Gitee</span><br><span class="line">$ git init</span><br><span class="line">Initialized empty Git repository in D:/Gitee/.git/</span><br></pre></td></tr></table></figure>
+
+<p>命令执行完成，路径<code>D:\Gitee</code>下会自动生成<code>.git</code>的文件夹，如果不显示，查看是否打开隐藏的项目这个选项</p>
+<p><img src="/../Gitee%E4%BB%93%E5%BA%93%E8%AE%BE%E7%BD%AE%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5Images/Gitee.png"></p>
+</li>
+<li><p>配置用户名和邮箱</p>
+<p>桌面右键打开<code>Open Git Bash here</code>终端命令行页面，进入<code>D:\Gitee</code>路径，执行命令格式<code>git config --global user.name &quot;name&quot;</code>和<code>git config --global user.email &quot;email&quot;</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;name&quot;</span><br><span class="line">git config --global user.email &quot;email&quot;</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意</strong>：这里的<code>name</code>输入你的<code>Gitee</code>用户名，<code>email</code>输入你的<code>Gitee</code>邮箱</p>
+<p>博主<code>Gitee</code>用户名<code>Zglao</code>，<code>Gitee</code>的邮箱<code>3878XX6714@qq.com</code>，初始化Git的用户名和邮箱，执行命令<code>git config --global user.name &quot;Zglao&quot;</code>和<code>git config --global user.email &quot;3878XX6714@qq.com&quot;</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Zg Lao@admin MINGW64 /d/Gitee (master)</span><br><span class="line">$ git config --global user.name &quot;Zglao&quot;</span><br><span class="line"></span><br><span class="line">Zg Lao@admin MINGW64 /d/Gitee (master)</span><br><span class="line">$ git config --global user.email &quot;3878XX6714@qq.com&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>注册<code>Gitee</code>账号</p>
+<p><code>Gitee</code>注册地址<a target="_blank" rel="noopener" href="https://gitee.com/signup?redirect_to_url=/">注册 - Gitee.com</a></p>
+</li>
+<li><p>创建<code>Gitee</code>仓库</p>
+<p>登陆到<code>Gitee</code>，操作步骤：头像左边➕ -&gt; 新建仓库，点击创建</p>
+<p><img src="/../Gitee%E4%BB%93%E5%BA%93%E8%AE%BE%E7%BD%AE%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5Images/Gitee-repository_1.png"></p>
+<p>其中，仓库名称可以随便填写（博主为了便于管理，命名为<code>InstallPackage</code>，英文意思安装包），路径可以手动修改，其他默认</p>
+<p>创建完成，自动跳转仓库代码页面，点击<code>初始化 readme 文件</code></p>
+<p><img src="/../Gitee%E4%BB%93%E5%BA%93%E8%AE%BE%E7%BD%AE%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5Images/Gitee-repository_2.png"></p>
+<p><img src="/../Gitee%E4%BB%93%E5%BA%93%E8%AE%BE%E7%BD%AE%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5Images/Gitee-repository_3.png"></p>
+</li>
+<li><p>克隆仓库到本地</p>
+<p>克隆仓库格式<code>git clone [url]</code>（<code>url</code>是仓库地址），第一次克隆会弹出弹窗，输入你的<code>Gitee</code>用户名和密码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Zg Lao@admin MINGW64 /d/Gitee (master)</span><br><span class="line">$ git clone https://gitee.com/zglao/InstallPackage.git</span><br><span class="line">Cloning into &#x27;InstallPackage&#x27;...</span><br><span class="line">remote: Enumerating objects: 4, done.</span><br><span class="line">remote: Counting objects: 100% (4/4), done.</span><br><span class="line">remote: Compressing objects: 100% (4/4), done.</span><br><span class="line">remote: Total 4 (delta 0), reused 0 (delta 0), pack-reused 0</span><br><span class="line">Receiving objects: 100% (4/4), done.</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../Gitee%E4%BB%93%E5%BA%93%E8%AE%BE%E7%BD%AE%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5Images/Gitee-repository_4.png"></p>
+<p><img src="/../Gitee%E4%BB%93%E5%BA%93%E8%AE%BE%E7%BD%AE%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5Images/Gitee-repository_5.png"></p>
+<p>克隆完成，路径<code>D:\Gitee</code>下会自动生成仓库名（博主仓库名<code>InstallPackage</code>）的文件夹，内容是<code>Gitee</code>仓库中的内容</p>
+<p><img src="/../Gitee%E4%BB%93%E5%BA%93%E8%AE%BE%E7%BD%AE%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5Images/Local-Gitee-repository_1.png"></p>
+</li>
+<li><p>本地仓库添加内容</p>
+<p>手动把需要上传至<code>Gitee</code>仓库的内容复制粘贴路径<code>D:\Gitee\InstallPackage</code>中</p>
+<p><img src="/../Gitee%E4%BB%93%E5%BA%93%E8%AE%BE%E7%BD%AE%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5Images/Local-Gitee-repository_2.png"></p>
+<p>其中，可以对<code>README.md</code>和<code>README.en.md</code>文件内容进行修改，<code>README.md</code>是中文说明文档和<code>README.en.md</code>是英文说明文档，博主内容修改内容是安装包的下载及安装步骤</p>
+<p><img src="/../Gitee%E4%BB%93%E5%BA%93%E8%AE%BE%E7%BD%AE%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5Images/Local-Gitee-repository_3.png"></p>
+</li>
+<li><p>上传<code>Gitee</code>仓库</p>
+<ul>
+<li><p>进入<code>D:\Gitee\InstallPackage</code>路径</p>
+<p>执行命令<code>cd D:\Gitee\InstallPackage</code>和<code>git status</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">Zg Lao@admin MINGW64 /d/Gitee (master)</span><br><span class="line">$ cd D:\Gitee\InstallPackage</span><br><span class="line"></span><br><span class="line">Zg Lao@admin MINGW64 /d/Gitee/InstallPackage (master)</span><br><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line">Your branch is up to date with &#x27;origin/master&#x27;.</span><br><span class="line"></span><br><span class="line">Changes not staged for commit:</span><br><span class="line">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)</span><br><span class="line">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)</span><br><span class="line">        modified:   README.en.md</span><br><span class="line">        modified:   README.md</span><br><span class="line"></span><br><span class="line">Untracked files:</span><br><span class="line">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)</span><br><span class="line">        Git-2.43.0-64-bit.exe</span><br><span class="line">        Node-v20.15.0-x64.msi</span><br><span class="line">        Typora/</span><br><span class="line"></span><br><span class="line">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)</span><br></pre></td></tr></table></figure>
+
+<p>其中，命令<code>git status</code>是查看git状态</p>
+</li>
+<li><p>添加项目目录下所有文件至本地仓库</p>
+<p>执行命令<code>git add .</code>和<code>git status</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">Zg Lao@admin MINGW64 /d/Gitee/InstallPackage (master)</span><br><span class="line">$ git add .</span><br><span class="line"></span><br><span class="line">Zg Lao@admin MINGW64 /d/Gitee/InstallPackage (master)</span><br><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line">Your branch is up to date with &#x27;origin/master&#x27;.</span><br><span class="line"></span><br><span class="line">Changes to be committed:</span><br><span class="line">  (use &quot;git restore --staged &lt;file&gt;...&quot; to unstage)</span><br><span class="line">        new file:   Git-2.43.0-64-bit.exe</span><br><span class="line">        new file:   Node-v20.15.0-x64.msi</span><br><span class="line">        modified:   README.en.md</span><br><span class="line">        modified:   README.md</span><br><span class="line">        new file:   Typora/typora-setup-x64-1.6.7.exe</span><br><span class="line">        new file:   Typora/winmm.dll</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>提交的内容添加注释说明</p>
+<p>添加注释说明格式<code>git commit -m &#39;说明&#39;</code>（说明一般是添加文件或者修改文件或者删除文件的说明），执行命令<code>git commit -m &quot;Add files（node git Typora） from InstallPackage and modify files（README.md README.en.md）</code>和<code>git status</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">Zg Lao@admin MINGW64 /d/Gitee/InstallPackage (master)</span><br><span class="line">$ git commit -m &quot;Add files（node git Typora） from InstallPackage and modify files（README.md README.en.md）&quot;</span><br><span class="line">[master a629253] Add files（node git Typora） from InstallPackage and modify files（README.md README.en.md）</span><br><span class="line"> 6 files changed, 12 insertions(+), 54 deletions(-)</span><br><span class="line"> create mode 100644 Git-2.43.0-64-bit.exe</span><br><span class="line"> create mode 100644 Node-v20.15.0-x64.msi</span><br><span class="line"> create mode 100644 Typora/typora-setup-x64-1.6.7.exe</span><br><span class="line"> create mode 100644 Typora/winmm.dll</span><br><span class="line"> </span><br><span class="line">Zg Lao@admin MINGW64 /d/Gitee/InstallPackage (master)</span><br><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line">Your branch is ahead of &#x27;origin/master&#x27; by 1 commit.</span><br><span class="line">  (use &quot;git push&quot; to publish your local commits)</span><br><span class="line"></span><br><span class="line">nothing to commit, working tree clean</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>上传<code>Gitee</code></p>
+<p>执行命令<code>git push</code>，上传本地仓库至<code>Gitee</code>仓库</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">Zg Lao@admin MINGW64 /d/Gitee/InstallPackage (master)</span><br><span class="line">$ git push</span><br><span class="line">Enumerating objects: 12, done.</span><br><span class="line">Counting objects: 100% (12/12), done.</span><br><span class="line">Delta compression using up to 8 threads</span><br><span class="line">Compressing objects: 100% (9/9), done.</span><br><span class="line">Writing objects: 100% (9/9), 161.70 MiB | 3.37 MiB/s, done.</span><br><span class="line">Total 9 (delta 0), reused 0 (delta 0), pack-reused 0</span><br><span class="line">remote: Powered by GITEE.COM [GNK-6.4]</span><br><span class="line">remote: warning: This repository has 2 files larger than 50.00 MB</span><br><span class="line">remote: The size information of several files as follows:</span><br><span class="line">remote: File 6e49f7ddfaddb755fb24fcc16b1ca15f13b8751f 57.60  MB</span><br><span class="line">remote: File 9fb4faddf5e36bb8831a929bbd726823abc57a53 79.09  MB</span><br><span class="line">remote: Use command below to see the filename:</span><br><span class="line">remote: git rev-list --objects --all | grep $oid</span><br><span class="line">remote: HelpLink: https://gitee.com/help/articles/4232</span><br><span class="line">To https://gitee.com/zglao/InstallPackage.git</span><br><span class="line">   0c63870..a629253  master -&gt; master</span><br></pre></td></tr></table></figure>
+
+<p>此时，本地仓库内容全部已上传<code>Gitee</code>仓库</p>
+<p><img src="/../Gitee%E4%BB%93%E5%BA%93%E8%AE%BE%E7%BD%AE%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5Images/Gitee-success.png"></p>
+</li>
+</ul>
+</li>
+<li><p>设置下载链接</p>
+<p>根据格式修改链接放入<code>md</code>文档中，把文章上传至<code>Github</code>仓库，打开个人博客，<code>Ctrl+</code>单击链接自动跳转下载页面</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://gitee.com/Gitee用户名/Gitee仓库名/raw/分支/文件名</span><br></pre></td></tr></table></figure>
+
+<p>博主设置的下载链接</p>
+<p><a target="_blank" rel="noopener" href="https://gitee.com/zglao/InstallPackage/raw/master/Node-v20.15.0-x64.msi">https://gitee.com/zglao/InstallPackage/raw/master/Node-v20.15.0-x64.msi</a></p>
+<p><img src="/../Gitee%E4%BB%93%E5%BA%93%E8%AE%BE%E7%BD%AE%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5Images/Node-v20.15.0-x64.png"></p>
+<p><a target="_blank" rel="noopener" href="https://gitee.com/zglao/InstallPackage/raw/master/Git-2.43.0-64-bit.exe">https://gitee.com/zglao/InstallPackage/raw/master/Git-2.43.0-64-bit.exe</a></p>
+<p><img src="/../Gitee%E4%BB%93%E5%BA%93%E8%AE%BE%E7%BD%AE%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5Images/Git-2.43.0-64-bit.png"></p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2025/10/03/Gitee%E4%BB%93%E5%BA%93%E8%AE%BE%E7%BD%AE%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5/" data-id="cuidnFyB9ghMjtzSNxWh6nDyo" data-title="Gitee仓库设置下载链接" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Excel(一)" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2025/10/03/Excel(%E4%B8%80)/" class="article-date">
+  <time class="dt-published" datetime="2025-10-03T08:13:45.352Z" itemprop="datePublished">2025-10-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2025/10/03/Excel(%E4%B8%80)/">Excel(一)--快捷键</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="一、相关说明"><a href="#一、相关说明" class="headerlink" title="一、相关说明"></a>一、相关说明</h2><ul>
+<li>博主本地环境：<code>Windows 11</code>家庭中文版、<code>64</code>位操作系统，基于<code>x64</code>的处理器</li>
+<li>文章若注明，默认是<code>Excel</code>快捷键</li>
+<li>更新日期<code>2024</code>年<code>8</code>月<code>26</code>日 <code>10</code>点<code>44</code>分（持续更新中）</li>
+</ul>
+<h2 id="二、Ctrl"><a href="#二、Ctrl" class="headerlink" title="二、Ctrl +"></a>二、Ctrl +</h2><ul>
+<li><p>Ctrl + 特殊字符</p>
+<table>
+<thead>
+<tr>
+<th align="center">快捷键</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Ctrl + ;</td>
+<td align="center">输入当前日期（格式YYYY&#x2F;MM&#x2F;dd）</td>
+</tr>
+<tr>
+<td align="center">Ctrl + \</td>
+<td align="center">核对两列内容</td>
+</tr>
+<tr>
+<td align="center">…</td>
+<td align="center">…</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>Ctrl + 数字</p>
+<table>
+<thead>
+<tr>
+<th align="center">快捷键</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">…</td>
+<td align="center">…</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>Ctrl + 字母</p>
+<table>
+<thead>
+<tr>
+<th align="center">快捷键</th>
+<th align="center">含义</th>
+<th align="center">备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Ctrl + A</td>
+<td align="center">全选</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Ctrl + B</td>
+<td align="center">加粗</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Ctrl + C</td>
+<td align="center">复制</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Ctrl + D</td>
+<td align="center">向下填充</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Ctrl + E</td>
+<td align="center">居中对齐</td>
+<td align="center">Word</td>
+</tr>
+<tr>
+<td align="center">Ctrl + E</td>
+<td align="center">智能填充</td>
+<td align="center">Excel</td>
+</tr>
+<tr>
+<td align="center">Ctrl + F</td>
+<td align="center">查找</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Ctrl + G</td>
+<td align="center">定位</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Ctrl + H</td>
+<td align="center">替换</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Ctrl + I</td>
+<td align="center">斜体</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Ctrl + J</td>
+<td align="center">两端对齐</td>
+<td align="center">Word</td>
+</tr>
+<tr>
+<td align="center">Ctrl + K</td>
+<td align="center">超链接</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Ctrl + L</td>
+<td align="center">左对齐</td>
+<td align="center">Word</td>
+</tr>
+<tr>
+<td align="center">Ctrl + M</td>
+<td align="center">左侧段落缩进</td>
+<td align="center">Word</td>
+</tr>
+<tr>
+<td align="center">Ctrl + N</td>
+<td align="center">新建文件</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Ctrl + O</td>
+<td align="center">打开文件</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Ctrl + P</td>
+<td align="center">打印</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Ctrl + Q</td>
+<td align="center">删除段落格式</td>
+<td align="center">Word</td>
+</tr>
+<tr>
+<td align="center">Ctrl + R</td>
+<td align="center">右对齐</td>
+<td align="center">Word</td>
+</tr>
+<tr>
+<td align="center">Ctrl + R</td>
+<td align="center">向右填充</td>
+<td align="center">Excel</td>
+</tr>
+<tr>
+<td align="center">Ctrl + S</td>
+<td align="center">保存</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Ctrl + T</td>
+<td align="center">打开新标签页</td>
+<td align="center">桌面&#x2F;应用</td>
+</tr>
+<tr>
+<td align="center">Ctrl + T</td>
+<td align="center">悬挂缩进</td>
+<td align="center">Word</td>
+</tr>
+<tr>
+<td align="center">Ctrl + T</td>
+<td align="center">超级表</td>
+<td align="center">Excel</td>
+</tr>
+<tr>
+<td align="center">Ctrl + U</td>
+<td align="center">下划线</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Ctrl + V</td>
+<td align="center">粘贴</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Ctrl + W</td>
+<td align="center">关闭文件</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Ctrl + X</td>
+<td align="center">剪切</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Ctrl + Y</td>
+<td align="center">恢复</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Ctrl + Z</td>
+<td align="center">撤销</td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h2 id="三、Ctrl-Shift"><a href="#三、Ctrl-Shift" class="headerlink" title="三、Ctrl + Shift +"></a>三、Ctrl + Shift +</h2><ul>
+<li><p>Ctrl + Shift + 特殊字符</p>
+<table>
+<thead>
+<tr>
+<th align="center">快捷键</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Ctrl + Shift + ↑</td>
+<td align="center">向上选中单元格区域</td>
+</tr>
+<tr>
+<td align="center">Ctrl + Shift + ↓</td>
+<td align="center">向下选中单元格区域</td>
+</tr>
+<tr>
+<td align="center">Ctrl + Shift + ←</td>
+<td align="center">向左选中单元格区域</td>
+</tr>
+<tr>
+<td align="center">Ctrl + Shift + →</td>
+<td align="center">向右选中单元格区域</td>
+</tr>
+<tr>
+<td align="center">Ctrl + Shift + ；</td>
+<td align="center">输入当前时间（格式00:00）</td>
+</tr>
+<tr>
+<td align="center">Ctrl + Shift + $</td>
+<td align="center">人民币格式（￥）</td>
+</tr>
+<tr>
+<td align="center">Ctrl + Shift + %</td>
+<td align="center">百分比格式（%）</td>
+</tr>
+<tr>
+<td align="center">Ctrl + Shift + &#96;</td>
+<td align="center">修改为常规格式</td>
+</tr>
+<tr>
+<td align="center">…</td>
+<td align="center">…</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>Ctrl + Shift + 数字</p>
+<table>
+<thead>
+<tr>
+<th align="center">快捷键</th>
+<th align="center">含义</th>
+<th align="center">备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Ctrl + Shift + 1</td>
+<td align="center">千分位格式</td>
+<td align="center">大于1000的数字</td>
+</tr>
+<tr>
+<td align="center">Ctrl + Shift + 1</td>
+<td align="center">去除小数点（四舍五入）</td>
+<td align="center">有小数位的数字</td>
+</tr>
+<tr>
+<td align="center">Ctrl + Shift + 2</td>
+<td align="center">修改为时间格式（YYYY&#x2F;MM&#x2F;dd</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Ctrl + Shift + 3</td>
+<td align="center">修改为日期格式（YYYY&#x2F;MM&#x2F;dd）</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Ctrl + Shift + 4</td>
+<td align="center">修改为人民币格式（￥）</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Ctrl + Shift + 5</td>
+<td align="center">修改为百分比格式（%）</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Ctrl + Shift + 6</td>
+<td align="center">修改为科学记数格式</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Ctrl + Shift + 7</td>
+<td align="center">添加外边框</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Ctrl + Shift + 8</td>
+<td align="center">扩展选择区域</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Ctrl + Shift + 9</td>
+<td align="center">取消隐藏行</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Ctrl + Shift + 0</td>
+<td align="center">取消隐藏列</td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<p><strong>注意</strong>：Ctrl+Shift+9、Ctrl+Shift+0没有反应，则是热键冲突导致</p>
+</li>
+<li><p>Ctrl + Shift + 字母</p>
+<table>
+<thead>
+<tr>
+<th align="center">快捷键</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Ctrl + Shift + G</td>
+<td align="center">显示工作簿统计信息</td>
+</tr>
+<tr>
+<td align="center">Ctrl + Shift + L</td>
+<td align="center">添加筛选框</td>
+</tr>
+<tr>
+<td align="center">Ctrl + Shift + P</td>
+<td align="center">设置单元格格式</td>
+</tr>
+<tr>
+<td align="center">Ctrl + Shift + U</td>
+<td align="center">展开公式编辑栏</td>
+</tr>
+<tr>
+<td align="center">…</td>
+<td align="center">…</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>Ctrl + Shift + Fn（Fn，n为数字）</p>
+<table>
+<thead>
+<tr>
+<th align="center">快捷键</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Ctrl + Shift + Fn +  F1</td>
+<td align="center">隐藏选项卡</td>
+</tr>
+<tr>
+<td align="center">Ctrl + Shift + F10</td>
+<td align="center">设置单元格格式</td>
+</tr>
+<tr>
+<td align="center">Ctrl + Shift + Fn + F12</td>
+<td align="center">打印设置</td>
+</tr>
+<tr>
+<td align="center">…</td>
+<td align="center">…</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h2 id="四、Alt"><a href="#四、Alt" class="headerlink" title="四、Alt +"></a>四、Alt +</h2><ul>
+<li><p>Alt + 特殊字符</p>
+<table>
+<thead>
+<tr>
+<th align="center">快捷键</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Alt + &#x3D;</td>
+<td align="center">求和</td>
+</tr>
+<tr>
+<td align="center">…</td>
+<td align="center">…</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>Alt + 数字</p>
+<table>
+<thead>
+<tr>
+<th align="center">快捷键</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">…</td>
+<td align="center">…</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>Alt + 字母</p>
+<table>
+<thead>
+<tr>
+<th align="center">快捷键</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">…</td>
+<td align="center">…</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>Alt + Fn（Fn，n为数字）</p>
+<table>
+<thead>
+<tr>
+<th align="center">快捷键</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Alt + Fn + F1</td>
+<td align="center">生成图表</td>
+</tr>
+<tr>
+<td align="center">Alt + Fn + F4</td>
+<td align="center">关闭表格</td>
+</tr>
+<tr>
+<td align="center">…</td>
+<td align="center">…</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2025/10/03/Excel(%E4%B8%80)/" data-id="cuidjvl5XKr9amdtLwUihyi6H" data-title="Excel(一)--快捷键" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Excel(二)" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2025/10/03/Excel(%E4%BA%8C)/" class="article-date">
+  <time class="dt-published" datetime="2025-10-03T08:13:45.348Z" itemprop="datePublished">2025-10-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2025/10/03/Excel(%E4%BA%8C)/">Excel(二)--基础</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="一、相关说明"><a href="#一、相关说明" class="headerlink" title="一、相关说明"></a>一、相关说明</h2><ul>
+<li>博主本地环境：<code>Windows 11</code>家庭中文版、<code>64</code>位操作系统，基于<code>x64</code>的处理器</li>
+<li>更新日期<code>2024</code>年<code>8</code>月<code>28</code>日 <code>14</code>点<code>45</code>分（持续更新中）</li>
+</ul>
+<h2 id="二、单元格基本操作"><a href="#二、单元格基本操作" class="headerlink" title="二、单元格基本操作"></a>二、单元格基本操作</h2><ul>
+<li>选择单元格</li>
+<li>输入数据</li>
+<li>编辑单元格</li>
+<li>清除单元格</li>
+<li>移动和复制单元格</li>
+<li>合并单元格</li>
+<li>调整列宽和行高</li>
+<li>隐藏和取消隐藏列&#x2F;行</li>
+<li>插入和删除单元格、行或列</li>
+<li>锁定和解锁单元格</li>
+<li>…</li>
+</ul>
+<h2 id="三、函数"><a href="#三、函数" class="headerlink" title="三、函数"></a>三、函数</h2><ul>
+<li><p>日期与时间函数</p>
+<ul>
+<li><p>TODAY   返回当前日期</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=TODAY()  # 2024/8/26</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>NOW   返回当前的日期和时间</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=NOW()  # 2024/8/26 16:05</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>DATE   创建一个日期值，由年、月、日组成</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=DATE(2024, 8, 26)  # 2024/8/26</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>TIME   创建一个时间值，由小时、分钟和秒组成</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=TIME(16, 6, 10)  # 4:06 PM</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>YEAR   从日期值中提取年份</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=YEAR(&quot;2024-08-26&quot;)  # 2024</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>MONTH   从日期值中提取月份</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=MONTH(&quot;2024-08-26&quot;)  # 8</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>DAY   从日期值中提取天数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=DAY(&quot;2024-08-26&quot;)  # 26</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>HOUR   从时间值或日期时间值中提取小时数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=HOUR(&quot;16:09:26&quot;)  # 16</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>MINUTE   从时间值或日期时间值中提取分钟数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=MINUTE(&quot;16:10:35&quot;)  # 10</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>SECOND   从时间值或日期时间值中提取秒数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=SECOND(&quot;16:11:03&quot;)   # 3</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>WEEKDAY   返回日期值对应的星期几的数字或文本</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">=WEEKDAY(&quot;2024-08-26&quot;)    # 2</span><br><span class="line">=WEEKDAY(&quot;2024-08-26&quot;,1)   # 2</span><br><span class="line">=WEEKDAY(&quot;2024-08-26&quot;,2)   # 1</span><br><span class="line">=WEEKDAY(&quot;2024-08-26&quot;,3)   # 0</span><br><span class="line">=WEEKDAY(&quot;2024-08-26&quot;,11)   # 1</span><br><span class="line">=WEEKDAY(&quot;2024-08-26&quot;,12)   # 7</span><br><span class="line">=WEEKDAY(&quot;2024-08-26&quot;,13)   # 6</span><br><span class="line">=WEEKDAY(&quot;2024-08-26&quot;,14)   # 5</span><br><span class="line">=WEEKDAY(&quot;2024-08-26&quot;,15)   # 4</span><br><span class="line">=WEEKDAY(&quot;2024-08-26&quot;,16)   # 3</span><br><span class="line">=WEEKDAY(&quot;2024-08-26&quot;,17)   # 2</span><br><span class="line"></span><br><span class="line">(...)1-从1(星期日)到7(星期六)的数字</span><br><span class="line">(...)2-从1(星期一)到7(星期日)的数字</span><br><span class="line">(...)3-从0(星期一)到6(星期日)的数字</span><br><span class="line">(...)11-数字1(星期一)至7(星期日)</span><br><span class="line">(...)12-数字1(星期二)至7(星期一)</span><br><span class="line">(...)13-数字1(星期三)至7(星期二)</span><br><span class="line">(...)14-数字1(星期四)至7(星期三)</span><br><span class="line">(...)15-数字1(星期五)至7(星期四)</span><br><span class="line">(...)16-数字1(星期六)至7(星期五)</span><br><span class="line">(...)17-数字1(星期日)至7(星期六)</span><br><span class="line">默认是1</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>DAYS   返回两个日期之间的天数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">=DAYS(&quot;2024-08-31&quot;, &quot;2024-08-26&quot;)   # 5</span><br><span class="line">=DAYS(&quot;2024-08-26&quot;, &quot;2024-08-31&quot;)   # -5</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>…</p>
+</li>
+</ul>
+</li>
+<li><p>数学函数</p>
+<ul>
+<li><p>ABS   返回一个数的绝对值</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">=ABS(10)  # 10</span><br><span class="line">=ABS(-10)  # 10</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>MOD   返回除法的余数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=MOD(10, 3)  # 1</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>POWER   返回一个数的指定次幂</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=POWER(2, 5)  # 32</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>INT   将数字向下舍入到最接近的整数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=INT(9.99)  # 9</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>ROUND   将数字四舍五入到指定的小数位数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">=ROUND(3.14159, 2)  # 3.14</span><br><span class="line">=ROUND(6.65783, 2)  # 6.66</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>ROUNDDOWN   将数字向下舍入到指定的小数位数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=ROUNDDOWN(3.9, 0)  # 3</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>ROUNDUP   将数字向上舍入到指定的小数位数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=ROUNDUP(3.1, 0)  # 4</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>SUM   计算一系列数字的总和</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=SUM(A1:A10)  # 计算A1到A10单元格的总和</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>SUMIF   根据指定的条件对一系列数字求和</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=SUMIF(A1:A10, &quot;&gt;10&quot;)  # 计算A1到A10中大于10的数字之和</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>SUMIFS   根据多个条件对一系列数字求和</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=SUMIFS(B1:B10, A1:A10, &quot;&gt;5&quot;, C1:C10, &quot;&lt;18&quot;)  # 21</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../ExcelImages/SUMIFS.png"></p>
+</li>
+<li><p>MEDIAN   返回一组数字的中位数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">=MEDIAN(1, 3, 3, 6, 7, 8, 9)  # 取中位数6</span><br><span class="line">=MEDIAN(A1:A10)  # 取A1到A10单元格的中位数</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>RANK   返回一个数字在一系列数字中的排名（默认是降序排名）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">=RANK(A1, A1:A10)  # A1单元格的值在A1到A10中的排名（降序）（值越小排名越靠后）</span><br><span class="line">=RANK(A1, A1:A10, 1)  # A1单元格的值在A1到A10中的排名（升序）（值越小排名越靠前）</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>…</p>
+</li>
+</ul>
+</li>
+<li><p>统计函数</p>
+<ul>
+<li><p>COUNT   计算指定单元格中包含数字的单元格的数量</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=COUNT(A1:A10)  # 计算A1到A10中包含数字的单元格数量</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>COUNTA   计算指定单元格中非空的单元格的数量</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=COUNTA(A1:A10)  # 计算A1到A10中非空单元格的数量</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>COUNTIF   计算指定单元格中满足特定条件的单元格数量</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=COUNTIF(A1:A10, &quot;&gt;10&quot;)  # 计算A1到A10中大于10的单元格数量</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>COUNTIFS   计算指定单元格中满足多个条件的单元格数量</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=COUNTIFS(A1:A10, &quot;&gt;10&quot;, B1:B10, &quot;&lt;20&quot;)  # 如果A1到A10中大于10且B1到B10中小于20，则计算满足条件的单元格数量</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>AVERAGE   计算一系列数字的平均值</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=AVERAGE(A1:A10)  # 计算A1到A10中数字的平均值</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>MIN   找出一系列数字中的最小值</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=MIN(A1:A10)  # 找出A1到A10中的最小值</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>MAX   找出一系列数字中的最大值</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=MAX(A1:A10)  # 找出A1到A10中的最大值</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>SMALL   从一系列数字中返回第k个最小的值</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=SMALL(A1:A10, 3)  # 找出A1到A10中的第3个最小值</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>LARGE   从一系列数字中返回第k个最大的值</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=LARGE(A1:A10, 2)  # 找出A1到A10中的第2个最大值</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>…</p>
+</li>
+</ul>
+</li>
+<li><p>查找与引用函数</p>
+<ul>
+<li><p>VLOOKUP   在一列中查找特定信息，返回同行中另一列的值</p>
+<p><strong>格式</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup])</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>lookup_value</code>: 要查找的值</li>
+<li><code>table_array</code>: 包含数据的区域或范围（要查找数据表）</li>
+<li><code>col_index_num</code>: 数据表中返回值的列号</li>
+<li><code>range_lookup</code>: 布尔值，指定是否进行近似匹配，FALSE&#x2F;0表示精确匹配，TRUE&#x2F;1表示近似匹配</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">=VLOOKUP(&quot;A&quot;, A1:B10, 2, 0)  # 在A1:B10中查找&quot;A&quot;并返回A所在行的第二列的值</span><br><span class="line">=VLOOKUP(&quot;A&quot;, A1:B10, 2, FALSE)  # 在A1:B10中查找&quot;A&quot;并返回A所在行的第二列的值</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>LOOKUP   在向量或数组中查找特定值，并返回相应的值</p>
+<p><strong>格式</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LOOKUP(lookup_value, [lookup_vector], [result_vector])</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>lookup_value</code>: 要查找的值</li>
+<li><code>lookup_vector</code>: 要搜索的一行或一列</li>
+<li><code>result_vector</code>: 与<code>lookup_vector</code>对应的行或列，从中返回查找值的结果</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=LOOKUP(&quot;A&quot;, A1:A10, B1:B10)  # 在A1:A10中查找&quot;A&quot;并返回B列中相应的值</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>INDEX   返回表格中特定行和列交叉点处的值</p>
+<p><strong>格式</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INDEX(array, row_num, [column_num])</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>array</code>: 包含数据的区域或数组</li>
+<li><code>row_num</code>: 要返回的行号</li>
+<li><code>column_num</code>: 要返回的列号（可选）</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">=INDEX(A1:A10, 3)  # 从A1:B10中返回第3行的值</span><br><span class="line">=INDEX(A1:B10, 3, 2)  # 从A1:B10中返回第3行第2列的值</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>MATCH   返回一个值在给定数组中的相对位置</p>
+<p><strong>格式</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MATCH(lookup_value, lookup_array, [match_type])</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>lookup_value</code>: 要查找的值</li>
+<li><code>lookup_array</code>: 包含可能匹配项的一行或一列</li>
+<li><code>match_type</code>: 指定查找类型，1表示最近小于（），0表示精确匹配，-1表示最大大于</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">=MATCH(&quot;A&quot;, A1:A10, 0)  # 在A1:A10中查找&quot;A&quot;的位置，0表示精确匹配</span><br><span class="line">=MATCH(&quot;A&quot;, A1:A10, -1)  # 在A1:A10中查找&quot;A&quot;的位置，0表示精确匹配</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>…</p>
+</li>
+</ul>
+</li>
+<li><p>文本函数</p>
+<ul>
+<li><p>LEN   返回文本字符串中的字符数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">=LEN(&quot;Hello&quot;)  # 5</span><br><span class="line">=LEN(A1)  # 5</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../ExcelImages/LEN.png"></p>
+</li>
+<li><p>FIND   查找字符串中第一次出现另一个字符串的位置</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">=FIND(&quot;e&quot;, &quot;Hello&quot;)  # 2</span><br><span class="line">=FIND(&quot;e&quot;, A1)  # 2</span><br><span class="line">=FIND(&quot;a&quot;, &quot;Hello&quot;)  # #VALUE!</span><br><span class="line">=FIND(&quot;a&quot;, A1)  # #VALUE!</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../ExcelImages/FIND_1.png"></p>
+<p><img src="/../ExcelImages/FIND_2.png"></p>
+</li>
+<li><p>LEFT   返回字符串中最左侧的指定数量的字符</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">=LEFT(&quot;Hello&quot;, 2)  # &quot;He&quot;</span><br><span class="line">=LEFT(A1, 2)  # &quot;He&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>MID   从指定位置开始，提取指定长度的子字符串</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">=MID(&quot;Hello&quot;, 2, 1)  # &quot;e&quot;</span><br><span class="line">=MID(A1, 2, 1)  # &quot;e&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>RIGHT   返回字符串中最右侧的指定数量的字符</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">=RIGHT(&quot;Hello&quot;, 3)  # &quot;llo&quot;</span><br><span class="line">=RIGHT(A1, 3)  # &quot;llo&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>EXACT   检查两个文本字符串是否完全相同（区分大小写）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">=EXACT(&quot;Hello&quot;, &quot;Hello&quot;)  # TRUE</span><br><span class="line">=EXACT(A1, B1)  # TRUE</span><br><span class="line">=EXACT(&quot;Hello&quot;, &quot;hello&quot;)  # FALSE</span><br><span class="line">=EXACT(A2, B2)  # FALSE</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>LOWER   将文本转换为小写</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">=LOWER(&quot;HELLO&quot;)  # &quot;hello&quot;</span><br><span class="line">=LOWER(&quot;HEllo&quot;)  # &quot;hello&quot;</span><br><span class="line">=LOWER(&quot;Hello&quot;)  # &quot;hello&quot;</span><br><span class="line">=LOWER(&quot;hello&quot;)  # &quot;hello&quot;</span><br><span class="line">=LOWER(A1)  # &quot;hello&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>UPPER   将文本转换为大写</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">=UPPER(&quot;hello&quot;)  # &quot;HELLO&quot;</span><br><span class="line">=UPPER(&quot;Hello&quot;)  # &quot;HELLO&quot;</span><br><span class="line">=UPPER(&quot;HEllo&quot;)  # &quot;HELLO&quot;</span><br><span class="line">=UPPER(&quot;HELLO&quot;)  # &quot;HELLO&quot;</span><br><span class="line">=UPPER(A1)  # &quot;HELLO&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>PROPER   首字母转换为大写，其余字母转换为小写</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">=PROPER(&quot;hElLo&quot;)  # &quot;Hello&quot;</span><br><span class="line">=PROPER(&quot;HELLO&quot;)  # &quot;Hello&quot;</span><br><span class="line">=PROPER(&quot;Hello&quot;)  # &quot;Hello&quot;</span><br><span class="line">=PROPER(A1)  # &quot;Hello&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>TEXTJOIN   多个文本字符串合并为一个文本字符串，可以指定分隔符</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">=TEXTJOIN(&quot;, &quot;, TRUE, &quot;Apple&quot;, &quot;Banana&quot;)  # &quot;Apple, Banana&quot;</span><br><span class="line">=TEXTJOIN(&quot;, &quot;, TRUE, A1:B1)  # &quot;Apple, Banana&quot;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../ExcelImages/TEXTJOIN.png"></p>
+</li>
+<li><p>…</p>
+</li>
+</ul>
+</li>
+<li><p>逻辑函数</p>
+<ul>
+<li><p>IF   根据给定条件返回两个不同结果之一</p>
+<p><strong>格式</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">IF(condition, true_value, false_value)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>condition</code>: 判断条件</li>
+<li><code>true_value</code>: 如果条件为真，则返回的值</li>
+<li><code>false_value</code>: 如果条件为假，则返回的值</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">=IF(A1 &gt; 10, &quot;&gt;10&quot;, &quot;≤10&quot;)  # 判断A1单元格的值，A1单元格的值大于10，输出&quot;&gt;10&quot;; A1单元格的值小于等于10，输出&quot;≤10&quot;;</span><br><span class="line">=IF(A1 &gt; 10, &quot;&gt;10&quot;, &quot;≤10&quot;)  # &gt;10</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../ExcelImages/IF.png"></p>
+</li>
+<li><p>OR   检查多个条件是否至少有一个为真</p>
+<p><strong>格式</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">OR(logical1, logical2, ...)</span><br></pre></td></tr></table></figure>
+
+<p><code>logical1</code>, <code>logical2</code>, …: 逻辑条件列表</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">=OR(A1 &gt; 10, B1 &lt; 5)  # 如果A1大于10或B1小于5，则返回TRUE</span><br><span class="line">=OR(A1 &gt; 10, B1 &lt; 5)  # TRUE</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../ExcelImages/OR.png"></p>
+</li>
+<li><p>AND   检查多个条件是否全部为真</p>
+<p><strong>格式</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">AND(logical1, logical2, ...)</span><br></pre></td></tr></table></figure>
+
+<p><code>logical1</code>, <code>logical2</code>, …: 逻辑条件列表</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">=AND(A1 &gt; 10, B1 &lt; 5)  # 只有当A1大于10且B1小于5时，才返回TRUE</span><br><span class="line">=AND(A1 &gt; 10, B1 &lt; 5)  # FALSE</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../ExcelImages/AND.png"></p>
+</li>
+<li><p>…</p>
+</li>
+</ul>
+</li>
+<li><p>进制转换函数</p>
+<ul>
+<li><p>BIN2OCT、BIN2DEC、BIN2HEX   二进制转换为八进制、十进制、十六进制</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">=BIN2DEC(&quot;1010&quot;)  # 10</span><br><span class="line">=BIN2OCT(&quot;1010&quot;)  # 12</span><br><span class="line">=BIN2HEX(&quot;1010&quot;)  # A</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>OCT2BIN、OCT2DEC、OCT2HEX   八进制转换为二进制、十进制、十六进制</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">=OCT2BIN(&quot;12&quot;)  # 1010</span><br><span class="line">=OCT2DEC(&quot;12&quot;)  # 10</span><br><span class="line">=OCT2HEX(&quot;12&quot;)  # A</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>DEC2BIN、DEC2OCT、DEC2HEX   十进制转换为二进制、八进制、十六进制</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">=DEC2BIN(10)  # 1010</span><br><span class="line">=DEC2OCT(10)  # 12</span><br><span class="line">=DEC2HEX(10)  # A</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>HEX2BIN、HEX2OCT、HEX2DEC   十六进制转换为二进制、八进制、十进制</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">=HEX2BIN(&quot;A&quot;)  # 1010</span><br><span class="line">=HEX2OCT(&quot;A&quot;)  # 12</span><br><span class="line">=HEX2DEC(&quot;A&quot;)  # 10</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<h2 id="四、其他快捷方式"><a href="#四、其他快捷方式" class="headerlink" title="四、其他快捷方式"></a>四、其他快捷方式</h2><ul>
+<li><p>快速输入长数值200000</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=2**5  # 200000</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>…</p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2025/10/03/Excel(%E4%BA%8C)/" data-id="cuidur6ufOokiE9K9mh8-vgxI" data-title="Excel(二)--基础" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2025/10/02/hello-world/" class="article-date">
@@ -110,7 +1532,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/10/02/hello-world/" data-id="cuidZHEg6XgH0bdChLwBJ90lk" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/10/02/hello-world/" data-id="cuidE3uQRh3KQwOy0VxywHnPg" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -153,7 +1575,23 @@
       <ul>
         
           <li>
-            <a href="/2025/10/02/hello-world/">Hello World</a>
+            <a href="/2025/10/03/Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%B8%80)/">Hexo+Github搭建个人博客(一)</a>
+          </li>
+        
+          <li>
+            <a href="/2025/10/03/Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%B8%89)/">Hexo+Github搭建个人博客(三)</a>
+          </li>
+        
+          <li>
+            <a href="/2025/10/03/Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%BA%8C)/">Hexo+Github搭建个人博客(二)</a>
+          </li>
+        
+          <li>
+            <a href="/2025/10/03/Hello%20World/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2025/10/03/Gitee%E4%BB%93%E5%BA%93%E8%AE%BE%E7%BD%AE%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5/">Gitee仓库设置下载链接</a>
           </li>
         
       </ul>
