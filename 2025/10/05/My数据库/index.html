@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>My数据库 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="一、相关说明 博主本地环境：Windows 11家庭中文版、64位操作系统，基于x64的处理器 更新日期2025年10月05日 14点43分（持续更新中）  二、MySQL1. SQL语句 数据定义语言DDL（Data Definition Language）——CREATE、DROP、ALTER  创建数据库 1CREATE DATABASE 数据库名;  删除数据库 1DROP DATABAS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="My数据库">
+<meta property="og:url" content="http://example.com/2025/10/05/My%E6%95%B0%E6%8D%AE%E5%BA%93/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="一、相关说明 博主本地环境：Windows 11家庭中文版、64位操作系统，基于x64的处理器 更新日期2025年10月05日 14点43分（持续更新中）  二、MySQL1. SQL语句 数据定义语言DDL（Data Definition Language）——CREATE、DROP、ALTER  创建数据库 1CREATE DATABASE 数据库名;  删除数据库 1DROP DATABAS">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2025-10-05T06:42:55.336Z">
+<meta property="article:modified_time" content="2025-10-05T07:24:31.758Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 8.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-My数据库" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2025/10/05/My%E6%95%B0%E6%8D%AE%E5%BA%93/" class="article-date">
+  <time class="dt-published" datetime="2025-10-05T06:42:55.336Z" itemprop="datePublished">2025-10-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      My数据库
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="一、相关说明"><a href="#一、相关说明" class="headerlink" title="一、相关说明"></a>一、相关说明</h2><ul>
+<li>博主本地环境：<code>Windows 11</code>家庭中文版、<code>64</code>位操作系统，基于<code>x64</code>的处理器</li>
+<li>更新日期<code>2025</code>年<code>10</code>月<code>05</code>日 <code>14</code>点<code>43</code>分（持续更新中）</li>
+</ul>
+<h2 id="二、MySQL"><a href="#二、MySQL" class="headerlink" title="二、MySQL"></a>二、MySQL</h2><h3 id="1-SQL语句"><a href="#1-SQL语句" class="headerlink" title="1. SQL语句"></a>1. SQL语句</h3><ul>
+<li><p>数据定义语言DDL（Data Definition Language）——CREATE、DROP、ALTER</p>
+<ul>
+<li><p>创建数据库</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CREATE DATABASE 数据库名;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>删除数据库</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DROP DATABASE 数据库名;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用数据库</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">USE 数据库名;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建表</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE 表名(</span><br><span class="line">   列名1 列1类型,</span><br><span class="line">   ...</span><br><span class="line">   列名n 列n类型,</span><br><span class="line">   PRIMARY KEY ( `列名` ) </span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>删除表</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DROP TABLE 表名;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看数据库、数据表、表结构</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SHOW DATABASES;</span><br><span class="line">SHOW TABLES;</span><br><span class="line">DESC 表名; 或 DESCRIBE 表名;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>原数据表的结构，索引</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SHOW CREATE TABLE 表名;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改表名</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">RENAME TABLE 原表名 to 新表名;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>数据查询语言DQL（Data Query Language）——SELECT</p>
+<ul>
+<li><p>简单查询</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM 表名 WHERE 字段=&#x27;值&#x27;;</span><br><span class="line">SELECT * FROM 表名 WHERE 条件 IN(&#x27;值&#x27;,&#x27;值&#x27;,...,&#x27;值&#x27;);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>联表查询——左连接（LEFT JOIN）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT a.*,b.字段(需要的值) FROM B表名 b LEFT JOIN A表名 a ON a.字段 =b.字段 WHERE 字段=&#x27;值&#x27;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>嵌套查询</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM A表名 WHERE 字段1 IN(SELECT 字段1 FROM B表名 WHERE 字段3 =&#x27;值&#x27;);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>去掉重复值——DISTINCT</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT DISTINCT 字段 FROM 表名;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>限制行数——LIMIT</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM 表名 LIMIT 数值;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>范围区间——BETWEEN…AND</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM 表名 WHERE 字段1 = &#x27;值&#x27; AND 字段2 BETWEEN &#x27;起始范围&#x27; AND &#x27;结束范围&#x27;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>除…之外——NOT IN</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT 字段(需要的值) FROM 表名 WHERE 字段(除...之外) NOT IN (&#x27;值&#x27;);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>包含——LIKE</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM 表面 WHERE 字段 LIKE &#x27;%值%&#x27;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>排序——升序（ASC）、降序（DESC）、先升序再升序、先降序再降序</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM 表名 WHERE 字段 = &#x27;值&#x27; ORDER BY 排序字段 ASC;</span><br><span class="line">SELECT * FROM 表名 WHERE 字段 = &#x27;值&#x27; ORDER BY 排序字段 DESC;</span><br><span class="line">SELECT * FROM 表名 WHERE 字段 = &#x27;值&#x27; ORDER BY 排序字段1 ASC,排序字段2 ASC;</span><br><span class="line">SELECT * FROM 表名 WHERE 字段 = &#x27;值&#x27; ORDER BY 排序字段1,排序字段2;  # 默认升序</span><br><span class="line">SELECT * FROM 表名 WHERE 字段 = &#x27;值&#x27; ORDER BY 排序字段1 DESC,排序字段2 DESC;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>分组——GROUP BY</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM 表名 GROUP BY 字段1,...,字段N;</span><br><span class="line">SELECT * FROM 表名 GROUP BY 字段1,...,字段N ORDER BY 字段 ASC/DESC;</span><br><span class="line">SELECT * FROM 表名 GROUP BY 字段1,...,字段N HAVING 字段(&lt;、&gt;、=)值;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>组合查询——UNION ALL</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT 字段 FROM 表名 WHERE 字段=&#x27;值&#x27; UNION ALL SELECT 字段 FROM 表名 WHERE 字段=&#x27;值&#x27;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>设置别名——AS</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT 字段 AS 别名 FROM 表名;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>WHERE过滤空值</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">WHERE 列名 IS NOT NULL</span><br><span class="line">WHERE 列名 != ‘NULL’</span><br><span class="line">WHERE 列名 &lt;&gt; ‘NULL’</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>操作符</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">AND</span><br><span class="line">OR</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>值——最大值（MAX）、最小值（MIN）、平均值（AVG）、和（SUM）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">SELECT MAX(字段) FROM 表名;</span><br><span class="line">SELECT MIN(字段) FROM 表名;</span><br><span class="line">SELECT AVG(字段) FROM 表名;</span><br><span class="line">SELECT SUM(字段) FROM 表名;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>函数</p>
+<ul>
+<li>条件函数</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>数据操纵语言DML（Data Manipulation Language）——INSERT、UPDATE、DELETE</p>
+<ul>
+<li><p>插入内容</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO `表名` (字段1`,`字段2`,...,`字段n`) VALUES (&#x27;值1&#x27;,‘值2&#x27;,...,&#x27;值n&#x27;);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>更新内容</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">UPDATE 表名 SET 字段 = ’值‘(需要修改的值) WHERE 字段 = &#x27;值&#x27;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>删除内容</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DELETE 表名 WHERE 字段 = &#x27;值&#x27; AND 字段 =&#x27;值&#x27;;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>数据控制语言DCL（Data Control Language）</p>
+</li>
+</ul>
+<h3 id="2-其他"><a href="#2-其他" class="headerlink" title="2. 其他"></a>2. 其他</h3><h2 id="三、MongoDB"><a href="#三、MongoDB" class="headerlink" title="三、MongoDB"></a>三、MongoDB</h2><h3 id="1-数据库操作"><a href="#1-数据库操作" class="headerlink" title="1. 数据库操作"></a>1. 数据库操作</h3><ul>
+<li><p>查看所有数据库</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show dbs</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建数据库</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">use 数据库名</span><br></pre></td></tr></table></figure>
+
+<p>注意：数据库<strong>不存在</strong>则创建数据库，<strong>存在</strong>切换指定数据库</p>
+</li>
+<li><p>删除数据库（先选中数据库）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.dropDatabase()</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="2-集合操作"><a href="#2-集合操作" class="headerlink" title="2. 集合操作"></a>2. 集合操作</h3><ul>
+<li><p>查看所有集合</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show collections</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建集合</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.createCollection(&#x27;集合名&#x27;)</span><br></pre></td></tr></table></figure>
+
+<p><strong>样例</strong></p>
+<p>创建固定集合 mycol，整个集合空间大小 6142800 B, 文档最大个数为 10000 个</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.createCollection(&quot;mycol&quot;, &#123; capped : true, autoIndexId : true, size : 6142800, max : 10000 &#125; )</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>删除集合</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.集合名.drop()</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="3-文档操作"><a href="#3-文档操作" class="headerlink" title="3. 文档操作"></a>3. 文档操作</h3><ul>
+<li><p>插入文档</p>
+<p><strong>样例</strong></p>
+<p>插入 title 为 “MongoDB”，description 为 “MongoDB 是一个 Nosql 数据库” 的文档</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.col.insert(&#123;title: &#x27;MongoDB&#x27;, description: &#x27;MongoDB 是一个 Nosql 数据库&#x27;&#125;, &#x27;by&#x27;: &#x27;Blog&#x27;)</span><br></pre></td></tr></table></figure>
+
+<p>注释：col 是我们的集合名，如果该集合不在该数据库中， MongoDB 会自动创建该集合并插入文档</p>
+</li>
+<li><p>删除文档</p>
+<p><strong>样例</strong></p>
+<p>删除 title 为 “MongoDB” 的文档</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.col.remove(&#123;&#x27;title&#x27;: &#x27;MongoDB&#x27;&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>更新文档</p>
+<p><strong>样例</strong></p>
+<p>把 title 由原来的 “MongoDB” 更新为 “MongoDB Blog”，修改一条</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.col.update(&#123;&#x27;title&#x27;: &#x27;MongoDB&#x27;&#125;,&#123;$set:&#123;&#x27;title&#x27;: &#x27;MongoDB Blog&#x27;&#125;&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>‘,{multi:true}’ 修改多条相同的文档</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.col.update(&#123;&#x27;title&#x27;: &#x27;MongoDB&#x27;&#125;,&#123;$set:&#123;&#x27;title&#x27;: &#x27;MongoDB Blog&#x27;&#125;&#125;,&#123;multi:true&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查询文档</p>
+<p><strong>样例</strong></p>
+<p>通过 by 和 title 键来查询 “Blog” 中 “MongoDB Blog” 的数据</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.col.find(&#123;&#x27;by&#x27;: &#x27;Blog&#x27;, &#x27;title&#x27;: &#x27;MongoDB Blog&#x27;&#125;).pretty()</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2025/10/05/My%E6%95%B0%E6%8D%AE%E5%BA%93/" data-id="cuidOEVG0hynGMgSRpTyrpdzE" data-title="My数据库" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2025/10/03/Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%B8%80)/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hexo+Github搭建个人博客(一)</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/10/">October 2025</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2025/10/05/My%E6%95%B0%E6%8D%AE%E5%BA%93/">My数据库</a>
+          </li>
+        
+          <li>
+            <a href="/2025/10/03/Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%B8%80)/">Hexo+Github搭建个人博客(一)</a>
+          </li>
+        
+          <li>
+            <a href="/2025/10/03/Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%B8%89)/">Hexo+Github搭建个人博客(三)</a>
+          </li>
+        
+          <li>
+            <a href="/2025/10/03/Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%BA%8C)/">Hexo+Github搭建个人博客(二)</a>
+          </li>
+        
+          <li>
+            <a href="/2025/10/03/Hello%20World/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2025 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
