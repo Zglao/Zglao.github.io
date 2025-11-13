@@ -6,15 +6,22 @@
   
   <title>Windows命令 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="一、相关说明 博主本地环境：Windows 11家庭中文版、64位操作系统，基于x64的处理器 更新日期2025年11月10日 23点06分（持续更新中）  二、步骤1. Win+R打开，输入cmd进入命令行页面 2. 执行命令 三、命令1. copy 语法   单文件 1copy 文件 文件  批量文件 1copy 文件 目录\   注意事项 1231) copy只负责单目录和文件级复制，整树用">
+  <meta name="description" content="一、相关说明 博主本地环境：Windows 10专业版、64位操作系统，基于x64的处理器 更新日期2025年11月10日 23点06分（持续更新中）  二、打开CMD1. 快捷键Win+R打开，输入cmd，回车   2. 搜索在开始菜单搜索栏输入 cmd，点击”命令提示符”  三、CMD命令1. 文件操作mkdir–创建 语法   创建单级目录 1mkdir 目录\  创建多级目录 1mkdir">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Windows命令">
 <meta property="og:url" content="http://example.com/2025/11/10/Windows%E5%91%BD%E4%BB%A4/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="一、相关说明 博主本地环境：Windows 11家庭中文版、64位操作系统，基于x64的处理器 更新日期2025年11月10日 23点06分（持续更新中）  二、步骤1. Win+R打开，输入cmd进入命令行页面 2. 执行命令 三、命令1. copy 语法   单文件 1copy 文件 文件  批量文件 1copy 文件 目录\   注意事项 1231) copy只负责单目录和文件级复制，整树用">
+<meta property="og:description" content="一、相关说明 博主本地环境：Windows 10专业版、64位操作系统，基于x64的处理器 更新日期2025年11月10日 23点06分（持续更新中）  二、打开CMD1. 快捷键Win+R打开，输入cmd，回车   2. 搜索在开始菜单搜索栏输入 cmd，点击”命令提示符”  三、CMD命令1. 文件操作mkdir–创建 语法   创建单级目录 1mkdir 目录\  创建多级目录 1mkdir">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/Window%E5%91%BD%E4%BB%A4%E8%A1%8C/Windows_1.png">
 <meta property="og:image" content="http://example.com/Window%E5%91%BD%E4%BB%A4%E8%A1%8C/Windows_2.png">
+<meta property="og:image" content="http://example.com/Window%E5%91%BD%E4%BB%A4%E8%A1%8C/Windows_3.png">
+<meta property="og:image" content="http://example.com/Window%E5%91%BD%E4%BB%A4%E8%A1%8C/mkdir/mkdir_1-1.png">
+<meta property="og:image" content="http://example.com/Window%E5%91%BD%E4%BB%A4%E8%A1%8C/mkdir/mkdir_1-2.png">
+<meta property="og:image" content="http://example.com/Window%E5%91%BD%E4%BB%A4%E8%A1%8C/mkdir/mkdir_1-3.png">
+<meta property="og:image" content="http://example.com/Window%E5%91%BD%E4%BB%A4%E8%A1%8C/mkdir/mkdir_2-1.png">
+<meta property="og:image" content="http://example.com/Window%E5%91%BD%E4%BB%A4%E8%A1%8C/mkdir/mkdir_2-2.png">
+<meta property="og:image" content="http://example.com/Window%E5%91%BD%E4%BB%A4%E8%A1%8C/mkdir/mkdir_2-3.png">
 <meta property="og:image" content="http://example.com/Window%E5%91%BD%E4%BB%A4%E8%A1%8C/copy/copy_1-1.png">
 <meta property="og:image" content="http://example.com/Window%E5%91%BD%E4%BB%A4%E8%A1%8C/copy/copy_1-2.png">
 <meta property="og:image" content="http://example.com/Window%E5%91%BD%E4%BB%A4%E8%A1%8C/copy/copy_1-3.png">
@@ -22,8 +29,13 @@
 <meta property="og:image" content="http://example.com/Window%E5%91%BD%E4%BB%A4%E8%A1%8C/copy/copy_2-2.png">
 <meta property="og:image" content="http://example.com/Window%E5%91%BD%E4%BB%A4%E8%A1%8C/copy/copy_2-3.png">
 <meta property="og:image" content="http://example.com/Window%E5%91%BD%E4%BB%A4%E8%A1%8C/copy/copy_2-4.png">
+<meta property="og:image" content="http://example.com/Window%E5%91%BD%E4%BB%A4%E8%A1%8C/xcopy/xcopy_1-1.png">
+<meta property="og:image" content="http://example.com/Window%E5%91%BD%E4%BB%A4%E8%A1%8C/xcopy/xcopy_1-2.png">
+<meta property="og:image" content="http://example.com/Window%E5%91%BD%E4%BB%A4%E8%A1%8C/xcopy/xcopy_1-3.png">
+<meta property="og:image" content="http://example.com/Window%E5%91%BD%E4%BB%A4%E8%A1%8C/xcopy/xcopy_1-4.png">
+<meta property="og:image" content="http://example.com/Window%E5%91%BD%E4%BB%A4%E8%A1%8C/xcopy/xcopy_1-5.png">
 <meta property="article:published_time" content="2025-11-10T14:32:10.670Z">
-<meta property="article:modified_time" content="2025-11-10T15:09:29.181Z">
+<meta property="article:modified_time" content="2025-11-13T14:21:16.706Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/Window%E5%91%BD%E4%BB%A4%E8%A1%8C/Windows_1.png">
@@ -106,12 +118,50 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
         <h2 id="一、相关说明"><a href="#一、相关说明" class="headerlink" title="一、相关说明"></a>一、相关说明</h2><ul>
-<li>博主本地环境：<code>Windows 11</code>家庭中文版、<code>64</code>位操作系统，基于<code>x64</code>的处理器</li>
+<li>博主本地环境：<code>Windows 10</code>专业版、<code>64</code>位操作系统，基于<code>x64</code>的处理器</li>
 <li>更新日期<code>2025</code>年<code>11</code>月<code>10</code>日 <code>23</code>点<code>06</code>分（持续更新中）</li>
 </ul>
-<h2 id="二、步骤"><a href="#二、步骤" class="headerlink" title="二、步骤"></a>二、步骤</h2><h3 id="1-Win-R打开，输入cmd进入命令行页面"><a href="#1-Win-R打开，输入cmd进入命令行页面" class="headerlink" title="1. Win+R打开，输入cmd进入命令行页面"></a>1. Win+R打开，输入cmd进入命令行页面</h3><p><img src="/../Window%E5%91%BD%E4%BB%A4%E8%A1%8C/Windows_1.png"></p>
-<h3 id="2-执行命令"><a href="#2-执行命令" class="headerlink" title="2. 执行命令"></a>2. 执行命令</h3><p><img src="/../Window%E5%91%BD%E4%BB%A4%E8%A1%8C/Windows_2.png"></p>
-<h2 id="三、命令"><a href="#三、命令" class="headerlink" title="三、命令"></a>三、命令</h2><h3 id="1-copy"><a href="#1-copy" class="headerlink" title="1. copy"></a>1. copy</h3><ul>
+<h2 id="二、打开CMD"><a href="#二、打开CMD" class="headerlink" title="二、打开CMD"></a>二、打开CMD</h2><h3 id="1-快捷键"><a href="#1-快捷键" class="headerlink" title="1. 快捷键"></a>1. 快捷键</h3><p><code>Win+R</code>打开，输入<code>cmd</code>，回车</p>
+<p><img src="/../Window%E5%91%BD%E4%BB%A4%E8%A1%8C/Windows_1.png"></p>
+<p><img src="/../Window%E5%91%BD%E4%BB%A4%E8%A1%8C/Windows_2.png"></p>
+<h3 id="2-搜索"><a href="#2-搜索" class="headerlink" title="2. 搜索"></a>2. <strong>搜索</strong></h3><p>在开始菜单搜索栏输入 <code>cmd</code>，点击”命令提示符”</p>
+<p><img src="/../Window%E5%91%BD%E4%BB%A4%E8%A1%8C/Windows_3.png"></p>
+<h2 id="三、CMD命令"><a href="#三、CMD命令" class="headerlink" title="三、CMD命令"></a>三、CMD命令</h2><h3 id="1-文件操作"><a href="#1-文件操作" class="headerlink" title="1. 文件操作"></a>1. 文件操作</h3><h4 id="mkdir–创建"><a href="#mkdir–创建" class="headerlink" title="mkdir–创建"></a>mkdir–创建</h4><ul>
+<li><p>语法 </p>
+<ul>
+<li><p>创建单级目录</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir 目录\</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建多级目录</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p 目录\子目录\子目录\</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>注意事项</p>
+<ul>
+<li>路径需要加引号</li>
+<li>创建多级目录<code>-p</code>自动创建路径中缺失的父目录，避免因目录不存在导致错误</li>
+</ul>
+</li>
+<li><p>示例</p>
+<ul>
+<li><p>创建单级目录</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir &quot;C:\Users\Administrator\Desktop\Windows命令\mkdir命令\目录\&quot;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../Window%E5%91%BD%E4%BB%A4%E8%A1%8C/mkdir/mkdir_1-1.png"></p>
+<p><img src="/../Window%E5%91%BD%E4%BB%A4%E8%A1%8C/mkdir/mkdir_1-2.png"></p>
+<p><img src="/../Window%E5%91%BD%E4%BB%A4%E8%A1%8C/mkdir/mkdir_1-3.png"></p>
+</li>
+<li><p>创建多级目录</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir &quot;C:\Users\Administrator\Desktop\Windows命令\mkdir命令\目录2\子目录\子目录&quot;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../Window%E5%91%BD%E4%BB%A4%E8%A1%8C/mkdir/mkdir_2-1.png"></p>
+<p><img src="/../Window%E5%91%BD%E4%BB%A4%E8%A1%8C/mkdir/mkdir_2-2.png"></p>
+<p><img src="/../Window%E5%91%BD%E4%BB%A4%E8%A1%8C/mkdir/mkdir_2-3.png"></p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="copy–复制"><a href="#copy–复制" class="headerlink" title="copy–复制"></a>copy–复制</h4><ul>
 <li><p>语法 </p>
 <ul>
 <li><p>单文件</p>
@@ -122,31 +172,95 @@
 </ul>
 </li>
 <li><p>注意事项</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1) copy只负责单目录和文件级复制，整树用robocopy</span><br><span class="line">2) 路径需要加引号</span><br><span class="line">3) 最后一个路径是目标文件夹，末尾加\</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>copy</code>只负责单目录和文件级复制，整树用<code>robocopy</code></li>
+<li>路径需要加引号</li>
+<li>最后一个路径是目标文件夹，末尾加<code>\</code></li>
+</ul>
 </li>
 <li><p>示例</p>
 <ul>
 <li><p>单文件复制</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">copy &quot;C:\Users\20538\Desktop\copy命令示例\文件.txt&quot; &quot;C:\Users\20538\Desktop\copy命令示例\文件2.txt&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">copy &quot;C:\Users\Administrator\Desktop\Windows命令\copy命令\文件.txt&quot; &quot;C:\Users\Administrator\Desktop\Windows命令\copy命令\文件2.txt&quot;</span><br></pre></td></tr></table></figure>
 
 <p><img src="/../Window%E5%91%BD%E4%BB%A4%E8%A1%8C/copy/copy_1-1.png"></p>
 <p><img src="/../Window%E5%91%BD%E4%BB%A4%E8%A1%8C/copy/copy_1-2.png"></p>
 <p><img src="/../Window%E5%91%BD%E4%BB%A4%E8%A1%8C/copy/copy_1-3.png"></p>
 </li>
 <li><p>批量文件复制</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">copy &quot;C:\Users\20538\Desktop\copy命令示例\*.txt&quot; &quot;C:\Users\20538\Desktop\copy命令示例2\&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">copy &quot;C:\Users\Administrator\Desktop\Windows命令\copy命令\*.txt&quot; &quot;C:\Users\Administrator\Desktop\Windows命令\copy命令2\&quot;</span><br></pre></td></tr></table></figure>
 
-<p><img src="/../Window%E5%91%BD%E4%BB%A4%E8%A1%8C/copy/copy_2-1.png"><img src="/../Window%E5%91%BD%E4%BB%A4%E8%A1%8C/copy/copy_2-2.png"><img src="/../Window%E5%91%BD%E4%BB%A4%E8%A1%8C/copy/copy_2-3.png"><img src="/../Window%E5%91%BD%E4%BB%A4%E8%A1%8C/copy/copy_2-4.png"></p>
+<p><img src="/../Window%E5%91%BD%E4%BB%A4%E8%A1%8C/copy/copy_2-1.png"></p>
+<p><img src="/../Window%E5%91%BD%E4%BB%A4%E8%A1%8C/copy/copy_2-2.png"></p>
+<p><img src="/../Window%E5%91%BD%E4%BB%A4%E8%A1%8C/copy/copy_2-3.png"></p>
+<p><img src="/../Window%E5%91%BD%E4%BB%A4%E8%A1%8C/copy/copy_2-4.png"></p>
 </li>
 </ul>
 </li>
 </ul>
-<h3 id="2-其他"><a href="#2-其他" class="headerlink" title="2. 其他"></a>2. 其他</h3><p>- </p>
+<h4 id="xcopy–复制（目标路径不存在自动创建）"><a href="#xcopy–复制（目标路径不存在自动创建）" class="headerlink" title="xcopy–复制（目标路径不存在自动创建）"></a>xcopy–复制（目标路径不存在自动创建）</h4><ul>
+<li><p>语法 </p>
+<ul>
+<li><p>单文件+自动建目录</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xcopy 文件 文件 /Y /I</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>复制整个文件夹（不含空目录）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xcopy 文件 文件 /S /Y /I</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>复制整个文件夹（含空目录）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xcopy 文件 文件 /E /Y /I</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>注意事项</p>
+<ul>
+<li><code>/Y</code> 不询问直接覆盖</li>
+<li><code>/I</code> 目标若不存在，则按目录创建</li>
+<li><code>/S</code> 复制子目录（空目录不拷）</li>
+<li><code>/E</code> 复制子目录（含空目录）</li>
+</ul>
+</li>
+<li><p>示例</p>
+<ul>
+<li><p>单文件+自动建目录</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xcopy &quot;C:\Users\Administrator\Desktop\Windows命令\xcopy命令\文件.txt&quot; &quot;C:\Users\Administrator\Desktop\Windows命令\xcopy命令（无目录）\&quot; /Y /I</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../Window%E5%91%BD%E4%BB%A4%E8%A1%8C/xcopy/xcopy_1-1.png"></p>
+<p><img src="/../Window%E5%91%BD%E4%BB%A4%E8%A1%8C/xcopy/xcopy_1-2.png"></p>
+<p><img src="/../Window%E5%91%BD%E4%BB%A4%E8%A1%8C/xcopy/xcopy_1-3.png"></p>
+<p><img src="/../Window%E5%91%BD%E4%BB%A4%E8%A1%8C/xcopy/xcopy_1-4.png"></p>
+<p><img src="/../Window%E5%91%BD%E4%BB%A4%E8%A1%8C/xcopy/xcopy_1-5.png"></p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="命令–含义"><a href="#命令–含义" class="headerlink" title="命令–含义"></a>命令–含义</h4><ul>
+<li><p>语法 </p>
+<ul>
+<li><p>1</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">    </span><br></pre></td></tr></table></figure>
+</li>
+<li><p>2</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">    </span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>注意事项</p>
+<p>- </p>
+</li>
+<li><p>示例</p>
+<ul>
+<li><p>1</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">    </span><br></pre></td></tr></table></figure>
+</li>
+<li><p>2</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">    </span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/11/10/Windows%E5%91%BD%E4%BB%A4/" data-id="cuiduGMGvqSWQpCBJPfibIGdO" data-title="Windows命令" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/11/10/Windows%E5%91%BD%E4%BB%A4/" data-id="cuid5xy0dTQa-HhKDXMa0_ULa" data-title="Windows命令" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
